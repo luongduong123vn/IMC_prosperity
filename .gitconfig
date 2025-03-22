@@ -1,0 +1,7 @@
+[user]
+    name = "Duong Luong"
+    email = "67356069+luongduong123vn@users.noreply.github.com"
+
+[core]
+    editor = code
+    autocrlf = true 
