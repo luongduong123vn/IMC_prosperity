@@ -26,8 +26,7 @@ wheels/
 *.egg
 
 # Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
+.ipynb_checkpoints/
 
 # VS Code
 .vscode/
@@ -38,6 +37,3 @@ wheels/
 *.iml
 *.iws
 .idea_modules/
-
-# Logs
-*.log 
