@@ -146,12 +146,13 @@ PARAMS = {
     Product.STARFRUIT: {
         "take_width": 1,
         "clear_width": 0,
-        "prevent_adverse": True,
+        "prevent_adverse": False,
         "adverse_volume": 15,
-        "reversion_beta": -0.229,
+        "reversion_beta": 0,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
+        'ret_vol': 0.00016
     },
 }
 
@@ -162,7 +163,7 @@ class Trader:
             params = PARAMS
         self.params = params
 
-        self.LIMIT = {Product.AMETHYSTS: 20, Product.STARFRUIT: 20}
+        self.LIMIT = {Product.AMETHYSTS: 50, Product.STARFRUIT: 50}
 
     def take_best_orders(
         self,
@@ -303,17 +304,33 @@ class Trader:
                     mmmid_price = traderObject["starfruit_last_price"]
             else:
                 mmmid_price = (mm_ask + mm_bid) / 2
-
+            z = np.random.normal(0, 1)
+            
+            # Calculate volatility based on historical returns if we have enough data
+            if len(traderObject.get('starfruit_price_history', [])) >= 10:
+                # Get the last 10 prices
+                prices = traderObject['starfruit_price_history'][-10:]
+                # Calculate returns
+                returns = np.diff(prices) / prices[:-1]
+                # Calculate volatility
+                ret_vol = float(np.std(returns))
+            else:
+                # Use default volatility from params
+                ret_vol = self.params[Product.STARFRUIT]["ret_vol"]
+                
             if traderObject.get("starfruit_last_price", None) != None:
                 last_price = traderObject["starfruit_last_price"]
                 last_returns = (mmmid_price - last_price) / last_price
-                pred_returns = (
-                    last_returns * self.params[Product.STARFRUIT]["reversion_beta"]
-                )
-                fair = mmmid_price + (mmmid_price * pred_returns)
+                pred_returns = ret_vol * z
+                fair = round(sum(traderObject['starfruit_price_history'])/len(traderObject['starfruit_price_history']),2)
             else:
                 fair = mmmid_price
             traderObject["starfruit_last_price"] = mmmid_price
+             # Update price history
+                # Add new price
+            traderObject['starfruit_price_history'].append(mmmid_price)
+            # Keep only the last 10 prices
+            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-10:]
             return fair
         return None
 
@@ -434,7 +451,11 @@ class Trader:
         traderObject = {}
         if state.traderData != None and state.traderData != "":
             traderObject = jsonpickle.decode(state.traderData)
-
+            
+        # Initialize price history if it doesn't exist
+        if 'starfruit_price_history' not in traderObject:
+            traderObject['starfruit_price_history'] = []
+            
         result = {}
 
         if Product.AMETHYSTS in self.params and Product.AMETHYSTS in state.order_depths:
@@ -489,6 +510,8 @@ class Trader:
             starfruit_fair_value = self.starfruit_fair_value(
                 state.order_depths[Product.STARFRUIT], traderObject
             )
+            
+            
             starfruit_take_orders, buy_order_volume, sell_order_volume = (
                 self.take_orders(
                     Product.STARFRUIT,
