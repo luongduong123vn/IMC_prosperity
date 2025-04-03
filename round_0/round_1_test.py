@@ -141,17 +141,18 @@ PARAMS = {
         "disregard_edge": 1,  # disregards orders for joining or pennying within this value from fair
         "join_edge": 2,  # joins orders within this edge
         "default_edge": 4,
-        "soft_position_limit": 10,
+        "soft_position_limit": 50,
     },
     Product.STARFRUIT: {
-        "fair_value": 2020,
         "take_width": 1,
         "clear_width": 0,
-        # for making
-        "disregard_edge": 1,  # disregards orders for joining or pennying within this value from fair
-        "join_edge": 2,  # joins orders within this edge
-        "default_edge": 4,
-        "soft_position_limit": 10,
+        "prevent_adverse": False,
+        "adverse_volume": 15,
+        "reversion_beta": 0,
+        "disregard_edge": 1,
+        "join_edge": 0,
+        "default_edge": 1,
+        'ret_vol': 0.00016
     },
 }
 
@@ -162,7 +163,7 @@ class Trader:
             params = PARAMS
         self.params = params
 
-        self.LIMIT = {Product.AMETHYSTS: 20, Product.STARFRUIT: 20}
+        self.LIMIT = {Product.AMETHYSTS: 50, Product.STARFRUIT: 50}
 
     def take_best_orders(
         self,
@@ -403,7 +404,7 @@ class Trader:
             if abs(best_ask_above_fair - fair_value) <= join_edge:
                 ask = best_ask_above_fair  # join
             else:
-                ask = best_ask_above_fair - 1  # penny
+                ask = best_ask_above_fair - 1 # penny
 
         bid = round(fair_value - default_edge)
         if best_bid_below_fair != None:
@@ -434,7 +435,11 @@ class Trader:
         traderObject = {}
         if state.traderData != None and state.traderData != "":
             traderObject = jsonpickle.decode(state.traderData)
-
+            
+        # Initialize price history if it doesn't exist
+        if 'starfruit_price_history' not in traderObject:
+            traderObject['starfruit_price_history'] = []
+            
         result = {}
 
         if Product.AMETHYSTS in self.params and Product.AMETHYSTS in state.order_depths:
@@ -486,22 +491,29 @@ class Trader:
                 if Product.STARFRUIT in state.position
                 else 0
             )
+            starfruit_fair_value = self.starfruit_fair_value(
+                state.order_depths[Product.STARFRUIT], traderObject
+            )
+            
+            
             starfruit_take_orders, buy_order_volume, sell_order_volume = (
                 self.take_orders(
                     Product.STARFRUIT,
                     state.order_depths[Product.STARFRUIT],
-                    self.params[Product.STARFRUIT]["fair_value"],
+                    starfruit_fair_value,
                     self.params[Product.STARFRUIT]["take_width"],
-                    amethyst_position,
+                    starfruit_position,
+                    self.params[Product.STARFRUIT]["prevent_adverse"],
+                    self.params[Product.STARFRUIT]["adverse_volume"],
                 )
             )
             starfruit_clear_orders, buy_order_volume, sell_order_volume = (
                 self.clear_orders(
                     Product.STARFRUIT,
                     state.order_depths[Product.STARFRUIT],
-                    self.params[Product.STARFRUIT]["fair_value"],
+                    starfruit_fair_value,
                     self.params[Product.STARFRUIT]["clear_width"],
-                    amethyst_position,
+                    starfruit_position,
                     buy_order_volume,
                     sell_order_volume,
                 )
@@ -509,15 +521,13 @@ class Trader:
             starfruit_make_orders, _, _ = self.make_orders(
                 Product.STARFRUIT,
                 state.order_depths[Product.STARFRUIT],
-                self.params[Product.STARFRUIT]["fair_value"],
+                starfruit_fair_value,
                 starfruit_position,
                 buy_order_volume,
                 sell_order_volume,
                 self.params[Product.STARFRUIT]["disregard_edge"],
                 self.params[Product.STARFRUIT]["join_edge"],
                 self.params[Product.STARFRUIT]["default_edge"],
-                True,
-                self.params[Product.STARFRUIT]["soft_position_limit"],
             )
             result[Product.STARFRUIT] = (
                 starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
