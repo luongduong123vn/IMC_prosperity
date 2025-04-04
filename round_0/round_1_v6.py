@@ -146,7 +146,7 @@ PARAMS = {
     Product.STARFRUIT: {
         "take_width": 1,
         "clear_width": 0,
-        "prevent_adverse": True,
+        "prevent_adverse": False,
         "adverse_volume": 15,
         "reversion_beta": 0,
         "disregard_edge": 1,
@@ -320,14 +320,15 @@ class Trader:
 
             traderObject['starfruit_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-5:]
+            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-10:]
+            starfruit_fv_history = traderObject['starfruit_price_history'][-5:]
                 
             if traderObject.get("starfruit_last_price", None) != None:
                 last_price = traderObject["starfruit_last_price"]
                 last_returns = (mmmid_price - last_price) / last_price
                 pred_returns = ret_vol * z
-                fair = round(sum(traderObject['starfruit_price_history'])/len(traderObject['starfruit_price_history']),2)
-                #fair = mmmid_price
+                #fair = round(sum(starfruit_fv_history)/len(starfruit_fv_history),2)
+                fair = mmmid_price
             else:
                 fair = mmmid_price
             traderObject["starfruit_last_price"] = mmmid_price
@@ -455,6 +456,7 @@ class Trader:
     def make_order_starfruit(
         self,
         product,
+        traderObject,
         order_depth: OrderDepth,
         fair_value: float,
         position: int,
@@ -481,14 +483,26 @@ class Trader:
 
         best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
         best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
-
-        ask = round(fair_value + default_edge)
+    
+        if len(traderObject.get('starfruit_price_history', [])) >= 10:
+            # Get the last 10 prices
+            starfruit_vol_history = traderObject['starfruit_price_history'][-10:]
+            prices = starfruit_vol_history
+            # Calculate returns
+            returns = np.diff(prices) / prices[:-1]
+            # Calculate volatility
+            realized_vol = float(np.std(returns))
+            edge = min(round((realized_vol / self.params[Product.STARFRUIT]["ret_vol"]) * default_edge * 1.5), default_edge)   
+        else:
+            # Use default volatility from params
+            edge = default_edge
+        ask = round(fair_value + edge)
         if best_ask_above_fair != None:
             if abs(best_ask_above_fair - fair_value) <= join_edge:
                 ask = best_ask_above_fair  # join
             else:
                 #ask = best_ask_above_fair - 1  # penny
-                ask = best_ask_above_fair 
+                ask = best_ask_above_fair - edge
 
         bid = round(fair_value - default_edge)
         if best_bid_below_fair != None:
@@ -496,7 +510,7 @@ class Trader:
                 bid = best_bid_below_fair
             else:
                 #bid = best_bid_below_fair + 1
-                bid = best_bid_below_fair 
+                bid = best_bid_below_fair + edge
 
         if manage_position:
             if position > soft_position_limit:
@@ -582,17 +596,17 @@ class Trader:
             )
             
             
-            starfruit_take_orders, buy_order_volume, sell_order_volume = (
-                self.take_orders(
-                    Product.STARFRUIT,
-                    state.order_depths[Product.STARFRUIT],
-                    starfruit_fair_value,
-                    self.params[Product.STARFRUIT]["take_width"],
-                    starfruit_position,
-                    self.params[Product.STARFRUIT]["prevent_adverse"],
-                    self.params[Product.STARFRUIT]["adverse_volume"],
-                )
-            )
+            # starfruit_take_orders, buy_order_volume, sell_order_volume = (
+            #     self.take_orders(
+            #         Product.STARFRUIT,
+            #         state.order_depths[Product.STARFRUIT],
+            #         starfruit_fair_value,
+            #         self.params[Product.STARFRUIT]["take_width"],
+            #         starfruit_position,
+            #         self.params[Product.STARFRUIT]["prevent_adverse"],
+            #         self.params[Product.STARFRUIT]["adverse_volume"],
+            #     )
+            # )
             starfruit_clear_orders, buy_order_volume, sell_order_volume = (
                 self.clear_orders(
                     Product.STARFRUIT,
@@ -606,6 +620,7 @@ class Trader:
             )
             starfruit_make_orders, _, _ = self.make_order_starfruit(
                 Product.STARFRUIT,
+                traderObject,
                 state.order_depths[Product.STARFRUIT],
                 starfruit_fair_value,
                 starfruit_position,
@@ -615,8 +630,11 @@ class Trader:
                 self.params[Product.STARFRUIT]["join_edge"],
                 self.params[Product.STARFRUIT]["default_edge"],
             )
-            result[Product.STARFRUIT] = (
-                starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
+            # result[Product.STARFRUIT] = (
+            #     starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
+            # )
+
+            result[Product.STARFRUIT] = (starfruit_clear_orders + starfruit_make_orders
             )
 
         conversions = 0
