@@ -146,8 +146,8 @@ PARAMS = {
     Product.STARFRUIT: {
         "take_width": 1,
         "clear_width": 0,
-        "prevent_adverse": False,
-        "adverse_volume": 15,
+        "prevent_adverse": True,
+        "adverse_volume": 19,
         "reversion_beta": 0,
         "disregard_edge": 1,
         "join_edge": 0,
@@ -601,17 +601,17 @@ class Trader:
             )
             
             
-            # starfruit_take_orders, buy_order_volume, sell_order_volume = (
-            #     self.take_orders(
-            #         Product.STARFRUIT,
-            #         state.order_depths[Product.STARFRUIT],
-            #         starfruit_fair_value,
-            #         self.params[Product.STARFRUIT]["take_width"],
-            #         starfruit_position,
-            #         self.params[Product.STARFRUIT]["prevent_adverse"],
-            #         self.params[Product.STARFRUIT]["adverse_volume"],
-            #     )
-            # )
+            starfruit_take_orders, buy_order_volume, sell_order_volume = (
+                self.take_orders(
+                    Product.STARFRUIT,
+                    state.order_depths[Product.STARFRUIT],
+                    starfruit_fair_value,
+                    self.params[Product.STARFRUIT]["take_width"],
+                    starfruit_position,
+                    self.params[Product.STARFRUIT]["prevent_adverse"],
+                    self.params[Product.STARFRUIT]["adverse_volume"],
+                )
+            )
             starfruit_clear_orders, buy_order_volume, sell_order_volume = (
                 self.clear_orders(
                     Product.STARFRUIT,
@@ -635,12 +635,12 @@ class Trader:
                 self.params[Product.STARFRUIT]["join_edge"],
                 self.params[Product.STARFRUIT]["default_edge"],
             )
-            # result[Product.STARFRUIT] = (
-            #     starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
-            # )
-
-            result[Product.STARFRUIT] = (starfruit_clear_orders + starfruit_make_orders
+            result[Product.STARFRUIT] = (
+                starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
             )
+
+            # result[Product.STARFRUIT] = (starfruit_clear_orders + starfruit_make_orders
+            # )
 
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
