@@ -320,7 +320,7 @@ class Trader:
 
             traderObject['starfruit_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-10:]
+            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-15:]
             starfruit_fv_history = traderObject['starfruit_price_history'][-5:]
                 
             if traderObject.get("starfruit_last_price", None) != None:
@@ -492,7 +492,12 @@ class Trader:
             returns = np.diff(prices) / prices[:-1]
             # Calculate volatility
             realized_vol = float(np.std(returns))
-            edge = min(round((realized_vol / self.params[Product.STARFRUIT]["ret_vol"]) * default_edge * 1.5), default_edge)   
+            if realized_vol / self.params[Product.STARFRUIT]["ret_vol"] >= 2:
+                edge = -max(round((realized_vol / self.params[Product.STARFRUIT]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+            elif realized_vol / self.params[Product.STARFRUIT]["ret_vol"] <= 0.67:
+                edge = min(round((realized_vol / self.params[Product.STARFRUIT]["ret_vol"]) * default_edge  * 1.5), default_edge)   
+            else:
+                edge = default_edge
         else:
             # Use default volatility from params
             edge = default_edge
