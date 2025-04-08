@@ -4,11 +4,13 @@ import string
 import jsonpickle
 import numpy as np
 import math
+import pandas as pd
 
 import json
 from typing import Any
 
 from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState
+from typing import List, Tuple, Union
 
 
 class Logger:
@@ -140,12 +142,13 @@ PARAMS = {
         "clear_width": 0,
         # for making
         "disregard_edge": 1,  # disregards orders for joining or pennying within this value from fair
-        "join_edge": 2,  # joins orders within this edge
+        "join_edge": 0,  # joins orders within this edge
         "default_edge": 4,
         "soft_position_limit": 50,
+        "min_spread": 0
     },
     Product.STARFRUIT: {
-        "take_width": 1,
+        "take_width": 2,
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
@@ -153,18 +156,20 @@ PARAMS = {
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
-        'ret_vol': 0.00016
+        'ret_vol': 0.00035,
+        "min_spread": 0,
     },
     Product.SQUID_INK: {
-        "take_width": 1,
+        "take_width": 2,
         "clear_width": 0,
         "prevent_adverse": True,
-        "adverse_volume": 19,
+        "adverse_volume": 0,
         "reversion_beta": 0,
         "disregard_edge": 1,
-        "join_edge": 0,
+        "join_edge": 1,
         "default_edge": 1,
-        'ret_vol': 0.00016
+        'ret_vol': 0.001,
+        "min_spread": 0,
     },
 }
 
@@ -235,15 +240,52 @@ class Trader:
         position: int,
         buy_order_volume: int,
         sell_order_volume: int,
+        best_bid_volume: int,
+        best_ask_volume: int,
     ) -> (int, int):
-        buy_quantity = self.LIMIT[product] - (position + buy_order_volume)
-        if buy_quantity > 0:
-            orders.append(Order(product, round(bid), buy_quantity))  # Buy order
-
-        sell_quantity = self.LIMIT[product] + (position - sell_order_volume)
-        if sell_quantity > 0:
-            orders.append(Order(product, round(ask), -sell_quantity))  # Sell order
+        if product == 'a':
+            buy_quantity = min(self.LIMIT[product] - (position + buy_order_volume), best_bid_volume)
+            if buy_quantity > 0:
+                orders.append(Order(product, round(bid), buy_quantity))  # Buy order
+        else:
+            buy_quantity = self.LIMIT[product] - (position + buy_order_volume)
+            if buy_quantity > 0:
+                orders.append(Order(product, round(bid), buy_quantity))  # Buy order
+        if product == 'a':
+            sell_quantity = min(self.LIMIT[product] + (position - sell_order_volume), best_ask_volume)
+            if sell_quantity > 0:
+                orders.append(Order(product, round(ask), -sell_quantity))  # Sell order
+        else:
+            sell_quantity = self.LIMIT[product] + (position - sell_order_volume)
+            if sell_quantity > 0:
+                orders.append(Order(product, round(ask), -sell_quantity))  # Sell order
         return buy_order_volume, sell_order_volume
+
+    def calculate_time_series_slope_n(self, values: Union[List[float], np.ndarray, pd.Series]) -> float:
+        # Convert to numpy array if it's a list or pandas Series
+        if isinstance(values, (list, pd.Series)):
+            values = np.array(values)
+        
+        n = len(values)
+        if n < 2:
+            return 0
+        
+        # For n consecutive timestamps (0 to n-1), the mean is (n-1)/2
+        t_mean = (n - 1) / 2
+        
+        # Calculate value mean
+        v_mean = np.mean(values)
+        
+        # Create timestamp deviations from mean
+        t_deviations = np.arange(n) - t_mean
+        
+        # Calculate slope (beta)
+        numerator = np.sum(t_deviations * (values - v_mean))
+        denominator = np.sum(t_deviations ** 2)
+        
+        # Return slope, handling division by zero
+        return numerator / denominator if denominator != 0 else 0
+
 
     def clear_position_order(
         self,
@@ -333,7 +375,7 @@ class Trader:
             traderObject['starfruit_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
             traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-10:]
-            starfruit_fv_history = traderObject['starfruit_price_history'][-5:]
+            starfruit_fv_history = traderObject['starfruit_price_history'][-10:]
                 
             if traderObject.get("starfruit_last_price", None) != None:
                 last_price = traderObject["starfruit_last_price"]
@@ -391,14 +433,29 @@ class Trader:
 
             traderObject['ink_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject['ink_price_history'] = traderObject['ink_price_history'][-10:]
+            traderObject['ink_price_history'] = traderObject['ink_price_history'][-100:]
             ink_fv_history = traderObject['ink_price_history'][-5:]
-                
+            starfruit_price_history = traderObject['ink_price_history']
+            prices = starfruit_price_history
+            returns = np.diff(prices) / prices[:-1]
+            if len(returns) >= len(starfruit_price_history)-1:
+                n = len(returns)
+                slope = self.calculate_time_series_slope_n(prices)
+                # recent_mean = np.mean(returns[-3:]) if n >= 3 else np.mean(returns)
+                # next_return = recent_mean + slope * (n - (n-1)/2)
+                recent_mean = np.mean(prices[-3:]) if n >= 3 else np.mean(prices)
+                next_prices = recent_mean + slope * (n - (n-1)/2)
+            else:
+                slope = 0
             if traderObject.get("ink_last_price", None) != None:
                 last_price = traderObject["ink_last_price"]
                 last_returns = (mmmid_price - last_price) / last_price
                 pred_returns = ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
+                #fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
+                #fair = mmmid_price * (1 + z*self.params[Product.SQUID_INK]["ret_vol"])
+                #fair = mmmid_price * (1 + next_return)
+                #fair = next_prices
                 fair = mmmid_price
             else:
                 fair = mmmid_price
@@ -481,29 +538,40 @@ class Trader:
             for price in order_depth.sell_orders.keys()
             if price > fair_value + disregard_edge
         ]
+        asks_volume_above_fair = [
+            volume
+            for price, volume in order_depth.sell_orders.items()
+            if price > fair_value + disregard_edge
+        ]
         bids_below_fair = [
             price
             for price in order_depth.buy_orders.keys()
             if price < fair_value - disregard_edge
         ]
+        bids_volume_below_fair = [
+            volume
+            for price, volume in order_depth.buy_orders.items()
+            if price < fair_value - disregard_edge
+        ]
 
         best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
         best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
+        best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
+        best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
+        spread = best_ask_above_fair - best_bid_below_fair
 
         ask = round(fair_value + default_edge)
         if best_ask_above_fair != None:
             if abs(best_ask_above_fair - fair_value) <= join_edge:
                 ask = best_ask_above_fair  # join
             else:
-                #ask = best_ask_above_fair - 1  # penny
-                ask = best_ask_above_fair - 1
+                ask = best_ask_above_fair - 1  # penny
 
         bid = round(fair_value - default_edge)
         if best_bid_below_fair != None:
             if abs(fair_value - best_bid_below_fair) <= join_edge:
                 bid = best_bid_below_fair
             else:
-                #bid = best_bid_below_fair + 1
                 bid = best_bid_below_fair + 1
 
         if manage_position:
@@ -511,16 +579,18 @@ class Trader:
                 ask -= 1
             elif position < -1 * soft_position_limit:
                 bid += 1
-
-        buy_order_volume, sell_order_volume = self.market_make(
-            product,
-            orders,
-            bid,
-            ask,
-            position,
-            buy_order_volume,
-            sell_order_volume,
-        )
+        if spread > self.params[product]["min_spread"]:
+            buy_order_volume, sell_order_volume = self.market_make(
+                product,
+                orders,
+                bid,
+                ask,
+                position,
+                buy_order_volume,
+                sell_order_volume,
+                best_bid_volume,
+                best_ask_volume,
+            )
 
         return orders, buy_order_volume, sell_order_volume
 
@@ -546,24 +616,44 @@ class Trader:
             for price in order_depth.sell_orders.keys()
             if price > fair_value + disregard_edge
         ]
+        asks_volume_above_fair = [
+            volume
+            for price, volume in order_depth.sell_orders.items()
+            if price > fair_value + disregard_edge
+        ]
         bids_below_fair = [
             price
             for price in order_depth.buy_orders.keys()
             if price < fair_value - disregard_edge
         ]
+        bids_volume_below_fair = [
+            volume
+            for price, volume in order_depth.buy_orders.items()
+            if price < fair_value - disregard_edge
+        ]
 
         best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
         best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
+        best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
+        best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
     
-        if len(traderObject.get('starfruit_price_history', [])) >= 50:
+        if len(traderObject.get('starfruit_price_history', [])) >= 10:
             # Get the last 10 prices
-            starfruit_vol_history = traderObject['starfruit_price_history'][-50:]
+            starfruit_vol_history = traderObject['starfruit_price_history'][-10:]
             prices = starfruit_vol_history
             # Calculate returns
             returns = np.diff(prices) / prices[:-1]
             # Calculate volatility
             realized_vol = float(np.std(returns))
-            edge = min(round((realized_vol / self.params[Product.STARFRUIT]["ret_vol"]) * default_edge * 2), default_edge)   
+            if realized_vol / self.params[Product.STARFRUIT]["ret_vol"] >= 1.5:
+                #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+                edge = 1
+            elif realized_vol / self.params[Product.STARFRUIT]["ret_vol"] <= 0.4:
+                #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
+                edge = 1
+            else:
+                edge = 1
+            #edge = default_edge
         else:
             # Use default volatility from params
             edge = default_edge
@@ -588,7 +678,6 @@ class Trader:
                 ask -= 1
             elif position < -1 * soft_position_limit:
                 bid += 1
-
         buy_order_volume, sell_order_volume = self.market_make(
             product,
             orders,
@@ -597,7 +686,9 @@ class Trader:
             position,
             buy_order_volume,
             sell_order_volume,
-        )
+            best_bid_volume,
+            best_ask_volume,
+            )
 
         return orders, buy_order_volume, sell_order_volume
 
@@ -623,14 +714,27 @@ class Trader:
             for price in order_depth.sell_orders.keys()
             if price > fair_value + disregard_edge
         ]
+        asks_volume_above_fair = [
+            volume
+            for price, volume in order_depth.sell_orders.items()
+            if price > fair_value + disregard_edge
+        ]
         bids_below_fair = [
             price
             for price in order_depth.buy_orders.keys()
             if price < fair_value - disregard_edge
         ]
+        bids_volume_below_fair = [
+            volume
+            for price, volume in order_depth.buy_orders.items()
+            if price < fair_value - disregard_edge
+        ]
+
 
         best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
         best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
+        best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
+        best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
     
         if len(traderObject.get('ink_price_history', [])) >= 10:
             # Get the last 10 prices
@@ -640,7 +744,15 @@ class Trader:
             returns = np.diff(prices) / prices[:-1]
             # Calculate volatility
             realized_vol = float(np.std(returns))
-            edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge * 2), default_edge)   
+            if realized_vol / self.params[Product.SQUID_INK]["ret_vol"] >= 3:
+                #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+                edge = 0
+            elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
+                #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
+                edge = 1
+            else:
+                edge = -1
+            #edge = default_edge
         else:
             # Use default volatility from params
             edge = default_edge
@@ -650,7 +762,7 @@ class Trader:
                 ask = best_ask_above_fair  # join
             else:
                 #ask = best_ask_above_fair - 1  # penny
-                ask = best_ask_above_fair - edge
+                ask = best_ask_above_fair + edge
 
         bid = round(fair_value - default_edge)
         if best_bid_below_fair != None:
@@ -658,7 +770,7 @@ class Trader:
                 bid = best_bid_below_fair
             else:
                 #bid = best_bid_below_fair + 1
-                bid = best_bid_below_fair + edge
+                bid = best_bid_below_fair - edge
 
         if manage_position:
             if position > soft_position_limit:
@@ -674,6 +786,8 @@ class Trader:
             position,
             buy_order_volume,
             sell_order_volume,
+            best_bid_volume,
+            best_ask_volume,
         )
 
         return orders, buy_order_volume, sell_order_volume
