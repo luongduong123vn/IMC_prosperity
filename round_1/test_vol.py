@@ -164,11 +164,14 @@ PARAMS = {
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
-        "reversion_beta": -0.15,
+        "reversion_beta": 0.1,
         "disregard_edge": 1,
         "join_edge": 0,
-        "default_edge": -1,
+        "default_edge": 1,
         'ret_vol': 0.001,
+        "manage_position": True,
+        "soft_position_limit": 45,
+        "spread_adjustment": 1
     },
 }
 
@@ -242,16 +245,16 @@ class Trader:
         bid_volume: int,
         ask_volume: int,
     ) -> (int, int):
-        if product == "a":
-            buy_quantity = round(min(self.LIMIT[product] - (position + buy_order_volume), bid_volume / self.params[Product.SQUID_INK]["volume_factor"]))
+        if product == "SQUID_INK":
+            buy_quantity = self.LIMIT[product] - (position + buy_order_volume)
             if buy_quantity > 0:
                 orders.append(Order(product, round(bid), buy_quantity))  # Buy order
         else:
             buy_quantity = 1*(self.LIMIT[product] - (position + buy_order_volume))
             if buy_quantity > 0:
                 orders.append(Order(product, round(bid), buy_quantity))  # Buy order
-        if product == "a":
-            sell_quantity = round(min(self.LIMIT[product] + (position - sell_order_volume), ask_volume / self.params[Product.SQUID_INK]["volume_factor"]))
+        if product == "SQUID_INK":
+            sell_quantity = self.LIMIT[product] + (position - sell_order_volume)
             if sell_quantity > 0:
                 orders.append(Order(product, round(ask), -sell_quantity))  # Sell order
         else:
@@ -440,10 +443,10 @@ class Trader:
             if len(returns) >= len(starfruit_price_history)-1:
                 n = len(returns)
                 slope = self.calculate_time_series_slope_n(prices)
-                # recent_mean = np.mean(returns[-3:]) if n >= 3 else np.mean(returns)
+                # recent_mean = np.mean(returns) if n >= 3 else np.mean(returns)
                 # next_return = recent_mean + slope * (n - (n-1)/2)
-                recent_mean = np.mean(prices[-3:]) if n >= 3 else np.mean(prices)
-                next_prices = recent_mean + slope * (n - (n-1)/2)
+                # recent_mean = np.mean(prices[-3:]) if n >= 3 else np.mean(prices)
+                # next_prices = recent_mean + slope * (n - (n-1)/2)
             else:
                 slope = 0
             if traderObject.get("ink_last_price", None) != None:
@@ -760,9 +763,9 @@ class Trader:
                 edge = 0
             elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
                 #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
-                edge = 1
-            else:
                 edge = -1
+            else:
+                edge = 1
             #edge = default_edge
         else:
             # Use default volatility from params
@@ -773,7 +776,7 @@ class Trader:
                 ask = best_ask_above_fair  # join
             else:
                 #ask = best_ask_above_fair - 1  # penny
-                ask = best_ask_above_fair + edge
+                ask = best_ask_above_fair - edge
 
         bid = round(fair_value - default_edge)
         if best_bid_below_fair != None:
@@ -781,13 +784,21 @@ class Trader:
                 bid = best_bid_below_fair
             else:
                 #bid = best_bid_below_fair + 1
-                bid = best_bid_below_fair - edge
-
+                bid = best_bid_below_fair + edge
+        spread_factor = self.params[Product.SQUID_INK]["spread_adjustment"]
         if manage_position:
             if position > soft_position_limit:
-                ask -= 1
+                bid = best_bid_below_fair - spread_factor * edge if best_bid_below_fair != None else fair_value - spread_factor*edge
+                # if ask >= fair_value and ask <= fair_value + 1:
+                #     ask = fair_value
+                # elif ask > fair_value + 1:
+                #     ask = ask - 1
             elif position < -1 * soft_position_limit:
-                bid += 1
+                ask = best_ask_above_fair + spread_factor * edge if best_ask_above_fair != None else fair_value + spread_factor*edge
+                # if bid <= fair_value and bid >= fair_value - 1:
+                #     bid = fair_value
+                # elif bid < fair_value - 1:
+                #     bid = bid + 1
 
         buy_order_volume, sell_order_volume = self.market_make(
             product,
@@ -953,6 +964,8 @@ class Trader:
                 self.params[Product.SQUID_INK]["disregard_edge"],
                 self.params[Product.SQUID_INK]["join_edge"],
                 self.params[Product.SQUID_INK]["default_edge"],
+                self.params[Product.SQUID_INK]["manage_position"],
+                self.params[Product.SQUID_INK]["soft_position_limit"],
             )
             result[Product.SQUID_INK] = (
                 ink_take_orders + ink_clear_orders + ink_make_orders

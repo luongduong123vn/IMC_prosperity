@@ -1,743 +1,519 @@
 Sandbox logs:
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 11.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 0
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 37.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 37.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 300
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[400,\"\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":2,\"2033\":2,\"2032\":121},{\"2035\":-121}],\"RAINFOREST_RESIN\":[{\"10000\":2,\"9998\":21,\"9996\":4,\"9995\":117},{\"10004\":-4,\"10005\":-117}],\"SQUID_INK\":[{\"1835\":3,\"1834\":49,\"1833\":28,\"1832\":22},{\"1836\":-27,\"1837\":-26,\"1838\":-23,\"1839\":-22}]},[],[[\"SQUID_INK\",1836.0,1,\"\",\"\",400]],{},[{},{}]],[[\"RAINFOREST_RESIN\",10002,-1],[\"RAINFOREST_RESIN\",9999,50],[\"RAINFOREST_RESIN\",10003,-49],[\"KELP\",2033,50],[\"KELP\",2034,-50],[\"SQUID_INK\",1834,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5], \\\"ink_price_history\\\": [1835.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1835.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 29.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 29.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 47.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 47.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1200
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[1300,\"{\\\"starfruit_price_history\\\": [2033.5], \\\"ink_price_history\\\": [1835.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1835.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":155,\"2031\":69},{\"2034\":-3,\"2035\":-224}],\"RAINFOREST_RESIN\":[{\"9996\":9,\"9995\":215},{\"10000\":-3,\"10002\":-6,\"10004\":-9,\"10005\":-215}],\"SQUID_INK\":[{\"1840\":25,\"1839\":13,\"1834\":51,\"1832\":30},{\"1842\":-23,\"1843\":-68,\"1844\":-31}]},[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",400],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",400],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",400]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",1300],[\"SQUID_INK\",1839.0,8,\"\",\"\",1200],[\"SQUID_INK\",1839.0,1,\"\",\"\",1200],[\"SQUID_INK\",1839.0,1,\"\",\"\",1200],[\"KELP\",2033.0,1,\"\",\"\",1200]],{\"KELP\":-2,\"RAINFOREST_RESIN\":-1},[{},{}]],[[\"RAINFOREST_RESIN\",9998,2],[\"RAINFOREST_RESIN\",9997,49],[\"RAINFOREST_RESIN\",10001,-49],[\"KELP\",2034,2],[\"KELP\",2033,50],[\"KELP\",2034,-48],[\"SQUID_INK\",1840,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1841.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 11.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 19.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 19.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 33.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 33.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 43.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 43.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1700
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[1800,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1841.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":82,\"2031\":43},{\"2033\":-1,\"2034\":-8,\"2035\":-125}],\"RAINFOREST_RESIN\":[{\"9996\":3,\"9995\":122},{\"10000\":-6,\"10002\":-10,\"10004\":-3,\"10005\":-122}],\"SQUID_INK\":[{\"1843\":24,\"1842\":16,\"1841\":74},{\"1844\":-49,\"1845\":-44,\"1847\":-30}]},[[\"RAINFOREST_RESIN\",9998.0,2,\"SUBMISSION\",\"\",1300],[\"KELP\",2034.0,2,\"SUBMISSION\",\"\",1300]],[[\"RAINFOREST_RESIN\",9998.0,4,\"\",\"\",1800],[\"SQUID_INK\",1843.0,8,\"\",\"\",1700],[\"KELP\",2033.0,4,\"\",\"\",1800]],{\"KELP\":0,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9997,49],[\"RAINFOREST_RESIN\",10001,-51],[\"KELP\",2033,50],[\"KELP\",2034,-50],[\"SQUID_INK\",1843,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1843.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 16.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 16.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 1900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 27.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 27.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 41.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 41.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2100
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[2200,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1843.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":81,\"2031\":26},{\"2034\":-5,\"2035\":-104}],\"RAINFOREST_RESIN\":[{\"9996\":7,\"9995\":97},{\"10004\":-7,\"10005\":-97}],\"SQUID_INK\":[{\"1846\":47,\"1845\":28,\"1844\":32},{\"1847\":-7,\"1848\":-32,\"1849\":-70}]},[[\"RAINFOREST_RESIN\",9998.0,2,\"SUBMISSION\",\"\",1300],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",1800]],[[\"RAINFOREST_RESIN\",9998.0,4,\"\",\"\",1800],[\"RAINFOREST_RESIN\",10000.0,1,\"\",\"\",1800],[\"SQUID_INK\",1845.0,1,\"\",\"\",2000],[\"KELP\",2032.0,1,\"\",\"\",1900]],{\"KELP\":1,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9998,4],[\"RAINFOREST_RESIN\",9997,45],[\"RAINFOREST_RESIN\",10003,-51],[\"KELP\",2033,49],[\"KELP\",2034,-51],[\"SQUID_INK\",1846,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1847.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 14.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 14.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 25.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 25.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 37.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 37.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 41.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 41.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2600
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[2700,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1847.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":19,\"2031\":115},{\"2035\":-122}],\"RAINFOREST_RESIN\":[{\"9998\":10,\"9996\":9,\"9995\":113},{\"10004\":-9,\"10005\":-113}],\"SQUID_INK\":[{\"1849\":8,\"1848\":37,\"1847\":24,\"1846\":43},{\"1850\":-23,\"1851\":-47,\"1852\":-30}]},[[\"RAINFOREST_RESIN\",9998.0,4,\"SUBMISSION\",\"\",2200],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",1800]],[[\"RAINFOREST_RESIN\",10002.0,4,\"\",\"\",2600],[\"SQUID_INK\",1849.0,20,\"\",\"\",2600],[\"SQUID_INK\",1849.0,2,\"\",\"\",2600],[\"KELP\",2032.0,1,\"\",\"\",1900]],{\"KELP\":1,\"RAINFOREST_RESIN\":5},[{},{}]],[[\"RAINFOREST_RESIN\",10002,-1],[\"RAINFOREST_RESIN\",9999,45],[\"RAINFOREST_RESIN\",10003,-54],[\"KELP\",2033,49],[\"KELP\",2034,-51],[\"SQUID_INK\",1848,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1849.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 13.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 13.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 2900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 42.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 42.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3000
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[3100,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1849.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":1,\"2032\":34,\"2031\":78},{\"2035\":-107}],\"RAINFOREST_RESIN\":[{\"9998\":5,\"9996\":4,\"9995\":103},{\"10004\":-4,\"10005\":-103}],\"SQUID_INK\":[{\"1850\":1,\"1849\":27,\"1848\":85},{\"1851\":-80,\"1852\":-27}]},[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",2700],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",1800]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",3100],[\"SQUID_INK\",1849.0,20,\"\",\"\",2600],[\"SQUID_INK\",1849.0,2,\"\",\"\",2600],[\"KELP\",2032.0,1,\"\",\"\",1900]],{\"KELP\":1,\"RAINFOREST_RESIN\":4},[{},{}]],[[\"RAINFOREST_RESIN\",9999,46],[\"RAINFOREST_RESIN\",10003,-54],[\"KELP\",2034,-1],[\"KELP\",2033,49],[\"KELP\",2034,-50],[\"SQUID_INK\",1849,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1850.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 22.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 22.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 36.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 36.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 49.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 49.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3500
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[3600,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1850.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":131},{\"2033\":-5,\"2035\":-131}],\"RAINFOREST_RESIN\":[{\"9998\":10,\"9996\":3,\"9995\":128},{\"10002\":-15,\"10004\":-3,\"10005\":-128}],\"SQUID_INK\":[{\"1850\":53,\"1849\":22,\"1848\":51},{\"1851\":-24,\"1852\":-54,\"1853\":-53}]},[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",2700],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",3100]],[[\"RAINFOREST_RESIN\",10002.0,2,\"\",\"\",3500],[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",3500],[\"SQUID_INK\",1849.0,5,\"\",\"\",3300],[\"KELP\",2032.0,1,\"\",\"\",1900]],{\"KELP\":0,\"RAINFOREST_RESIN\":4},[{},{}]],[[\"RAINFOREST_RESIN\",9999,46],[\"RAINFOREST_RESIN\",10001,-54],[\"KELP\",2033,50],[\"KELP\",2034,-50],[\"SQUID_INK\",1850,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1850.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 38.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 38.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 3900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 38.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 38.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4000
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[4100,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1850.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":5,\"2032\":130},{\"2034\":-7,\"2035\":-130}],\"RAINFOREST_RESIN\":[{\"10000\":5,\"9998\":3,\"9996\":5,\"9995\":125},{\"10002\":-3,\"10004\":-5,\"10005\":-125}],\"SQUID_INK\":[{\"1854\":2,\"1853\":46,\"1852\":27,\"1851\":25},{\"1855\":-23,\"1856\":-24,\"1857\":-55}]},[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",2700],[\"KELP\",2033.0,5,\"SUBMISSION\",\"\",3600],[\"KELP\",2033.0,14,\"SUBMISSION\",\"\",3600]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",4100],[\"SQUID_INK\",1854.0,0,\"\",\"\",4100],[\"SQUID_INK\",1854.0,1,\"\",\"\",4100],[\"SQUID_INK\",1854.0,1,\"\",\"\",4100],[\"SQUID_INK\",1855.0,3,\"\",\"\",4100],[\"KELP\",2032.0,1,\"\",\"\",4000]],{\"KELP\":19,\"RAINFOREST_RESIN\":4},[{},{}]],[[\"RAINFOREST_RESIN\",10000,-4],[\"RAINFOREST_RESIN\",9999,46],[\"RAINFOREST_RESIN\",10001,-50],[\"KELP\",2033,31],[\"KELP\",2034,-69],[\"SQUID_INK\",1853,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1854.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 14.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 14.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 26.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 26.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 49.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 49.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 49.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 49.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4600
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[4700,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1854.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":154},{\"2034\":-18,\"2035\":-156}],\"RAINFOREST_RESIN\":[{\"9998\":5,\"9996\":1,\"9995\":155},{\"10002\":-3,\"10004\":-1,\"10005\":-155}],\"SQUID_INK\":[{\"1855\":26,\"1854\":45,\"1853\":54},{\"1856\":-40,\"1857\":-55,\"1858\":-29,\"1860\":-21}]},[[\"RAINFOREST_RESIN\",10000.0,4,\"\",\"SUBMISSION\",4100],[\"KELP\",2033.0,5,\"SUBMISSION\",\"\",3600],[\"KELP\",2033.0,14,\"SUBMISSION\",\"\",3600]],[[\"RAINFOREST_RESIN\",10002.0,5,\"\",\"\",4300],[\"SQUID_INK\",1856.0,7,\"\",\"\",4600],[\"SQUID_INK\",1856.0,14,\"\",\"\",4600],[\"KELP\",2032.0,2,\"\",\"\",4300]],{\"KELP\":19,\"RAINFOREST_RESIN\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9999,50],[\"RAINFOREST_RESIN\",10001,-50],[\"KELP\",2033,31],[\"KELP\",2034,-69],[\"SQUID_INK\",1855,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1855.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 15.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 15.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 23.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 23.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 4900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 41.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 41.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5000
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[5100,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1855.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":116},{\"2034\":-5,\"2035\":-104}],\"RAINFOREST_RESIN\":[{\"9998\":9,\"9996\":4,\"9995\":100},{\"10004\":-4,\"10005\":-100}],\"SQUID_INK\":[{\"1860\":6,\"1859\":79,\"1857\":24},{\"1861\":-22,\"1862\":-26,\"1863\":-54}]},[[\"RAINFOREST_RESIN\",9999.0,1,\"SUBMISSION\",\"\",4700],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",4700]],[[\"RAINFOREST_RESIN\",10002.0,5,\"\",\"\",4300],[\"SQUID_INK\",1861.0,1,\"\",\"\",4900],[\"SQUID_INK\",1860.0,5,\"\",\"\",4900],[\"SQUID_INK\",1860.0,2,\"\",\"\",4900],[\"KELP\",2034.0,1,\"\",\"\",4900]],{\"KELP\":20,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9999,49],[\"RAINFOREST_RESIN\",10003,-51],[\"KELP\",2033,30],[\"KELP\",2034,-70],[\"SQUID_INK\",1858,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 18.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 18.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 29.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 29.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 44.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 44.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5400
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[5500,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":109},{\"2035\":-106}],\"RAINFOREST_RESIN\":[{\"9996\":3,\"9995\":103},{\"10004\":-3,\"10005\":-103}],\"SQUID_INK\":[{\"1859\":3,\"1858\":54,\"1857\":52},{\"1860\":-52,\"1861\":-25,\"1862\":-29}]},[[\"RAINFOREST_RESIN\",9999.0,1,\"SUBMISSION\",\"\",4700],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",4700]],[[\"RAINFOREST_RESIN\",10000.0,5,\"\",\"\",5300],[\"RAINFOREST_RESIN\",9998.0,7,\"\",\"\",5300],[\"SQUID_INK\",1859.0,5,\"\",\"\",5500],[\"SQUID_INK\",1859.0,3,\"\",\"\",5500],[\"KELP\",2033.0,5,\"\",\"\",5500],[\"KELP\",2032.0,3,\"\",\"\",5500]],{\"KELP\":20,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9997,49],[\"RAINFOREST_RESIN\",10003,-51],[\"KELP\",2033,30],[\"KELP\",2034,-70],[\"SQUID_INK\",1859,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 29.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 29.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 44.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 44.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5800
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[5900,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":112},{\"2035\":-109}],\"RAINFOREST_RESIN\":[{\"9998\":2,\"9996\":7,\"9995\":102},{\"10004\":-7,\"10005\":-102}],\"SQUID_INK\":[{\"1859\":29,\"1858\":60,\"1857\":23},{\"1860\":-23,\"1861\":-30,\"1862\":-56}]},[[\"RAINFOREST_RESIN\",9999.0,1,\"SUBMISSION\",\"\",4700],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",4700]],[[\"RAINFOREST_RESIN\",10000.0,5,\"\",\"\",5300],[\"RAINFOREST_RESIN\",9998.0,7,\"\",\"\",5300],[\"SQUID_INK\",1859.0,5,\"\",\"\",5500],[\"SQUID_INK\",1859.0,3,\"\",\"\",5500],[\"KELP\",2033.0,5,\"\",\"\",5500],[\"KELP\",2032.0,3,\"\",\"\",5500]],{\"KELP\":20,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9999,49],[\"RAINFOREST_RESIN\",10003,-51],[\"KELP\",2033,30],[\"KELP\",2034,-70],[\"SQUID_INK\",1859,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 5900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 15.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 15.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 27.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 27.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 43.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 43.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6200
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[6300,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":1,\"2032\":107},{\"2035\":-107}],\"RAINFOREST_RESIN\":[{\"9998\":3,\"9996\":2,\"9995\":105},{\"10002\":-10,\"10004\":-2,\"10005\":-105}],\"SQUID_INK\":[{\"1861\":1,\"1859\":107},{\"1862\":-107}]},[[\"RAINFOREST_RESIN\",9999.0,1,\"SUBMISSION\",\"\",4700],[\"KELP\",2033.0,1,\"SUBMISSION\",\"\",4700]],[[\"RAINFOREST_RESIN\",10000.0,5,\"\",\"\",5300],[\"RAINFOREST_RESIN\",9998.0,7,\"\",\"\",5300],[\"SQUID_INK\",1859.0,5,\"\",\"\",5500],[\"SQUID_INK\",1859.0,3,\"\",\"\",5500],[\"KELP\",2033.0,5,\"\",\"\",5500],[\"KELP\",2032.0,3,\"\",\"\",5500]],{\"KELP\":20,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",9999,49],[\"RAINFOREST_RESIN\",10001,-51],[\"KELP\",2034,-1],[\"KELP\",2033,30],[\"KELP\",2034,-69],[\"SQUID_INK\",1860,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 23.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 23.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 34.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 34.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 49.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 49.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6700
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[6800,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":5,\"2032\":129},{\"2034\":-7,\"2035\":-107,\"2036\":-30}],\"RAINFOREST_RESIN\":[{\"10000\":5,\"9996\":6,\"9995\":131},{\"10002\":-6,\"10004\":-6,\"10005\":-131}],\"SQUID_INK\":[{\"1860\":26,\"1859\":84,\"1858\":24},{\"1861\":-7,\"1862\":-79,\"1863\":-58}]},[[\"RAINFOREST_RESIN\",9999.0,1,\"SUBMISSION\",\"\",4700],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",6300]],[[\"RAINFOREST_RESIN\",10000.0,5,\"\",\"\",5300],[\"RAINFOREST_RESIN\",9998.0,7,\"\",\"\",5300],[\"SQUID_INK\",1860.0,1,\"\",\"\",6800],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":19,\"RAINFOREST_RESIN\":1},[{},{}]],[[\"RAINFOREST_RESIN\",10000,-1],[\"RAINFOREST_RESIN\",9997,49],[\"RAINFOREST_RESIN\",10001,-50],[\"KELP\",2033,31],[\"KELP\",2034,-69],[\"SQUID_INK\",1860,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1861.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 14.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 14.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 6900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 33.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 33.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 49.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 49.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7100
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[7200,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1861.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":127},{\"2034\":-3,\"2035\":-114}],\"RAINFOREST_RESIN\":[{\"9996\":5,\"9995\":109},{\"10002\":-9,\"10004\":-5,\"10005\":-109}],\"SQUID_INK\":[{\"1860\":67,\"1859\":60},{\"1862\":-26,\"1863\":-91}]},[[\"RAINFOREST_RESIN\",10000.0,1,\"\",\"SUBMISSION\",6800],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",6300]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1860.0,1,\"\",\"\",6800],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":19,\"RAINFOREST_RESIN\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9998,4],[\"RAINFOREST_RESIN\",9997,46],[\"RAINFOREST_RESIN\",10001,-50],[\"KELP\",2033,31],[\"KELP\",2034,-69],[\"SQUID_INK\",1860,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1861.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 13.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 13.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 38.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 38.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7500
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[7600,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1861.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":104},{\"2034\":-3,\"2035\":-104}],\"RAINFOREST_RESIN\":[{\"9996\":1,\"9995\":103},{\"10004\":-1,\"10005\":-103}],\"SQUID_INK\":[{\"1859\":49,\"1858\":55},{\"1860\":-3,\"1861\":-26,\"1862\":-78}]},[[\"RAINFOREST_RESIN\",9998.0,4,\"SUBMISSION\",\"\",7200],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",6300]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1860.0,1,\"\",\"\",6800],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":19,\"RAINFOREST_RESIN\":4},[{},{}]],[[\"RAINFOREST_RESIN\",10002,-2],[\"RAINFOREST_RESIN\",9997,46],[\"RAINFOREST_RESIN\",10003,-52],[\"KELP\",2033,31],[\"KELP\",2034,-69],[\"SQUID_INK\",1860,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 13.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 13.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 25.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 25.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 37.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 37.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 7900
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[8000,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1860.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":1,\"2033\":3,\"2032\":104},{\"2035\":-103}],\"RAINFOREST_RESIN\":[{\"10000\":3,\"9996\":5,\"9995\":98},{\"10002\":-12,\"10004\":-5,\"10005\":-98}],\"SQUID_INK\":[{\"1858\":52,\"1857\":25,\"1856\":30},{\"1859\":-29,\"1861\":-48,\"1862\":-25}]},[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",7600],[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",7600],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",6300]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1859.0,1,\"\",\"\",8000],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":19,\"RAINFOREST_RESIN\":2,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",10000,-2],[\"RAINFOREST_RESIN\",9997,48],[\"RAINFOREST_RESIN\",10001,-50],[\"KELP\",2034,-1],[\"KELP\",2033,31],[\"KELP\",2034,-68],[\"SQUID_INK\",1858,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1858.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 12.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 12.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 26.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 26.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 40.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 40.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8300
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[8400,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1858.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":109},{\"2035\":-109}],\"RAINFOREST_RESIN\":[{\"9998\":14,\"9996\":2,\"9995\":107},{\"10004\":-2,\"10005\":-107}],\"SQUID_INK\":[{\"1858\":25,\"1857\":84},{\"1860\":-84,\"1861\":-25}]},[[\"RAINFOREST_RESIN\",10000.0,2,\"\",\"SUBMISSION\",8000],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8000]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1859.0,1,\"\",\"\",8000],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":18,\"RAINFOREST_RESIN\":0,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",9999,50],[\"RAINFOREST_RESIN\",10003,-50],[\"KELP\",2033,32],[\"KELP\",2034,-68],[\"SQUID_INK\",1858,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8400
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 17.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 17.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 32.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 32.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8600
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[8700,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":1,\"2032\":96},{\"2035\":-80}],\"RAINFOREST_RESIN\":[{\"9996\":6,\"9995\":74},{\"10004\":-6,\"10005\":-74}],\"SQUID_INK\":[{\"1858\":36,\"1857\":37,\"1856\":24},{\"1859\":-2,\"1860\":-51,\"1861\":-27}]},[[\"RAINFOREST_RESIN\",10000.0,2,\"\",\"SUBMISSION\",8000],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8000]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1859.0,1,\"\",\"\",8000],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":18,\"RAINFOREST_RESIN\":0,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",9997,50],[\"RAINFOREST_RESIN\",10003,-50],[\"KELP\",2034,-1],[\"KELP\",2033,32],[\"KELP\",2034,-67],[\"SQUID_INK\",1858,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 15.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 15.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 29.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 29.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 8900
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 41.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 41.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9000
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[9100,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1859.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":5,\"2032\":104},{\"2035\":-1,\"2036\":-101}],\"RAINFOREST_RESIN\":[{\"9996\":1,\"9995\":101},{\"10004\":-1,\"10005\":-101}],\"SQUID_INK\":[{\"1857\":31,\"1856\":51,\"1855\":27},{\"1858\":-22,\"1859\":-49,\"1860\":-31}]},[[\"RAINFOREST_RESIN\",10000.0,2,\"\",\"SUBMISSION\",8000],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8700]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1859.0,1,\"\",\"\",8000],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":17,\"RAINFOREST_RESIN\":0,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",9998,1],[\"RAINFOREST_RESIN\",9997,49],[\"RAINFOREST_RESIN\",10003,-50],[\"KELP\",2033,33],[\"KELP\",2035,-67],[\"SQUID_INK\",1857,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9100
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 15.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 15.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9200
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 30.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 30.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9300
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 46.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 46.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9400
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[9500,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":6,\"2032\":113},{\"2036\":-113}],\"RAINFOREST_RESIN\":[{\"9998\":1,\"9996\":7,\"9995\":106},{\"10004\":-7,\"10005\":-106}],\"SQUID_INK\":[{\"1855\":63,\"1854\":30,\"1853\":26},{\"1856\":-26,\"1857\":-30,\"1858\":-57}]},[[\"RAINFOREST_RESIN\",9998.0,1,\"SUBMISSION\",\"\",9100],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8700]],[[\"RAINFOREST_RESIN\",9998.0,1,\"\",\"\",7200],[\"SQUID_INK\",1859.0,1,\"\",\"\",8000],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":17,\"RAINFOREST_RESIN\":1,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",10002,-13],[\"RAINFOREST_RESIN\",9999,49],[\"RAINFOREST_RESIN\",10003,-38],[\"KELP\",2033,33],[\"KELP\",2035,-67],[\"SQUID_INK\",1855,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1855.5}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9500
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 10.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 10.5",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9600
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 26.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 26.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9700
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 39.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 39.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9800
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 39.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 39.0",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 9900
 }
 {
-  "sandboxLog": "",
-  "lambdaLog": "[[10000,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1855.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2032\":129},{\"2034\":-10,\"2036\":-129}],\"RAINFOREST_RESIN\":[{\"9998\":1,\"9996\":4,\"9995\":125},{\"10000\":-5,\"10002\":-5,\"10004\":-4,\"10005\":-125}],\"SQUID_INK\":[{\"1856\":27,\"1855\":78},{\"1858\":-64,\"1859\":-27,\"1861\":-24}]},[[\"RAINFOREST_RESIN\",10002.0,11,\"\",\"SUBMISSION\",9500],[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",9500],[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"SUBMISSION\",9500],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8700]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",9700],[\"SQUID_INK\",1856.0,5,\"\",\"\",9900],[\"SQUID_INK\",1857.0,5,\"\",\"\",9900],[\"SQUID_INK\",1858.0,14,\"\",\"\",9900],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":17,\"RAINFOREST_RESIN\":-12,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",10000,5],[\"RAINFOREST_RESIN\",9999,57],[\"RAINFOREST_RESIN\",10001,-38],[\"KELP\",2033,33],[\"KELP\",2035,-67],[\"SQUID_INK\",1856,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.0}\",\"\"]",
+  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.0",
+  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.0",
   "timestamp": 10000
 }
 {
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 10.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 10.5",
-  "timestamp": 10100
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 20.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 20.5",
-  "timestamp": 10200
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 35.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 35.5",
-  "timestamp": 10300
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[10400,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":96},{\"2035\":-5,\"2036\":-91}],\"RAINFOREST_RESIN\":[{\"9996\":2,\"9995\":89},{\"10004\":-2,\"10005\":-89}],\"SQUID_INK\":[{\"1858\":30,\"1857\":41,\"1856\":25},{\"1859\":-30,\"1860\":-41,\"1861\":-25}]},[[\"RAINFOREST_RESIN\",10000.0,5,\"SUBMISSION\",\"\",10000],[\"SQUID_INK\",1860.0,3,\"SUBMISSION\",\"\",7600],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8700]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",9700],[\"SQUID_INK\",1856.0,5,\"\",\"\",9900],[\"SQUID_INK\",1857.0,5,\"\",\"\",9900],[\"SQUID_INK\",1858.0,14,\"\",\"\",9900],[\"KELP\",2032.0,1,\"\",\"\",6800]],{\"KELP\":17,\"RAINFOREST_RESIN\":-7,\"SQUID_INK\":3},[{},{}]],[[\"RAINFOREST_RESIN\",10002,-4],[\"RAINFOREST_RESIN\",9997,57],[\"RAINFOREST_RESIN\",10003,-39],[\"KELP\",2034,33],[\"KELP\",2035,-67],[\"SQUID_INK\",1858,-3],[\"SQUID_INK\",1858,47]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1858.5}\",\"\"]",
-  "timestamp": 10400
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 17.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 17.0",
-  "timestamp": 10500
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 28.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 28.5",
-  "timestamp": 10600
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 44.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 44.0",
-  "timestamp": 10700
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[10800,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1858.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2035\":7,\"2033\":110},{\"2036\":-93}],\"RAINFOREST_RESIN\":[{\"9995\":93},{\"10002\":-1,\"10005\":-93}],\"SQUID_INK\":[{\"1858\":3,\"1857\":37,\"1856\":77},{\"1859\":-69,\"1860\":-24}]},[[\"RAINFOREST_RESIN\",10002.0,4,\"\",\"SUBMISSION\",10400],[\"SQUID_INK\",1858.0,3,\"\",\"SUBMISSION\",10400],[\"KELP\",2034.0,1,\"\",\"SUBMISSION\",8700]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",9700],[\"SQUID_INK\",1857.0,4,\"\",\"\",10600],[\"KELP\",2033.0,4,\"\",\"\",10600]],{\"KELP\":17,\"RAINFOREST_RESIN\":-11,\"SQUID_INK\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9998,3],[\"RAINFOREST_RESIN\",9996,58],[\"RAINFOREST_RESIN\",10001,-39],[\"KELP\",2034,-7],[\"KELP\",2034,33],[\"KELP\",2035,-60],[\"SQUID_INK\",1858,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1858.0}\",\"\"]",
-  "timestamp": 10800
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "timestamp": 10900
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 11.5",
-  "timestamp": 11000
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 26.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 26.5",
-  "timestamp": 11100
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 41.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 41.5",
-  "timestamp": 11200
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[11300,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1858.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":54,\"2032\":85},{\"2034\":-11,\"2035\":-2,\"2036\":-138}],\"RAINFOREST_RESIN\":[{\"9996\":7,\"9995\":131},{\"10000\":-6,\"10002\":-3,\"10004\":-7,\"10005\":-131}],\"SQUID_INK\":[{\"1864\":30,\"1863\":30,\"1862\":27,\"1860\":1,\"1859\":22},{\"1865\":-34,\"1866\":-30,\"1867\":-58}]},[[\"RAINFOREST_RESIN\",9998.0,3,\"SUBMISSION\",\"\",10800],[\"SQUID_INK\",1858.0,3,\"\",\"SUBMISSION\",10400],[\"KELP\",2035.0,7,\"\",\"SUBMISSION\",10800]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",9700],[\"SQUID_INK\",1863.0,1,\"\",\"\",11100],[\"SQUID_INK\",1863.0,1,\"\",\"\",11100],[\"KELP\",2033.0,4,\"\",\"\",10600]],{\"KELP\":10,\"RAINFOREST_RESIN\":-8,\"SQUID_INK\":0},[{},{}]],[[\"RAINFOREST_RESIN\",10000,6],[\"RAINFOREST_RESIN\",9997,52],[\"RAINFOREST_RESIN\",10001,-42],[\"KELP\",2034,40],[\"KELP\",2035,-60],[\"SQUID_INK\",1863,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1864.5}\",\"\"]",
-  "timestamp": 11300
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 15.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 15.0",
-  "timestamp": 11400
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 27.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 27.0",
-  "timestamp": 11500
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 39.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 39.0",
-  "timestamp": 11600
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[11700,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1864.5}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":4,\"2033\":33,\"2032\":72},{\"2035\":-12,\"2036\":-105}],\"RAINFOREST_RESIN\":[{\"10000\":4,\"9996\":5,\"9995\":100},{\"10004\":-5,\"10005\":-100}],\"SQUID_INK\":[{\"1858\":53,\"1857\":22,\"1856\":29},{\"1860\":-58,\"1861\":-54}]},[[\"RAINFOREST_RESIN\",10000.0,6,\"SUBMISSION\",\"\",11300],[\"SQUID_INK\",1858.0,3,\"\",\"SUBMISSION\",10400],[\"KELP\",2034.0,6,\"SUBMISSION\",\"\",11300],[\"KELP\",2034.0,5,\"SUBMISSION\",\"\",11300]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",9700],[\"SQUID_INK\",1858.0,5,\"\",\"\",11500],[\"KELP\",2033.0,4,\"\",\"\",10600]],{\"KELP\":21,\"RAINFOREST_RESIN\":-2,\"SQUID_INK\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9997,52],[\"RAINFOREST_RESIN\",10003,-48],[\"KELP\",2034,-4],[\"KELP\",2034,29],[\"KELP\",2035,-67],[\"SQUID_INK\",1859,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5, 1859.0], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1859.0}\",\"\"]",
-  "timestamp": 11700
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 11.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 11.0",
-  "timestamp": 11800
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 24.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 24.5",
-  "timestamp": 11900
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 38.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 38.5",
-  "timestamp": 12000
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 38.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 38.5",
-  "timestamp": 12100
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[12200,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5, 2034.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5, 1859.0], \\\"starfruit_last_price\\\": 2034.5, \\\"ink_last_price\\\": 1859.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2034\":4,\"2033\":2,\"2032\":121},{\"2036\":-123}],\"RAINFOREST_RESIN\":[{\"9998\":8,\"9996\":7,\"9995\":116},{\"10004\":-7,\"10005\":-116}],\"SQUID_INK\":[{\"1857\":1,\"1856\":23,\"1855\":53,\"1853\":25},{\"1858\":-28,\"1859\":-48,\"1860\":-22}]},[[\"RAINFOREST_RESIN\",10000.0,6,\"SUBMISSION\",\"\",11300],[\"SQUID_INK\",1858.0,3,\"\",\"SUBMISSION\",10400],[\"KELP\",2034.0,4,\"\",\"SUBMISSION\",11700]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",12100],[\"RAINFOREST_RESIN\",10000.0,4,\"\",\"\",12100],[\"RAINFOREST_RESIN\",9998.0,3,\"\",\"\",12100],[\"SQUID_INK\",1857.0,21,\"\",\"\",12100],[\"SQUID_INK\",1857.0,1,\"\",\"\",12100],[\"SQUID_INK\",1857.0,1,\"\",\"\",12100],[\"SQUID_INK\",1857.0,0,\"\",\"\",12100],[\"SQUID_INK\",1857.0,0,\"\",\"\",12100],[\"SQUID_INK\",1857.0,2,\"\",\"\",12100],[\"KELP\",2033.0,4,\"\",\"\",11800]],{\"KELP\":17,\"RAINFOREST_RESIN\":-2,\"SQUID_INK\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9999,52],[\"RAINFOREST_RESIN\",10003,-48],[\"KELP\",2034,-4],[\"KELP\",2033,33],[\"KELP\",2035,-63],[\"SQUID_INK\",1857,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5, 2034.5, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5, 1859.0, 1857.0], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.0}\",\"\"]",
-  "timestamp": 12200
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 14.5",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 14.5",
-  "timestamp": 12300
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 29.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 29.0",
-  "timestamp": 12400
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 42.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 42.0",
-  "timestamp": 12500
-}
-{
-  "sandboxLog": "",
-  "lambdaLog": "[[12600,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5, 2034.5, 2034.0], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5, 1859.0, 1857.0], \\\"starfruit_last_price\\\": 2034.0, \\\"ink_last_price\\\": 1857.0}\",[[\"RAINFOREST_RESIN\",\"RAINFOREST_RESIN\",1],[\"SQUID_INK\",\"SQUID_INK\",1],[\"KELP\",\"KELP\",1]],{\"KELP\":[{\"2033\":7,\"2032\":107},{\"2035\":-26,\"2036\":-77}],\"RAINFOREST_RESIN\":[{\"10000\":7,\"9998\":5,\"9996\":2,\"9995\":101},{\"10002\":-2,\"10004\":-2,\"10005\":-101}],\"SQUID_INK\":[{\"1858\":29,\"1857\":52,\"1856\":29},{\"1859\":-21,\"1860\":-52,\"1861\":-26}]},[[\"RAINFOREST_RESIN\",10000.0,6,\"SUBMISSION\",\"\",11300],[\"SQUID_INK\",1858.0,3,\"\",\"SUBMISSION\",10400],[\"KELP\",2034.0,4,\"\",\"SUBMISSION\",12200]],[[\"RAINFOREST_RESIN\",10002.0,1,\"\",\"\",12400],[\"SQUID_INK\",1859.0,4,\"\",\"\",12600],[\"KELP\",2033.0,4,\"\",\"\",11800]],{\"KELP\":13,\"RAINFOREST_RESIN\":-2,\"SQUID_INK\":0},[{},{}]],[[\"RAINFOREST_RESIN\",9999,52],[\"RAINFOREST_RESIN\",10001,-48],[\"KELP\",2033,37],[\"KELP\",2034,-63],[\"SQUID_INK\",1858,50]],0,\"{\\\"starfruit_price_history\\\": [2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2033.5, 2034.0, 2034.0, 2034.0, 2034.5, 2034.5, 2034.5, 2034.5, 2034.0, 2033.5], \\\"ink_price_history\\\": [1835.0, 1841.0, 1843.5, 1847.0, 1849.0, 1850.0, 1850.5, 1854.0, 1855.5, 1860.0, 1859.0, 1859.5, 1860.5, 1861.0, 1861.0, 1860.0, 1858.5, 1859.0, 1859.0, 1857.5, 1855.5, 1857.0, 1858.5, 1858.0, 1864.5, 1859.0, 1857.0, 1858.5], \\\"starfruit_last_price\\\": 2033.5, \\\"ink_last_price\\\": 1858.5}\",\"\"]",
-  "timestamp": 12600
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 14.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 14.0",
-  "timestamp": 12700
-}
-{
-  "sandboxLog": "Field quantity in Order must be an integer. Current value is 17.0",
-  "lambdaLog": "Field quantity in Order must be an integer. Current value is 17.0",
-  "timestamp": 12800
-}
-{
-  "sandboxLog": "Lambda errors have reached maximum value for submission 336fb182-8d61-47a9-8ef1-e8aab7864869",
+  "sandboxLog": "Lambda errors have reached maximum value for submission 4e6597f4-5ce3-4a99-aa0d-eaa239252c36",
   "lambdaLog": null,
-  "timestamp": 92085
+  "timestamp": 93514
 }
 
 
 
 Activities log:
 day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
-1;400;SQUID_INK;1835;3;1834;49;1833;28;1836;27;1837;26;1838;23;1835.5;0.0
-1;400;RAINFOREST_RESIN;10002;1;10000;2;9998;21;10004;4;10005;117;;;10003.0;0.0
-1;400;KELP;2034;2;2033;2;2032;121;2035;121;;;;;2034.5;0.0
-1;1300;SQUID_INK;1840;25;1839;13;1834;51;1842;23;1843;68;1844;31;1841.0;0.0
-1;1300;KELP;2032;155;2031;69;;;2034;3;2035;224;;;2033.0;1.648193359375
-1;1300;RAINFOREST_RESIN;9996;9;9995;215;;;9998;2;10000;3;10002;6;9997.0;2.0
-1;1800;RAINFOREST_RESIN;9996;3;9995;122;;;10000;6;10002;10;10004;3;9998.0;6.0
-1;1800;KELP;2032;82;2031;43;;;2033;1;2034;8;2035;125;2032.5;0.0
-1;1800;SQUID_INK;1843;24;1842;16;1841;74;1844;49;1845;44;1847;30;1843.5;0.0
-1;2200;RAINFOREST_RESIN;9996;7;9995;97;;;9998;4;10004;7;10005;97;9997.0;6.0
-1;2200;KELP;2032;81;2031;26;;;2034;5;2035;104;;;2033.0;0.236083984375
-1;2200;SQUID_INK;1846;47;1845;28;1844;32;1847;7;1848;32;1849;70;1846.5;0.0
-1;2700;KELP;2032;19;2031;115;;;2035;122;;;;;2033.5;0.2080078125
-1;2700;SQUID_INK;1849;8;1848;37;1847;24;1850;23;1851;47;1852;30;1849.5;0.0
-1;2700;RAINFOREST_RESIN;10002;1;9998;10;9996;9;10004;9;10005;113;;;10003.0;14.0
-1;3100;KELP;2034;1;2032;34;2031;78;2035;107;;;;;2034.5;0.3079833984375
-1;3100;SQUID_INK;1850;1;1849;27;1848;85;1851;80;1852;27;;;1850.5;0.0
-1;3100;RAINFOREST_RESIN;9998;5;9996;4;9995;103;10004;4;10005;103;;;10001.0;16.0
-1;3600;KELP;2032;131;;;;;2033;5;2035;131;;;2032.5;1.0
-1;3600;SQUID_INK;1850;53;1849;22;1848;51;1851;24;1852;54;1853;53;1850.5;0.0
-1;3600;RAINFOREST_RESIN;9998;10;9996;3;9995;128;10002;15;10004;3;10005;128;10000.0;16.0
-1;4100;RAINFOREST_RESIN;10000;5;9998;3;9996;5;10002;3;10004;5;10005;125;10001.0;16.0
-1;4100;SQUID_INK;1854;2;1853;46;1852;27;1855;23;1856;24;1857;55;1854.5;0.0
-1;4100;KELP;2033;5;2032;130;;;2034;7;2035;130;;;2033.5;11.9140625
-1;4700;KELP;2032;154;;;;;2034;18;2035;156;;;2033.0;12.3125
-1;4700;RAINFOREST_RESIN;9998;5;9996;1;9995;155;10002;3;10004;1;10005;155;10000.0;16.0
-1;4700;SQUID_INK;1855;26;1854;45;1853;54;1856;40;1857;55;1858;29;1855.5;0.0
-1;5100;KELP;2032;116;;;;;2034;5;2035;104;;;2033.0;13.30078125
-1;5100;RAINFOREST_RESIN;9998;9;9996;4;9995;100;10004;4;10005;100;;;10001.0;17.0
-1;5100;SQUID_INK;1860;6;1859;79;1857;24;1861;22;1862;26;1863;54;1860.5;0.0
-1;5500;KELP;2032;109;;;;;2035;106;;;;;2033.5;12.48046875
-1;5500;RAINFOREST_RESIN;9996;3;9995;103;;;10004;3;10005;103;;;10000.0;17.0
-1;5500;SQUID_INK;1859;3;1858;54;1857;52;1860;52;1861;25;1862;29;1859.5;0.0
-1;5900;KELP;2032;112;;;;;2035;109;;;;;2033.5;14.296875
-1;5900;RAINFOREST_RESIN;9998;2;9996;7;9995;102;10004;7;10005;102;;;10001.0;17.0
-1;5900;SQUID_INK;1859;29;1858;60;1857;23;1860;23;1861;30;1862;56;1859.5;0.0
-1;6300;KELP;2034;1;2032;107;;;2035;107;;;;;2034.5;14.2890625
-1;6300;RAINFOREST_RESIN;9998;3;9996;2;9995;105;10002;10;10004;2;10005;105;10000.0;17.0
-1;6300;SQUID_INK;1861;1;1859;107;;;1862;107;;;;;1861.5;0.0
-1;6800;SQUID_INK;1860;26;1859;84;1858;24;1861;7;1862;79;1863;58;1860.5;0.0
-1;6800;KELP;2033;5;2032;129;;;2034;7;2035;107;2036;30;2033.5;15.609375
-1;6800;RAINFOREST_RESIN;10000;5;9996;6;9995;131;10002;6;10004;6;10005;131;10001.0;17.0
-1;7200;SQUID_INK;1860;67;1859;60;;;1862;26;1863;91;;;1861.0;0.0
-1;7200;KELP;2032;127;;;;;2034;3;2035;114;;;2033.0;15.7109375
-1;7200;RAINFOREST_RESIN;9996;5;9995;109;;;9998;4;10002;9;10004;5;9997.0;17.0
-1;7600;SQUID_INK;1859;49;1858;55;;;1860;3;1861;26;1862;78;1859.5;0.0
-1;7600;KELP;2032;104;;;;;2034;3;2035;104;;;2033.0;15.5078125
-1;7600;RAINFOREST_RESIN;10002;2;9996;1;9995;103;10004;1;10005;103;;;10003.0;25.0
-1;8000;SQUID_INK;1858;52;1857;25;1856;30;1859;29;1861;48;1862;25;1858.5;-8.3056640625
-1;8000;KELP;2034;1;2033;3;2032;104;2035;103;;;;;2034.5;15.94921875
-1;8000;RAINFOREST_RESIN;10000;3;9996;5;9995;98;10002;12;10004;5;10005;98;10001.0;29.0
-1;8400;SQUID_INK;1858;25;1857;84;;;1860;84;1861;25;;;1859.0;-5.6171875
-1;8400;RAINFOREST_RESIN;9998;14;9996;2;9995;107;10004;2;10005;107;;;10001.0;29.0
-1;8400;KELP;2032;109;;;;;2035;109;;;;;2033.5;16.54296875
-1;8700;KELP;2034;1;2032;96;;;2035;80;;;;;2034.5;16.71875
-1;8700;SQUID_INK;1858;36;1857;37;1856;24;1859;2;1860;51;1861;27;1858.5;-6.08447265625
-1;8700;RAINFOREST_RESIN;9996;6;9995;74;;;10004;6;10005;74;;;10000.0;29.0
-1;9100;KELP;2033;5;2032;104;;;2035;1;2036;101;;;2034.0;19.16796875
-1;9100;SQUID_INK;1857;31;1856;51;1855;27;1858;22;1859;49;1860;31;1857.5;-10.5380859375
-1;9100;RAINFOREST_RESIN;9996;1;9995;101;;;9998;1;10004;1;10005;101;9997.0;29.0
-1;9500;KELP;2033;6;2032;113;;;2036;113;;;;;2034.5;20.875
-1;9500;SQUID_INK;1855;63;1854;30;1853;26;1856;26;1857;30;1858;57;1855.5;-16.07861328125
-1;9500;RAINFOREST_RESIN;10002;13;9998;1;9996;7;10004;7;10005;106;;;10003.0;31.0
-1;10000;RAINFOREST_RESIN;9998;1;9996;4;9995;125;10000;5;10002;5;10004;4;9999.0;57.0
-1;10000;KELP;2032;129;;;;;2034;10;2036;129;;;2033.0;24.51171875
-1;10000;SQUID_INK;1856;27;1855;78;;;1858;64;1859;27;1861;24;1857.0;-6.75732421875
-1;10400;RAINFOREST_RESIN;10002;4;9996;2;9995;89;10004;2;10005;89;;;10003.0;57.0
-1;10400;KELP;2033;96;;;;;2035;5;2036;91;;;2034.0;26.85546875
-1;10400;SQUID_INK;1858;30;1857;41;1856;25;1859;30;1860;41;1861;25;1858.5;-6.38720703125
-1;10800;RAINFOREST_RESIN;9995;93;;;;;9998;3;10002;1;10005;93;9996.5;65.0
-1;10800;KELP;2035;7;2033;110;;;2036;93;;;;;2035.5;26.72265625
-1;10800;SQUID_INK;1858;3;1857;37;1856;77;1859;69;1860;24;;;1858.5;-6.0
-1;11300;KELP;2033;54;2032;85;;;2034;11;2035;2;2036;138;2033.5;29.349609375
-1;11300;SQUID_INK;1864;30;1863;30;1862;27;1865;34;1866;30;1867;58;1864.5;-6.0
-1;11300;RAINFOREST_RESIN;9996;7;9995;131;;;10000;6;10002;3;10004;7;9998.0;71.0
-1;11700;KELP;2034;4;2033;33;2032;72;2035;12;2036;105;;;2034.5;31.859375
-1;11700;SQUID_INK;1858;53;1857;22;1856;29;1860;58;1861;54;;;1859.0;-6.0
-1;11700;RAINFOREST_RESIN;10000;4;9996;5;9995;100;10004;5;10005;100;;;10002.0;71.0
-1;12200;KELP;2034;4;2033;2;2032;121;2036;123;;;;;2035.0;28.390625
-1;12200;SQUID_INK;1857;1;1856;23;1855;53;1858;28;1859;48;1860;22;1857.5;-6.0
-1;12200;RAINFOREST_RESIN;9998;8;9996;7;9995;116;10004;7;10005;116;;;10001.0;71.0
-1;12600;KELP;2033;7;2032;107;;;2035;26;2036;77;;;2034.0;27.28515625
-1;12600;SQUID_INK;1858;29;1857;52;1856;29;1859;21;1860;52;1861;26;1858.5;-6.0
-1;12600;RAINFOREST_RESIN;10000;7;9998;5;9996;2;10002;2;10004;2;10005;101;10001.0;71.0
 
 
 
