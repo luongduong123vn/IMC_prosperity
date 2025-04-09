@@ -164,13 +164,14 @@ PARAMS = {
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
-        "reversion_beta": 0.1,
+        "reversion_beta": 0,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
         'ret_vol': 0.001,
-        "manage_position": True,
-        "soft_position_limit": 45,
+        "drift": 0.00001,
+        "manage_position": False,
+        "soft_position_limit": 30,
         "spread_adjustment": 1
     },
 }
@@ -457,13 +458,14 @@ class Trader:
                     last_10_price = last_price
                 last_returns = (mmmid_price - last_price) / last_price
                 last_10_returns = (mmmid_price - last_10_price) / last_10_price
-                pred_returns = ret_vol * z
+                pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
-                fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
+                #fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
                 #fair = mmmid_price
+                fair = mmmid_price * (1 + pred_returns)
             else:
                 fair = mmmid_price
             traderObject["ink_last_price"] = mmmid_price
@@ -789,16 +791,16 @@ class Trader:
         if manage_position:
             if position > soft_position_limit:
                 bid = best_bid_below_fair - spread_factor * edge if best_bid_below_fair != None else fair_value - spread_factor*edge
-                # if ask >= fair_value and ask <= fair_value + 1:
-                #     ask = fair_value
-                # elif ask > fair_value + 1:
-                #     ask = ask - 1
+                if ask >= fair_value and ask <= fair_value + 1:
+                    ask = fair_value
+                elif ask > fair_value + 1:
+                    ask = ask - 1
             elif position < -1 * soft_position_limit:
                 ask = best_ask_above_fair + spread_factor * edge if best_ask_above_fair != None else fair_value + spread_factor*edge
-                # if bid <= fair_value and bid >= fair_value - 1:
-                #     bid = fair_value
-                # elif bid < fair_value - 1:
-                #     bid = bid + 1
+                if bid <= fair_value and bid >= fair_value - 1:
+                    bid = fair_value
+                elif bid < fair_value - 1:
+                    bid = bid + 1
 
         buy_order_volume, sell_order_volume = self.market_make(
             product,
