@@ -195,36 +195,6 @@ def calculate_time_series_slope_n(values: Union[List[float], np.ndarray, pd.Seri
     # Return slope, handling division by zero
     return numerator / denominator if denominator != 0 else 0
 
-def predict_next_value(values: Union[List[float], np.ndarray, pd.Series]) -> float:
-    """
-    Predict the next value in a time series using linear regression.
-    
-    Args:
-        values: List of values (y-values)
-        
-    Returns:
-        float: Predicted next value
-    """
-    # Convert to numpy array if it's a list or pandas Series
-    if isinstance(values, (list, pd.Series)):
-        values = np.array(values)
-    
-    n = len(values)
-    if n < 2:
-        return values[-1] if n == 1 else 0
-    
-    # Calculate slope
-    slope = calculate_time_series_slope_n(values)
-    
-    # Calculate the mean of the last few values (using last 3 values for stability)
-    recent_mean = np.mean(values[-3:]) if n >= 3 else np.mean(values)
-    
-    # Predict next value using the slope and recent mean
-    # The next timestamp would be n (since current timestamps are 0 to n-1)
-    next_value = recent_mean + slope * (n - (n-1)/2)
-    
-    return next_value
-
 # Read the data
 df = pd.read_csv('./round_1_data/prices_round_1_day_-2.csv')
 
@@ -288,15 +258,4 @@ plot_regression(kelp_high_vol['spread'].values, "KELP Spread Regression")
 plt.savefig('kelp_regression.png')
 print("\n")
 plot_regression(squid_high_vol['spread'].values, "SQUID_INK Spread Regression")
-plt.savefig('squid_regression.png')
-
-# Add to the existing analysis code:
-print("\nNext Value Predictions:")
-kelp_last_values = kelp['spread'].tail(10).values
-squid_last_values = squid['spread'].tail(10).values
-
-kelp_prediction = predict_next_value(kelp_last_values)
-squid_prediction = predict_next_value(squid_last_values)
-
-print(f"KELP next spread prediction: {kelp_prediction:.2f}")
-print(f"SQUID_INK next spread prediction: {squid_prediction:.2f}") 
+plt.savefig('squid_regression.png') 

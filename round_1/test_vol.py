@@ -265,7 +265,7 @@ class Trader:
         return buy_order_volume, sell_order_volume
 
     
-    def calculate_time_series_slope_n(values: Union[List[float], np.ndarray, pd.Series]) -> float:
+    def calculate_time_series_slope_n(self, values: Union[List[float], np.ndarray, pd.Series]) -> float:
         """
         Calculate the slope of the line of best fit through a time series of values.
         """
@@ -464,8 +464,7 @@ class Trader:
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
-                #fair = mmmid_price
-                fair = mmmid_price * (1 + pred_returns)
+                fair = mmmid_price
             else:
                 fair = mmmid_price
             traderObject["ink_last_price"] = mmmid_price
@@ -760,15 +759,16 @@ class Trader:
             returns = np.diff(prices) / prices[:-1]
             # Calculate volatility
             realized_vol = float(np.std(returns))
-            if realized_vol / self.params[Product.SQUID_INK]["ret_vol"] >= 3:
-                #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
-                edge = 0
-            elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
-                #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
-                edge = -1
-            else:
-                edge = 1
-            #edge = default_edge
+            # if realized_vol / self.params[Product.SQUID_INK]["ret_vol"] >= 3:
+            #     #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+            #     edge = 0
+            # elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
+            #     #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
+            #     edge = -1
+            # else:
+            #     edge = 1
+
+            edge = default_edge
         else:
             # Use default volatility from params
             edge = default_edge

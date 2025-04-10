@@ -169,10 +169,6 @@ PARAMS = {
         "join_edge": 0,
         "default_edge": 1,
         'ret_vol': 0.001,
-        "drift": 0,
-        "manage_position": True,
-        "soft_position_limit": 40,
-        "spread_adjustment": 1
     },
 }
 
@@ -432,12 +428,15 @@ class Trader:
                 ret_vol = float(np.std(returns))
                 # Calculate return trend strength
                 return_trend = self.calculate_time_series_slope_n(returns)
+                n = len(returns)
+                recent_mean = np.mean(returns) if n >= 3 else np.mean(returns)
+                next_return = recent_mean + return_trend * (n - (n-1)/2)
                 # Adjust prediction based on volatility-return trend correlation
-                trend_adjustment = 0.5119 * (ret_vol / self.params[Product.SQUID_INK]["ret_vol"]) * return_trend
             else:
                 # Use default values
                 ret_vol = self.params[Product.SQUID_INK]["ret_vol"]
                 trend_adjustment = 0
+                next_return = 0
 
             traderObject['ink_price_history'].append(mmmid_price)
             # Keep only the last 100 prices
@@ -445,7 +444,17 @@ class Trader:
             
             if traderObject.get("ink_last_price", None) != None:
                 last_price = traderObject["ink_last_price"]
-                pred_returns = self.params[Product.SQUID_INK]["drift"] + trend_adjustment
+                if len(traderObject["ink_price_history"]) >= 10:
+                    last_10_price = traderObject["ink_price_history"][-10]
+                else:
+                    last_10_price = last_price
+                last_returns = (mmmid_price - last_price) / last_price
+                # fair = mmmid_price * (1 + next_return) if next_return != 0 else mmmid_price
+                if ret_vol > 0.0015:
+                    trend_adjustment = np.mean(returns[-5:])
+                else:
+                    trend_adjustment = 0
+                #fair = mmmid_price * (1+trend_adjustment)
                 fair = mmmid_price
             else:
                 fair = mmmid_price
@@ -703,97 +712,123 @@ class Trader:
         soft_position_limit: int = 0,
     ):
         orders: List[Order] = []
-        asks_above_fair = [
-            price
-            for price in order_depth.sell_orders.keys()
-            if price > fair_value + disregard_edge
-        ]
-        asks_volume_above_fair = [
-            volume
-            for price, volume in order_depth.sell_orders.items()
-            if price > fair_value + disregard_edge
-        ]
-        bids_below_fair = [
-            price
-            for price in order_depth.buy_orders.keys()
-            if price < fair_value - disregard_edge
-        ]
-        bids_volume_below_fair = [
-            volume
-            for price, volume in order_depth.buy_orders.items()
-            if price < fair_value - disregard_edge
-        ]
-
-        best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
-        best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
-        best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
-        best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
+        
+        # Get current market state
+        best_ask = min(order_depth.sell_orders.keys()) if order_depth.sell_orders else fair_value + default_edge
+        best_bid = max(order_depth.buy_orders.keys()) if order_depth.buy_orders else fair_value - default_edge
         ask_volume = sum(order_depth.sell_orders.values())
         bid_volume = sum(order_depth.buy_orders.values())
-
-        # Calculate dynamic edges based on volatility and return trend
+        total_volume = abs(ask_volume) + abs(bid_volume)
+        current_spread = best_ask - best_bid
+        
+        # Initialize parameters
+        position_limit = self.LIMIT[product]
+        
+        # Parameters for dynamic quote adjustment
+        alpha = 0.1  # Volatility sensitivity
+        beta = 0.1   # Liquidity sensitivity
+        gamma = 0.1  # Inventory sensitivity
+        delta = 0.1  # Asymmetry parameter
+        max_improvement = 2   # Maximum price improvement ticks
+        min_improvement = -3  # Minimum price improvement ticks (negative means wider quotes)
+        
+        # Default adjustment factors
+        volatility_factor = 1.0
+        liquidity_factor = 1.0
+        inventory_factor = 1.0
+        
+        # Calculate factors if we have enough data
         if len(traderObject.get('ink_price_history', [])) >= 10:
             prices = traderObject['ink_price_history'][-10:]
             returns = np.diff(prices) / prices[:-1]
-            realized_vol = float(np.std(returns))
-            return_trend = self.calculate_time_series_slope_n(returns)
             
-            # Adjust edges based on volatility and return trend correlation
-            vol_ratio = realized_vol / self.params[Product.SQUID_INK]["ret_vol"]
-            trend_factor = 0.5119 * return_trend  # Using the correlation coefficient
+            # 1. Volatility Factor
+            current_volatility = float(np.std(returns))
+            baseline_volatility = self.params[Product.SQUID_INK]["ret_vol"]
+            volatility_factor = 1 + alpha * (current_volatility / baseline_volatility)
             
-            # Base edge calculation
-            if vol_ratio >= 3:
-                base_edge = -max(round(vol_ratio * default_edge * 0.7), default_edge)
-            elif vol_ratio <= 0.4:
-                base_edge = min(round(vol_ratio * default_edge * 1.5), default_edge)
+            # 2. Liquidity Factor
+            if 'normal_volume' in traderObject:
+                normal_volume = traderObject['normal_volume']
             else:
-                base_edge = default_edge
+                normal_volume = 100  # Default value if not available
+                
+            liquidity_factor = 1 + beta * (1 - (total_volume / normal_volume))
+            liquidity_factor = max(1.0, liquidity_factor)  # Ensure factor is at least 1
             
-            # Separate bid and ask edges based on trend direction
-            if trend_factor > 0:  # Positive trend
-                # More aggressive on ask side (selling), more conservative on bid side
-                ask_edge = base_edge * (1 + abs(trend_factor))
-                bid_edge = base_edge * (1 - abs(trend_factor))
-            else:  # Negative trend
-                # More aggressive on bid side (buying), more conservative on ask side
-                bid_edge = base_edge * (1 + abs(trend_factor))
-                ask_edge = base_edge * (1 - abs(trend_factor))
+            # 3. Inventory Factor
+            target_position = 10  # Usually market makers aim for neutral position
+            inventory_ratio = (position - target_position) / position_limit
+            inventory_factor = 1 + gamma * abs(inventory_ratio)**2
+            
+            # Calculate combined adjustment factor
+            combined_factor = volatility_factor * liquidity_factor * inventory_factor
+            
+            # Calculate dynamic price improvement based on the factors
+            # For high volatility/low liquidity, this will be negative (wider quotes)
+            # For low volatility/high liquidity, this will be positive (tighter quotes)
+            raw_improvement = max_improvement - (combined_factor * (max_improvement - min_improvement))
+            
+            # Initialize with symmetric adjustments
+            bid_improvement = raw_improvement
+            ask_improvement = raw_improvement
+        
+            # Apply inventory-based asymmetric adjustment if position is not zero
+            if position != 0:
+                # Apply inventory-based asymmetric adjustment
+                inventory_adjustment = delta * (position / position_limit)
+                
+                # When long (positive position), improve ask price to encourage selling
+                # When short (negative position), improve bid price to encourage buying
+                bid_improvement = raw_improvement * (1 + inventory_adjustment)
+                ask_improvement = raw_improvement * (1 - inventory_adjustment)
         else:
-            ask_edge = default_edge
-            bid_edge = default_edge
-
-        # Calculate ask price
-        ask = round(fair_value + ask_edge)
-        if best_ask_above_fair != None:
-            if abs(best_ask_above_fair - fair_value) <= join_edge:
-                ask = best_ask_above_fair
+            bid_improvement = default_edge
+            ask_improvement = default_edge
+        
+        # Convert continuous improvements to discrete ticks and constrain
+        bid_ticks = max(min_improvement, min(max_improvement, round(bid_improvement)))
+        ask_ticks = max(min_improvement, min(max_improvement, round(ask_improvement)))
+        
+        # Calculate final quote prices relative to the best bid/ask
+        ask = round(fair_value + default_edge)
+        if order_depth.sell_orders:
+            if abs(best_ask - fair_value) <= join_edge:
+                ask = best_ask  # join
             else:
-                ask = best_ask_above_fair - ask_edge
+                # Apply ticks - positive ticks make quotes tighter, negative ticks make quotes wider
+                ask = best_ask - ask_ticks
 
-        # Calculate bid price
-        bid = round(fair_value - bid_edge)
-        if best_bid_below_fair != None:
-            if abs(fair_value - best_bid_below_fair) <= join_edge:
-                bid = best_bid_below_fair
+        bid = round(fair_value - default_edge)
+        if order_depth.buy_orders:
+            if abs(fair_value - best_bid) <= join_edge:
+                bid = best_bid
             else:
-                bid = best_bid_below_fair + bid_edge
+                # Apply ticks - positive ticks make quotes tighter, negative ticks make quotes wider
+                bid = best_bid + bid_ticks
+        
+        # If the current spread is very wide, consider using fair value as a reference
+        max_reasonable_spread = 10  # Maximum spread we consider reasonable
+        if current_spread > max_reasonable_spread:
+            # When spread is too wide, quote relative to fair value instead
+            # Note: for negative improvements (wider quotes), we increase the edge
+            bid_adj_factor = 1 + (min(0, bid_improvement) / abs(min_improvement)) if bid_improvement < 0 else (1 - bid_improvement/max_improvement)
+            ask_adj_factor = 1 + (min(0, ask_improvement) / abs(min_improvement)) if ask_improvement < 0 else (1 - ask_improvement/max_improvement)
+            
+            bid = round(fair_value - default_edge * bid_adj_factor)
+            ask = round(fair_value + default_edge * ask_adj_factor)
+        else:
+            # Apply ticks to best bid/ask - can now make quotes wider or tighter
+            bid = best_bid + bid_ticks
+            ask = best_ask - ask_ticks
+                
+            # Ensure bid doesn't cross ask
+            if bid >= ask:
+                midpoint = (best_bid + best_ask) / 2
+                bid = math.floor(midpoint)
+                ask = math.ceil(midpoint)
 
-        spread_factor = self.params[Product.SQUID_INK]["spread_adjustment"]
-        if manage_position:
-            if position > soft_position_limit:
-                bid = bid - 1
-                if ask >= fair_value and ask <= fair_value + 1:
-                    ask = fair_value
-                elif ask > fair_value + 1:
-                    ask = ask - 1
-            elif position < -1 * soft_position_limit:
-                ask = ask + 1
-                if bid <= fair_value and bid >= fair_value - 1:
-                    bid = fair_value
-                elif bid < fair_value - 1:
-                    bid = bid + 1
-
+        # Execute market making
         buy_order_volume, sell_order_volume = self.market_make(
             product,
             orders,
@@ -801,10 +836,18 @@ class Trader:
             ask,
             position,
             buy_order_volume,
-            sell_order_volume,
+            sell_order_volume,  
             bid_volume,
             ask_volume,
         )
+        
+        # Optionally: Store current volume for future reference
+        if 'normal_volume' not in traderObject:
+            traderObject['normal_volume'] = total_volume
+        else:
+            # Update normal volume with exponential moving average
+            traderObject['normal_volume'] = 0.95 * traderObject['normal_volume'] + 0.05 * total_volume
+        
         return orders, buy_order_volume, sell_order_volume
     
     def run(self, state: TradingState):
@@ -957,8 +1000,6 @@ class Trader:
                 self.params[Product.SQUID_INK]["disregard_edge"],
                 self.params[Product.SQUID_INK]["join_edge"],
                 self.params[Product.SQUID_INK]["default_edge"],
-                self.params[Product.SQUID_INK]["manage_position"],
-                self.params[Product.SQUID_INK]["soft_position_limit"],
             )
             result[Product.SQUID_INK] = (
                 ink_take_orders + ink_clear_orders + ink_make_orders
