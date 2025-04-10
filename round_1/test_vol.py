@@ -759,16 +759,16 @@ class Trader:
             returns = np.diff(prices) / prices[:-1]
             # Calculate volatility
             realized_vol = float(np.std(returns))
-            # if realized_vol / self.params[Product.SQUID_INK]["ret_vol"] >= 3:
-            #     #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
-            #     edge = 0
-            # elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
-            #     #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
-            #     edge = -1
-            # else:
-            #     edge = 1
+            if realized_vol / self.params[Product.SQUID_INK]["ret_vol"] >= 3:
+                #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+                edge = 0
+            elif realized_vol / self.params[Product.SQUID_INK]["ret_vol"] <= 0.4:
+                #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
+                edge = -1
+            else:
+                edge = 1
 
-            edge = default_edge
+            #edge = default_edge
         else:
             # Use default volatility from params
             edge = default_edge

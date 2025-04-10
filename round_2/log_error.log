@@ -1,0 +1,522 @@
+Sandbox logs:
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"afee0dc4-9d22-496f-9a94-0f829a6a6748\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"afee0dc4-9d22-496f-9a94-0f829a6a6748\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"2db70f78-dbf8-4d5a-9df8-5c7599a52c85\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"2db70f78-dbf8-4d5a-9df8-5c7599a52c85\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"7fc5ab33-b44d-431d-88a9-19654e7cd490\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"7fc5ab33-b44d-431d-88a9-19654e7cd490\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"bb911da7-d379-4ca9-aa0c-bbcae67a80f7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"bb911da7-d379-4ca9-aa0c-bbcae67a80f7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4373a452-1d18-45f2-86d2-629bb36b4108\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4373a452-1d18-45f2-86d2-629bb36b4108\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"119127a8-4f84-4a4f-9c91-02672f8ca579\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"119127a8-4f84-4a4f-9c91-02672f8ca579\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"31d0563a-9588-49bb-af7a-d4b5bd9f8cb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"31d0563a-9588-49bb-af7a-d4b5bd9f8cb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"92b536a2-07e1-4e74-995f-1bd1c43ca851\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"92b536a2-07e1-4e74-995f-1bd1c43ca851\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"5d1c7753-a2a7-4dc8-8360-764e3e46f07d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"5d1c7753-a2a7-4dc8-8360-764e3e46f07d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4d9741a5-ef41-49f8-bb5b-df4c7bd9bc29\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4d9741a5-ef41-49f8-bb5b-df4c7bd9bc29\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4de1a7d4-0528-42ac-8ba1-31ff83e6c2e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4de1a7d4-0528-42ac-8ba1-31ff83e6c2e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"714ad097-1b67-43a9-ad13-b7946729e39e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"714ad097-1b67-43a9-ad13-b7946729e39e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b3c9134e-dc51-471f-99aa-f065051e78d0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b3c9134e-dc51-471f-99aa-f065051e78d0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8f101555-9b9e-4b34-8486-350a126516e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8f101555-9b9e-4b34-8486-350a126516e4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"45fe341d-15eb-4720-8cdf-42ac51bcb8f2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"45fe341d-15eb-4720-8cdf-42ac51bcb8f2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"fcade0b7-f976-4321-8c8b-6c14e6a8f11a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"fcade0b7-f976-4321-8c8b-6c14e6a8f11a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"384f6445-4762-436f-a576-d90e5bad20cd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"384f6445-4762-436f-a576-d90e5bad20cd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f0a9236d-ba0e-4967-adfc-dbc0a5f7fc44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f0a9236d-ba0e-4967-adfc-dbc0a5f7fc44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"746d9a82-3701-4440-874b-817300707231\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"746d9a82-3701-4440-874b-817300707231\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"263fde51-65a4-47a3-928e-b4d31d4fbbfd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"263fde51-65a4-47a3-928e-b4d31d4fbbfd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"09a96b74-371e-4836-b20c-a203ae4eb126\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"09a96b74-371e-4836-b20c-a203ae4eb126\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"135307e7-b573-423e-b1c3-6ffa7afa1e3c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"135307e7-b573-423e-b1c3-6ffa7afa1e3c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"6d0e4640-fc21-4247-bf7d-9767e3e1d52c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"6d0e4640-fc21-4247-bf7d-9767e3e1d52c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e6a48a9c-91b2-411f-a97c-6b46fb1852fa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e6a48a9c-91b2-411f-a97c-6b46fb1852fa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"9acbdd05-c7ae-4f2a-abc7-92ddaf73ec2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"9acbdd05-c7ae-4f2a-abc7-92ddaf73ec2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"a8db89b3-38d7-4e5d-974e-13a658d366ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"a8db89b3-38d7-4e5d-974e-13a658d366ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3504ff26-e3a6-4163-af3b-dd1c86c91855\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3504ff26-e3a6-4163-af3b-dd1c86c91855\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"29534909-b937-49f4-8cc2-87542cda6db0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"29534909-b937-49f4-8cc2-87542cda6db0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4770b815-7cab-4124-9ef7-668c7dd6dc42\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4770b815-7cab-4124-9ef7-668c7dd6dc42\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"91736d5d-851a-43d9-bc11-e41ec212db2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"91736d5d-851a-43d9-bc11-e41ec212db2a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c4ca7d52-6be5-49da-bd06-4b8f64b29cf9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c4ca7d52-6be5-49da-bd06-4b8f64b29cf9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"223b64dd-6f6d-42b4-899a-ff3f46578a54\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"223b64dd-6f6d-42b4-899a-ff3f46578a54\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ec7e40da-a450-4327-822e-93bb2739d974\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ec7e40da-a450-4327-822e-93bb2739d974\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ade1d553-8abd-4102-aa95-8091920e595f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ade1d553-8abd-4102-aa95-8091920e595f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e5bcc070-1735-4ab4-ad39-8feebe067d77\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e5bcc070-1735-4ab4-ad39-8feebe067d77\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"06bb1fa5-7298-447e-9f8e-3f2c69f3a48f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"06bb1fa5-7298-447e-9f8e-3f2c69f3a48f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c988bdc2-c7db-40d8-b0e2-5f620525c390\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c988bdc2-c7db-40d8-b0e2-5f620525c390\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ad34fa33-9e84-42ec-89f7-0759967b1b04\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ad34fa33-9e84-42ec-89f7-0759967b1b04\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"22735d64-badb-4de5-9bc6-1ff6f9785296\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"22735d64-badb-4de5-9bc6-1ff6f9785296\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"70007669-17b9-4775-b35f-750b1382bee6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"70007669-17b9-4775-b35f-750b1382bee6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e84f9dc9-6e14-4b6a-b4a0-776946dd06a1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e84f9dc9-6e14-4b6a-b4a0-776946dd06a1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"944c62ca-a290-4882-8cca-18f926478d34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"944c62ca-a290-4882-8cca-18f926478d34\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c09c77f4-b2f6-4b99-971c-b7a4eaa8f09c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c09c77f4-b2f6-4b99-971c-b7a4eaa8f09c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"93391234-620e-4b1b-ab51-045329a0b5a4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"93391234-620e-4b1b-ab51-045329a0b5a4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c3bdde0e-c3e7-4c08-b037-ad303c317f6b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c3bdde0e-c3e7-4c08-b037-ad303c317f6b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0986d1e5-3e83-4438-a382-712695f7cdc9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0986d1e5-3e83-4438-a382-712695f7cdc9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f15bae85-21f8-4ad2-a413-aaa89db0bdc0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f15bae85-21f8-4ad2-a413-aaa89db0bdc0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"116a41c7-39e2-4c5a-af81-b21bc2f022af\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"116a41c7-39e2-4c5a-af81-b21bc2f022af\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c59a1112-07a1-4d76-b838-33dbe0a58b08\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c59a1112-07a1-4d76-b838-33dbe0a58b08\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"1c055bb2-fe49-41fc-8eb2-5ed815826600\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"1c055bb2-fe49-41fc-8eb2-5ed815826600\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"426191d3-d9c5-4115-82fd-73f3c8d9d2d8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"426191d3-d9c5-4115-82fd-73f3c8d9d2d8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"595a0bf0-86a7-4bff-bbca-01c962aea952\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"595a0bf0-86a7-4bff-bbca-01c962aea952\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ba70b493-5bfc-40ad-afc1-39c6f0c60838\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ba70b493-5bfc-40ad-afc1-39c6f0c60838\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"23f8446d-d97a-41f6-a5cf-13cb602383f6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"23f8446d-d97a-41f6-a5cf-13cb602383f6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8546d081-2131-4fe8-9910-96c1a30c4723\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8546d081-2131-4fe8-9910-96c1a30c4723\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"274d4510-163f-4341-89e9-1b221e1a2cad\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"274d4510-163f-4341-89e9-1b221e1a2cad\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"de8b4aba-51ee-4608-98ed-9e1462bfbdac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"de8b4aba-51ee-4608-98ed-9e1462bfbdac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"faa5dc44-d1a5-46eb-8e7a-9c3eabdffb52\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"faa5dc44-d1a5-46eb-8e7a-9c3eabdffb52\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"30a21dae-0f68-43ac-8431-78b4480376c2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"30a21dae-0f68-43ac-8431-78b4480376c2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"44fcf292-ecc9-4a51-9a7c-d128d69ed16a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"44fcf292-ecc9-4a51-9a7c-d128d69ed16a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c77230e6-d72b-47d8-85c4-29e36ed82623\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c77230e6-d72b-47d8-85c4-29e36ed82623\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c4ec9f26-efd6-497e-acd9-98cf4bb393ce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c4ec9f26-efd6-497e-acd9-98cf4bb393ce\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 2)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 2)\", \"errorType\": \"ValueError\", \"requestId\": \"70af32e1-2602-4837-98c5-0f9a68726da2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 2)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 2)\", \"errorType\": \"ValueError\", \"requestId\": \"70af32e1-2602-4837-98c5-0f9a68726da2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3d708b1f-c18c-47d1-89c2-a3ab35930f31\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3d708b1f-c18c-47d1-89c2-a3ab35930f31\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4a0fbe2b-cf4e-4835-9978-1f57be5fb19e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4a0fbe2b-cf4e-4835-9978-1f57be5fb19e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c03ebdc6-b21d-4b30-8c7d-bf67afb68b16\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"c03ebdc6-b21d-4b30-8c7d-bf67afb68b16\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8e525cda-753e-4129-9a67-304c8134911b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"8e525cda-753e-4129-9a67-304c8134911b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e6fe6b0f-4f51-42f5-8581-b272b5f8c883\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"e6fe6b0f-4f51-42f5-8581-b272b5f8c883\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"9ba72578-a0e9-4f89-b309-41e7173cc019\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"9ba72578-a0e9-4f89-b309-41e7173cc019\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"d70d203a-0f26-48af-b9ef-b27e731872b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"d70d203a-0f26-48af-b9ef-b27e731872b0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"56149d8e-947a-46b2-9d71-04c73fd7c95e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"56149d8e-947a-46b2-9d71-04c73fd7c95e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4f2bc2a6-42f2-43fd-8109-e668834ee76c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4f2bc2a6-42f2-43fd-8109-e668834ee76c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ff3dfc8f-dfb6-46ab-be73-146c0cfc9b40\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ff3dfc8f-dfb6-46ab-be73-146c0cfc9b40\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0661fc96-eaa3-4959-a01b-9628239613d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0661fc96-eaa3-4959-a01b-9628239613d2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"566dae4c-7fff-4b9e-96f5-8510cda4bd3b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"566dae4c-7fff-4b9e-96f5-8510cda4bd3b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b9607982-3a2b-4ac1-8075-bea9c9eec149\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b9607982-3a2b-4ac1-8075-bea9c9eec149\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f594b5d1-658e-4052-9339-97feb5f074ef\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f594b5d1-658e-4052-9339-97feb5f074ef\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"646ed23f-e18c-49f6-bede-9af9df59b458\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"646ed23f-e18c-49f6-bede-9af9df59b458\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"d294b935-88d7-4ae9-bf17-1becd1173ecb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"d294b935-88d7-4ae9-bf17-1becd1173ecb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0c35549d-dc2e-4649-b407-ae7d82467711\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"0c35549d-dc2e-4649-b407-ae7d82467711\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"da959cf1-cd9f-43c2-8b6e-d1494e172aeb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"da959cf1-cd9f-43c2-8b6e-d1494e172aeb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"36e20e9c-0143-4487-a0a5-786eaa30ae87\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"36e20e9c-0143-4487-a0a5-786eaa30ae87\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f3b12b32-b85a-437b-888f-1bae08e5490c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"f3b12b32-b85a-437b-888f-1bae08e5490c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"308c938a-eb49-4a33-9e10-e76d4412406c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"308c938a-eb49-4a33-9e10-e76d4412406c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"a59b6a24-acda-4a86-be1d-8939f1c55849\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"a59b6a24-acda-4a86-be1d-8939f1c55849\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3b8c86d0-3993-4607-a0f0-eb1309353a07\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3b8c86d0-3993-4607-a0f0-eb1309353a07\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"82daeacd-dd0c-4dea-97f4-9f3d2c431b7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"82daeacd-dd0c-4dea-97f4-9f3d2c431b7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"6921b433-4e4a-4861-8e99-d3f22e65d012\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"6921b433-4e4a-4861-8e99-d3f22e65d012\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4ae32b81-1e43-4efd-a3dd-c1a44535e981\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"4ae32b81-1e43-4efd-a3dd-c1a44535e981\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"2b1d8c16-abd0-4082-bbb7-8c07671d2f7a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"2b1d8c16-abd0-4082-bbb7-8c07671d2f7a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"490a70a6-a223-4a61-866a-a4d663deea68\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"490a70a6-a223-4a61-866a-a4d663deea68\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"726a3c65-31f3-41d7-81c1-c3ebe12f23af\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"726a3c65-31f3-41d7-81c1-c3ebe12f23af\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"860a18a9-ec70-402d-8506-d3bb67a8bc79\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"860a18a9-ec70-402d-8506-d3bb67a8bc79\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"dc4016ea-f95b-4f1d-bc4c-6e27023c4c68\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"dc4016ea-f95b-4f1d-bc4c-6e27023c4c68\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3e79d60a-31d7-4839-bf7c-ab4cc3a11a7e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"3e79d60a-31d7-4839-bf7c-ab4cc3a11a7e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b77f9219-e1aa-4a09-9f5f-99a8a356059a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"b77f9219-e1aa-4a09-9f5f-99a8a356059a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"7a0c7f34-ebaa-4ae1-8873-5c09f9aa71de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"7a0c7f34-ebaa-4ae1-8873-5c09f9aa71de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"5df7bfdf-03f1-45b1-86d4-0ffd0e890711\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"5df7bfdf-03f1-45b1-86d4-0ffd0e890711\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ce287012-8d76-4f04-a3c7-08a8bfe6ba36\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"ce287012-8d76-4f04-a3c7-08a8bfe6ba36\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"49cb7de2-624a-437f-8257-d15f75a63960\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 0)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 0)\", \"errorType\": \"ValueError\", \"requestId\": \"49cb7de2-624a-437f-8257-d15f75a63960\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 2)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 2)\", \"errorType\": \"ValueError\", \"requestId\": \"02c8b20f-1907-4f30-a6ba-94be2019d3a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "lambdaLog": "[ERROR] ValueError: not enough values to unpack (expected 3, got 2)\\n{\"errorMessage\": \"not enough values to unpack (expected 3, got 2)\", \"errorType\": \"ValueError\", \"requestId\": \"02c8b20f-1907-4f30-a6ba-94be2019d3a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission 6ecaf7b3-54a8-4699-aaf7-48ca9908e7f1",
+  "lambdaLog": null,
+  "timestamp": 186706
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null
