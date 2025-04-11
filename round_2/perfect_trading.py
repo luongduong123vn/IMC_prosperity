@@ -200,13 +200,13 @@ class PerfectTrader:
         return optimal_trades
 
     def save_trades(self, optimal_trades: Dict[int, tuple]):
-        """Save trades to JSON file with integer timestamps."""
-        # Convert trades to JSON format with integer timestamps
+        """Save trades to JSON file with string timestamps."""
+        # Convert trades to JSON format with string timestamps
         trades_json = {
-            timestamp: {
+            str(timestamp): {  # Convert to string
                 "product": trade[0],
-                "price": int(trade[1]),
-                "quantity": int(trade[2])
+                "price": int(trade[1]),  # Ensure Python int
+                "quantity": int(trade[2])  # Ensure Python int
             }
             for timestamp, trade in optimal_trades.items()
         }
