@@ -185,15 +185,17 @@ PARAMS = {
     Product.SPREAD: {
         "default_spread_mean": 48,
         "default_spread_std": 70,
-        "spread_std_window": 200,
-        "zscore_threshold": 7,
+        "spread_std_window": 100,
+        "zscore_threshold_high": 3,
+        "zscore_threshold_low": -3,
         "target_position": 58,
     },
     Product.SPREAD_1: {
         "default_spread_mean": 30,
         "default_spread_std": 50,
-        "spread_std_window": 200,
-        "zscore_threshold": 7,
+        "spread_std_window": 100,
+        "zscore_threshold_high": 10,
+        "zscore_threshold_low": -20,
         "target_position": 98,
     },
 }
@@ -1326,7 +1328,7 @@ class Trader:
             spread - self.params[spread_product]["default_spread_mean"]
         ) / spread_std
 
-        if zscore >= self.params[spread_product]["zscore_threshold"]:
+        if zscore >= self.params[spread_product]["zscore_threshold_high"]:
             if basket_position != -self.params[spread_product]["target_position"]:
                 return self.execute_spread_orders(
                     -self.params[spread_product]["target_position"],
@@ -1336,7 +1338,7 @@ class Trader:
                     spread_product,
                 )
 
-        if zscore <= -self.params[spread_product]["zscore_threshold"]:
+        if zscore <= self.params[spread_product]["zscore_threshold_low"]:
             if basket_position != self.params[spread_product]["target_position"]:
                 return self.execute_spread_orders(
                     self.params[spread_product]["target_position"],
