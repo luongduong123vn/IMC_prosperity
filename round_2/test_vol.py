@@ -185,15 +185,15 @@ PARAMS = {
     Product.SPREAD: {
         "default_spread_mean": 48,
         "default_spread_std": 70,
-        "spread_std_window": 50,
-        "zscore_threshold": 10,
+        "spread_std_window": 200,
+        "zscore_threshold": 7,
         "target_position": 58,
     },
     Product.SPREAD_1: {
         "default_spread_mean": 30,
         "default_spread_std": 50,
-        "spread_std_window": 50,
-        "zscore_threshold": 10,
+        "spread_std_window": 200,
+        "zscore_threshold": 7,
         "target_position": 98,
     },
 }
@@ -514,6 +514,85 @@ class Trader:
             
             return fair
         return None
+    
+    def product_fair_value(self, order_depth: OrderDepth, traderObject, product: Product, adverse_volume: int) -> float:
+        if len(order_depth.sell_orders) != 0 and len(order_depth.buy_orders) != 0:
+            best_ask = min(order_depth.sell_orders.keys())
+            best_bid = max(order_depth.buy_orders.keys())
+            filtered_ask = [
+                price
+                for price in order_depth.sell_orders.keys()
+                if abs(order_depth.sell_orders[price])
+                >= adverse_volume
+            ]
+            filtered_bid = [
+                price
+                for price in order_depth.buy_orders.keys()
+                if abs(order_depth.buy_orders[price])
+                >= adverse_volume
+            ]
+            mm_ask = min(filtered_ask) if len(filtered_ask) > 0 else None
+            mm_bid = max(filtered_bid) if len(filtered_bid) > 0 else None
+            if mm_ask == None or mm_bid == None:
+                if traderObject.get(f"{product}_last_price", None) == None:
+                    mmmid_price = (best_ask + best_bid) / 2
+                else:
+                    mmmid_price = traderObject[f"{product}_last_price"]
+            else:
+                mmmid_price = (mm_ask + mm_bid) / 2
+            z = np.random.normal(0, 1)
+            
+            # Calculate volatility based on historical returns if we have enough data
+            if len(traderObject.get(f'{product}_price_history', [])) >= 10:
+                # Get the last 10 prices
+                prices = traderObject[f'{product}_price_history'][-10:]
+                # Calculate returns
+                returns = np.diff(prices) / prices[:-1]
+                # Calculate volatility
+                ret_vol = float(np.std(returns))
+            else:
+                # Use default volatility from params
+                ret_vol = self.params[Product.SQUID_INK]["ret_vol"]
+
+            traderObject[f'{product}_price_history'].append(mmmid_price)
+            # Keep only the last 10 prices
+            traderObject[f'{product}_price_history'] = traderObject[f'{product}_price_history'][-100:]
+            fv_history = traderObject[f'{product}_price_history'][-5:]
+            price_history = traderObject[f'{product}_price_history']
+            prices = price_history
+            returns = np.diff(prices) / prices[:-1]
+            if len(returns) >= len(price_history)-1:
+                n = len(returns)
+                slope = self.calculate_time_series_slope_n(prices)
+                # recent_mean = np.mean(returns) if n >= 3 else np.mean(returns)
+                # next_return = recent_mean + slope * (n - (n-1)/2)
+                # recent_mean = np.mean(prices[-3:]) if n >= 3 else np.mean(prices)
+                # next_prices = recent_mean + slope * (n - (n-1)/2)
+            else:
+                slope = 0
+            if traderObject.get(f"{product}_last_price", None) != None:
+                last_price = traderObject[f"{product}_last_price"]
+                if len(traderObject[f"{product}_price_history"]) >= 10:
+                    last_10_price = traderObject[f"{product}_price_history"][-10]
+                else:
+                    last_10_price = last_price
+                last_returns = (mmmid_price - last_price) / last_price
+                last_10_returns = (mmmid_price - last_10_price) / last_10_price
+                pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
+                #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
+                #fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
+                #fair = mmmid_price * (1 + last_returns)
+                #fair = mmmid_price * (1 + next_return)
+                #fair = next_prices
+                fair = mmmid_price
+            else:
+                fair = mmmid_price
+            traderObject[f"{product}_last_price"] = mmmid_price
+             # Update price history
+                # Add new price
+            
+            return fair
+        return None
 
     def take_orders(
         self,
@@ -746,7 +825,117 @@ class Trader:
             )
 
         return orders, buy_order_volume, sell_order_volume
+    
+    def make_order_new(
+        self,
+        product,
+        traderObject,
+        order_depth: OrderDepth,
+        fair_value: float,
+        position: int,
+        buy_order_volume: int,
+        sell_order_volume: int,
+        disregard_edge: float,  # disregard trades within this edge for pennying or joining
+        join_edge: float,  # join trades within this edge
+        default_edge: float,  # default edge to request if there are no levels to penny or join
+        manage_position: bool = False,
+        soft_position_limit: int = 0,
+        # will penny all other levels with higher edge
+    ):
+        orders: List[Order] = []
+        asks_above_fair = [
+            price
+            for price in order_depth.sell_orders.keys()
+            if price > fair_value + disregard_edge
+        ]
+        asks_volume_above_fair = [
+            volume
+            for price, volume in order_depth.sell_orders.items()
+            if price > fair_value + disregard_edge
+        ]
+        bids_below_fair = [
+            price
+            for price in order_depth.buy_orders.keys()
+            if price < fair_value - disregard_edge
+        ]
+        bids_volume_below_fair = [
+            volume
+            for price, volume in order_depth.buy_orders.items()
+            if price < fair_value - disregard_edge
+        ]
 
+
+        best_ask_above_fair = min(asks_above_fair) if len(asks_above_fair) > 0 else None
+        best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
+        best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
+        best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
+        ask_volume = sum(order_depth.sell_orders.values())
+        bid_volume = sum(order_depth.buy_orders.values())
+        if len(traderObject.get(f'{product}_price_history', [])) >= 10:
+            # Get the last 10 prices
+            starfruit_vol_history = traderObject[f'{product}_price_history'][-10:]
+            prices = starfruit_vol_history
+            # Calculate returns
+            returns = np.diff(prices) / prices[:-1]
+            # Calculate volatility
+            realized_vol = float(np.std(returns))
+            # if realized_vol / self.params[product]["ret_vol"] >= 3:
+            #     #edge = -max(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 0.7), default_edge)   
+            #     edge = 0
+            # elif realized_vol / self.params[product]["ret_vol"] <= 0.4:
+            #     #edge = min(round((realized_vol / self.params[Product.SQUID_INK]["ret_vol"]) * default_edge  * 1.5), default_edge) 
+            #     edge = -1
+            # else:
+            #     edge = 1
+
+            edge = default_edge
+        else:
+            # Use default volatility from params
+            edge = default_edge
+        ask = round(fair_value + default_edge)
+        if best_ask_above_fair != None:
+            if abs(best_ask_above_fair - fair_value) <= join_edge:
+                ask = best_ask_above_fair  # join
+            else:
+                #ask = best_ask_above_fair - 1  # penny
+                ask = best_ask_above_fair - edge
+
+        bid = round(fair_value - default_edge)
+        if best_bid_below_fair != None:
+            if abs(fair_value - best_bid_below_fair) <= join_edge:
+                bid = best_bid_below_fair
+            else:
+                #bid = best_bid_below_fair + 1
+                bid = best_bid_below_fair + edge
+        spread_factor = self.params[Product.SQUID_INK]["spread_adjustment"]
+        if manage_position:
+            if position > soft_position_limit:
+                bid = best_bid_below_fair - spread_factor * edge if best_bid_below_fair != None else fair_value - spread_factor*edge
+                if ask >= fair_value and ask <= fair_value + 1:
+                    ask = fair_value
+                elif ask > fair_value + 1:
+                    ask = ask - 1
+            elif position < -1 * soft_position_limit:
+                ask = best_ask_above_fair + spread_factor * edge if best_ask_above_fair != None else fair_value + spread_factor*edge
+                if bid <= fair_value and bid >= fair_value - 1:
+                    bid = fair_value
+                elif bid < fair_value - 1:
+                    bid = bid + 1
+
+        buy_order_volume, sell_order_volume = self.market_make(
+            product,
+            orders,
+            bid,
+            ask,
+            position,
+            buy_order_volume,
+            sell_order_volume,
+            bid_volume,
+            ask_volume,
+        )
+
+        return orders, buy_order_volume, sell_order_volume
+    
     def make_order_ink(
         self,
         product,
@@ -1170,6 +1359,9 @@ class Trader:
             traderObject['starfruit_price_history'] = []
         if 'ink_price_history' not in traderObject:
             traderObject['ink_price_history'] = []
+        for product in [Product.CHOCOLATE, Product.STRAWBERRIES, Product.ROSES, Product.GIFT_BASKET, Product.GIFT_BASKET_1]:
+            if f'{product}_price_history' not in traderObject:
+                traderObject[f'{product}_price_history'] = []
             
         result = {}
 
@@ -1215,7 +1407,6 @@ class Trader:
             result[Product.AMETHYSTS] = (
                 amethyst_take_orders + amethyst_clear_orders + amethyst_make_orders
             )
-
         if Product.STARFRUIT in self.params and Product.STARFRUIT in state.order_depths:
             starfruit_position = (
                 state.position[Product.STARFRUIT]
@@ -1310,11 +1501,66 @@ class Trader:
                 self.params[Product.SQUID_INK]["disregard_edge"],
                 self.params[Product.SQUID_INK]["join_edge"],
                 self.params[Product.SQUID_INK]["default_edge"],
+                self.params[Product.SQUID_INK]["manage_position"],
+                self.params[Product.SQUID_INK]["soft_position_limit"],
             )
             result[Product.SQUID_INK] = (
                 ink_take_orders + ink_clear_orders + ink_make_orders
             )
 
+        # for product in [Product.CHOCOLATE, Product.STRAWBERRIES, Product.ROSES, Product.GIFT_BASKET, Product.GIFT_BASKET_1]:
+        #     if product in state.order_depths:
+        #         position = (
+        #             state.position[product]
+        #             if product in state.position
+        #             else 0
+        #         )
+        #         # tinh fair value trc
+        #         fair_value = self.product_fair_value(
+        #             state.order_depths[product], traderObject, product, self.params[Product.SQUID_INK]["adverse_volume"]
+        #         )
+                
+                
+        #         take_orders, buy_order_volume, sell_order_volume = (
+        #             self.take_orders(
+        #                 product,
+        #                 state.order_depths[product],
+        #                 fair_value,
+        #                 self.params[Product.SQUID_INK]["take_width"],
+        #                 position,
+        #                 self.params[Product.SQUID_INK]["prevent_adverse"],
+        #                 self.params[Product.SQUID_INK]["adverse_volume"],
+        #             )
+        #         )
+        #         clear_orders, buy_order_volume, sell_order_volume = (
+        #             self.clear_orders(
+        #                 product,
+        #                 state.order_depths[product],
+        #                 fair_value,
+        #                 self.params[Product.SQUID_INK]["clear_width"],
+        #                 position,
+        #                 buy_order_volume,
+        #                 sell_order_volume,
+        #             )
+        #         )
+        #         make_orders, _, _ = self.make_order_new(
+        #             product,
+        #             traderObject,
+        #             state.order_depths[product],
+        #             fair_value,
+        #             position,
+        #             buy_order_volume,
+        #             sell_order_volume,
+        #             self.params[Product.SQUID_INK]["disregard_edge"],
+        #             self.params[Product.SQUID_INK]["join_edge"],
+        #             self.params[Product.SQUID_INK]["default_edge"],
+        #             self.params[Product.SQUID_INK]["manage_position"],
+        #             self.params[Product.SQUID_INK]["soft_position_limit"],
+        #         )
+        #         result[product] = (
+        #             clear_orders + make_orders
+        #         )
+                
         if Product.SPREAD not in traderObject:
             traderObject[Product.SPREAD] = {
                 "spread_history": [],
@@ -1341,31 +1587,31 @@ class Trader:
             result[Product.ROSES] = spread_orders[Product.ROSES]
             result[Product.GIFT_BASKET] = spread_orders[Product.GIFT_BASKET]
 
-        if Product.SPREAD_1 not in traderObject:
-            traderObject[Product.SPREAD_1] = {
-                "spread_history": [],
-                "prev_zscore": 0,
-                "clear_flag": False,
-                "curr_avg": 0,
-            }
+        # if Product.SPREAD_1 not in traderObject:
+        #     traderObject[Product.SPREAD_1] = {
+        #         "spread_history": [],
+        #         "prev_zscore": 0,
+        #         "clear_flag": False,
+        #         "curr_avg": 0,
+        #     }
 
-        basket_position = (
-            state.position[Product.GIFT_BASKET_1]
-            if Product.GIFT_BASKET_1 in state.position
-            else 0
-        )
-        spread_orders = self.spread_orders(
-            state.order_depths,
-            Product.GIFT_BASKET_1,
-            Product.SPREAD_1,
-            basket_position,
-            traderObject[Product.SPREAD_1],
-        )
-        if spread_orders != None:
-            result[Product.CHOCOLATE] = spread_orders[Product.CHOCOLATE]
-            result[Product.STRAWBERRIES] = spread_orders[Product.STRAWBERRIES]
-            result[Product.ROSES] = spread_orders[Product.ROSES]
-            result[Product.GIFT_BASKET_1] = spread_orders[Product.GIFT_BASKET_1]
+        # basket_position = (
+        #     state.position[Product.GIFT_BASKET_1]
+        #     if Product.GIFT_BASKET_1 in state.position
+        #     else 0
+        # )
+        # spread_orders = self.spread_orders(
+        #     state.order_depths,
+        #     Product.GIFT_BASKET_1,
+        #     Product.SPREAD_1,
+        #     basket_position,
+        #     traderObject[Product.SPREAD_1],
+        # )
+        # if spread_orders != None:
+        #     result[Product.CHOCOLATE] = spread_orders[Product.CHOCOLATE]
+        #     result[Product.STRAWBERRIES] = spread_orders[Product.STRAWBERRIES]
+        #     result[Product.ROSES] = spread_orders[Product.ROSES]
+        #     result[Product.GIFT_BASKET_1] = spread_orders[Product.GIFT_BASKET_1]
 
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
