@@ -1,2 +1,4037 @@
 {
-  
+  "99800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58568,
+    "quantity": -17
+  },
+  "99600": {
+    "product": "DJEMBES",
+    "price": 13367,
+    "quantity": 31
+  },
+  "99500": {
+    "product": "DJEMBES",
+    "price": 13366,
+    "quantity": 19
+  },
+  "99400": {
+    "product": "DJEMBES",
+    "price": 13366,
+    "quantity": -21
+  },
+  "99300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58584,
+    "quantity": -6
+  },
+  "99200": {
+    "product": "KELP",
+    "price": 2037,
+    "quantity": -1
+  },
+  "99000": {
+    "product": "DJEMBES",
+    "price": 13367,
+    "quantity": -26
+  },
+  "98900": {
+    "product": "SQUID_INK",
+    "price": 1813,
+    "quantity": -20
+  },
+  "98800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "98700": {
+    "product": "JAMS",
+    "price": 6519,
+    "quantity": 213
+  },
+  "98600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58564,
+    "quantity": -1
+  },
+  "98500": {
+    "product": "DJEMBES",
+    "price": 13365,
+    "quantity": 59
+  },
+  "98300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "98000": {
+    "product": "PICNIC_BASKET2",
+    "price": 30248,
+    "quantity": 15
+  },
+  "97900": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -4
+  },
+  "97800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58583,
+    "quantity": -7
+  },
+  "97700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58587,
+    "quantity": -2
+  },
+  "97600": {
+    "product": "DJEMBES",
+    "price": 13365,
+    "quantity": -62
+  },
+  "97500": {
+    "product": "SQUID_INK",
+    "price": 1816,
+    "quantity": 23
+  },
+  "97400": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 1
+  },
+  "97200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30242,
+    "quantity": 45
+  },
+  "97100": {
+    "product": "SQUID_INK",
+    "price": 1815,
+    "quantity": -22
+  },
+  "96700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30243,
+    "quantity": -30
+  },
+  "96500": {
+    "product": "DJEMBES",
+    "price": 13363,
+    "quantity": 3
+  },
+  "96300": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "96000": {
+    "product": "DJEMBES",
+    "price": 13361,
+    "quantity": 51
+  },
+  "95900": {
+    "product": "DJEMBES",
+    "price": 13361,
+    "quantity": -22
+  },
+  "95800": {
+    "product": "DJEMBES",
+    "price": 13361,
+    "quantity": 59
+  },
+  "95700": {
+    "product": "SQUID_INK",
+    "price": 1815,
+    "quantity": -21
+  },
+  "95600": {
+    "product": "DJEMBES",
+    "price": 13360,
+    "quantity": -26
+  },
+  "95500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58594,
+    "quantity": 5
+  },
+  "95400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -4
+  },
+  "95300": {
+    "product": "DJEMBES",
+    "price": 13359,
+    "quantity": 55
+  },
+  "95200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30249,
+    "quantity": 6
+  },
+  "95100": {
+    "product": "DJEMBES",
+    "price": 13360,
+    "quantity": -21
+  },
+  "95000": {
+    "product": "DJEMBES",
+    "price": 13359,
+    "quantity": 21
+  },
+  "94900": {
+    "product": "SQUID_INK",
+    "price": 1818,
+    "quantity": -23
+  },
+  "94700": {
+    "product": "DJEMBES",
+    "price": 13367,
+    "quantity": -47
+  },
+  "94600": {
+    "product": "SQUID_INK",
+    "price": 1815,
+    "quantity": 3
+  },
+  "94500": {
+    "product": "DJEMBES",
+    "price": 13371,
+    "quantity": -73
+  },
+  "94400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30263,
+    "quantity": -17
+  },
+  "94300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58615,
+    "quantity": -1
+  },
+  "94200": {
+    "product": "SQUID_INK",
+    "price": 1816,
+    "quantity": -1
+  },
+  "93900": {
+    "product": "DJEMBES",
+    "price": 13372,
+    "quantity": 64
+  },
+  "93800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58630,
+    "quantity": 14
+  },
+  "93700": {
+    "product": "DJEMBES",
+    "price": 13372,
+    "quantity": -61
+  },
+  "93600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58620,
+    "quantity": 13
+  },
+  "93500": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -29
+  },
+  "93400": {
+    "product": "SQUID_INK",
+    "price": 1814,
+    "quantity": 25
+  },
+  "93300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -4
+  },
+  "93200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": 7
+  },
+  "93100": {
+    "product": "DJEMBES",
+    "price": 13371,
+    "quantity": 25
+  },
+  "93000": {
+    "product": "DJEMBES",
+    "price": 13371,
+    "quantity": -28
+  },
+  "92900": {
+    "product": "SQUID_INK",
+    "price": 1812,
+    "quantity": -27
+  },
+  "92800": {
+    "product": "DJEMBES",
+    "price": 13371,
+    "quantity": 19
+  },
+  "92700": {
+    "product": "SQUID_INK",
+    "price": 1814,
+    "quantity": 10
+  },
+  "92600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58603,
+    "quantity": 6
+  },
+  "92500": {
+    "product": "SQUID_INK",
+    "price": 1809,
+    "quantity": 6
+  },
+  "92200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58602,
+    "quantity": -1
+  },
+  "92100": {
+    "product": "DJEMBES",
+    "price": 13372,
+    "quantity": -15
+  },
+  "91900": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -3
+  },
+  "91800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58602,
+    "quantity": -9
+  },
+  "91700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58606,
+    "quantity": 14
+  },
+  "91600": {
+    "product": "SQUID_INK",
+    "price": 1803,
+    "quantity": 27
+  },
+  "91500": {
+    "product": "DJEMBES",
+    "price": 13369,
+    "quantity": 59
+  },
+  "91400": {
+    "product": "DJEMBES",
+    "price": 13368,
+    "quantity": 57
+  },
+  "91300": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "91200": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 3
+  },
+  "91100": {
+    "product": "DJEMBES",
+    "price": 13368,
+    "quantity": -50
+  },
+  "91000": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": -89
+  },
+  "90900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30275,
+    "quantity": -12
+  },
+  "90800": {
+    "product": "SQUID_INK",
+    "price": 1806,
+    "quantity": -1
+  },
+  "90700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58609,
+    "quantity": -10
+  },
+  "90600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58614,
+    "quantity": -2
+  },
+  "90300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30281,
+    "quantity": -1
+  },
+  "90100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58626,
+    "quantity": 10
+  },
+  "90000": {
+    "product": "PICNIC_BASKET2",
+    "price": 30277,
+    "quantity": -2
+  },
+  "89900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30281,
+    "quantity": -3
+  },
+  "89800": {
+    "product": "SQUID_INK",
+    "price": 1807,
+    "quantity": 26
+  },
+  "89700": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -118
+  },
+  "89600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 3
+  },
+  "89200": {
+    "product": "DJEMBES",
+    "price": 13369,
+    "quantity": 25
+  },
+  "89100": {
+    "product": "DJEMBES",
+    "price": 13368,
+    "quantity": 25
+  },
+  "89000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58616,
+    "quantity": -15
+  },
+  "88900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58618,
+    "quantity": 1
+  },
+  "88600": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "88500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -6
+  },
+  "88400": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": -65
+  },
+  "88300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30283,
+    "quantity": -2
+  },
+  "88100": {
+    "product": "SQUID_INK",
+    "price": 1809,
+    "quantity": -26
+  },
+  "88000": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": 160
+  },
+  "87800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58601,
+    "quantity": -1
+  },
+  "87700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": -8
+  },
+  "87600": {
+    "product": "SQUID_INK",
+    "price": 1810,
+    "quantity": 26
+  },
+  "87200": {
+    "product": "JAMS",
+    "price": 6522,
+    "quantity": -145
+  },
+  "87100": {
+    "product": "SQUID_INK",
+    "price": 1810,
+    "quantity": -24
+  },
+  "87000": {
+    "product": "SQUID_INK",
+    "price": 1810,
+    "quantity": 4
+  },
+  "86900": {
+    "product": "SQUID_INK",
+    "price": 1810,
+    "quantity": -27
+  },
+  "86700": {
+    "product": "DJEMBES",
+    "price": 13376,
+    "quantity": -37
+  },
+  "86600": {
+    "product": "DJEMBES",
+    "price": 13378,
+    "quantity": -22
+  },
+  "86400": {
+    "product": "SQUID_INK",
+    "price": 1812,
+    "quantity": -1
+  },
+  "86300": {
+    "product": "DJEMBES",
+    "price": 13379,
+    "quantity": -61
+  },
+  "86200": {
+    "product": "SQUID_INK",
+    "price": 1815,
+    "quantity": -2
+  },
+  "86100": {
+    "product": "SQUID_INK",
+    "price": 1815,
+    "quantity": 21
+  },
+  "86000": {
+    "product": "SQUID_INK",
+    "price": 1814,
+    "quantity": -31
+  },
+  "85900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58625,
+    "quantity": -7
+  },
+  "85800": {
+    "product": "SQUID_INK",
+    "price": 1811,
+    "quantity": 28
+  },
+  "85700": {
+    "product": "SQUID_INK",
+    "price": 1809,
+    "quantity": 24
+  },
+  "85600": {
+    "product": "DJEMBES",
+    "price": 13379,
+    "quantity": 22
+  },
+  "85500": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": -56
+  },
+  "85400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58632,
+    "quantity": -3
+  },
+  "85300": {
+    "product": "SQUID_INK",
+    "price": 1809,
+    "quantity": 3
+  },
+  "85200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58633,
+    "quantity": 12
+  },
+  "85100": {
+    "product": "SQUID_INK",
+    "price": 1804,
+    "quantity": 7
+  },
+  "85000": {
+    "product": "DJEMBES",
+    "price": 13378,
+    "quantity": -22
+  },
+  "84900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58632,
+    "quantity": -1
+  },
+  "84800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58641,
+    "quantity": -31
+  },
+  "84700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58649,
+    "quantity": -4
+  },
+  "84600": {
+    "product": "SQUID_INK",
+    "price": 1798,
+    "quantity": 30
+  },
+  "84500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "84400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30279,
+    "quantity": 5
+  },
+  "84300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58651,
+    "quantity": 19
+  },
+  "84200": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": 3
+  },
+  "84100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": -5
+  },
+  "84000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58642,
+    "quantity": 14
+  },
+  "83900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30266,
+    "quantity": 1
+  },
+  "83800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30264,
+    "quantity": -1
+  },
+  "83700": {
+    "product": "SQUID_INK",
+    "price": 1802,
+    "quantity": -6
+  },
+  "83600": {
+    "product": "JAMS",
+    "price": 6526,
+    "quantity": -78
+  },
+  "83500": {
+    "product": "JAMS",
+    "price": 6527,
+    "quantity": -65
+  },
+  "83400": {
+    "product": "SQUID_INK",
+    "price": 1804,
+    "quantity": -20
+  },
+  "83300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58635,
+    "quantity": 16
+  },
+  "83200": {
+    "product": "SQUID_INK",
+    "price": 1805,
+    "quantity": -29
+  },
+  "83000": {
+    "product": "DJEMBES",
+    "price": 13378,
+    "quantity": 55
+  },
+  "82900": {
+    "product": "SQUID_INK",
+    "price": 1805,
+    "quantity": 4
+  },
+  "82800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58633,
+    "quantity": -12
+  },
+  "82600": {
+    "product": "SQUID_INK",
+    "price": 1806,
+    "quantity": 28
+  },
+  "82500": {
+    "product": "DJEMBES",
+    "price": 13377,
+    "quantity": 65
+  },
+  "82400": {
+    "product": "SQUID_INK",
+    "price": 1810,
+    "quantity": -30
+  },
+  "82200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "82100": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -2
+  },
+  "82000": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 2
+  },
+  "81900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58638,
+    "quantity": 13
+  },
+  "81800": {
+    "product": "DJEMBES",
+    "price": 13378,
+    "quantity": -48
+  },
+  "81700": {
+    "product": "SQUID_INK",
+    "price": 1808,
+    "quantity": 4
+  },
+  "81600": {
+    "product": "SQUID_INK",
+    "price": 1808,
+    "quantity": -28
+  },
+  "81400": {
+    "product": "KELP",
+    "price": 2037,
+    "quantity": -1
+  },
+  "81300": {
+    "product": "SQUID_INK",
+    "price": 1808,
+    "quantity": 24
+  },
+  "81100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30270,
+    "quantity": 17
+  },
+  "81000": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": -41
+  },
+  "80900": {
+    "product": "SQUID_INK",
+    "price": 1808,
+    "quantity": -1
+  },
+  "80800": {
+    "product": "SQUID_INK",
+    "price": 1808,
+    "quantity": 32
+  },
+  "80600": {
+    "product": "SQUID_INK",
+    "price": 1804,
+    "quantity": 22
+  },
+  "80400": {
+    "product": "DJEMBES",
+    "price": 13381,
+    "quantity": -72
+  },
+  "80300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "80200": {
+    "product": "DJEMBES",
+    "price": 13380,
+    "quantity": 44
+  },
+  "79900": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 5
+  },
+  "79800": {
+    "product": "JAMS",
+    "price": 6523,
+    "quantity": 70
+  },
+  "79700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "79600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30259,
+    "quantity": 16
+  },
+  "79500": {
+    "product": "SQUID_INK",
+    "price": 1816,
+    "quantity": -19
+  },
+  "79400": {
+    "product": "DJEMBES",
+    "price": 13377,
+    "quantity": 64
+  },
+  "79300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58611,
+    "quantity": 1
+  },
+  "79200": {
+    "product": "DJEMBES",
+    "price": 13376,
+    "quantity": -57
+  },
+  "79100": {
+    "product": "DJEMBES",
+    "price": 13376,
+    "quantity": 69
+  },
+  "78800": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -65
+  },
+  "78300": {
+    "product": "KELP",
+    "price": 2037,
+    "quantity": -1
+  },
+  "78200": {
+    "product": "DJEMBES",
+    "price": 13376,
+    "quantity": -37
+  },
+  "78100": {
+    "product": "SQUID_INK",
+    "price": 1821,
+    "quantity": -32
+  },
+  "78000": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": -142
+  },
+  "77900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58617,
+    "quantity": -2
+  },
+  "77700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58618,
+    "quantity": 2
+  },
+  "77600": {
+    "product": "DJEMBES",
+    "price": 13380,
+    "quantity": -23
+  },
+  "77500": {
+    "product": "DJEMBES",
+    "price": 13382,
+    "quantity": -60
+  },
+  "77400": {
+    "product": "JAMS",
+    "price": 6520,
+    "quantity": 201
+  },
+  "77300": {
+    "product": "SQUID_INK",
+    "price": 1824,
+    "quantity": 30
+  },
+  "77200": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": 9
+  },
+  "77100": {
+    "product": "DJEMBES",
+    "price": 13381,
+    "quantity": 68
+  },
+  "77000": {
+    "product": "SQUID_INK",
+    "price": 1819,
+    "quantity": 21
+  },
+  "76900": {
+    "product": "DJEMBES",
+    "price": 13380,
+    "quantity": 24
+  },
+  "76700": {
+    "product": "SQUID_INK",
+    "price": 1826,
+    "quantity": -35
+  },
+  "76600": {
+    "product": "DJEMBES",
+    "price": 13379,
+    "quantity": 28
+  },
+  "76500": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "76400": {
+    "product": "SQUID_INK",
+    "price": 1832,
+    "quantity": -1
+  },
+  "76300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -2
+  },
+  "76100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58611,
+    "quantity": -14
+  },
+  "76000": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -2
+  },
+  "75900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58626,
+    "quantity": -2
+  },
+  "75800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58637,
+    "quantity": -1
+  },
+  "75700": {
+    "product": "SQUID_INK",
+    "price": 1833,
+    "quantity": 6
+  },
+  "75600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30252,
+    "quantity": -22
+  },
+  "75500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "75400": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -64
+  },
+  "75300": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": 101
+  },
+  "75200": {
+    "product": "JAMS",
+    "price": 6525,
+    "quantity": -95
+  },
+  "75100": {
+    "product": "JAMS",
+    "price": 6526,
+    "quantity": -287
+  },
+  "75000": {
+    "product": "SQUID_INK",
+    "price": 1833,
+    "quantity": 30
+  },
+  "74900": {
+    "product": "DJEMBES",
+    "price": 13379,
+    "quantity": -31
+  },
+  "74800": {
+    "product": "DJEMBES",
+    "price": 13380,
+    "quantity": -19
+  },
+  "74700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -3
+  },
+  "74600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30265,
+    "quantity": 14
+  },
+  "74500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58670,
+    "quantity": 2
+  },
+  "74400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58663,
+    "quantity": 1
+  },
+  "74300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30262,
+    "quantity": -2
+  },
+  "74200": {
+    "product": "DJEMBES",
+    "price": 13381,
+    "quantity": -70
+  },
+  "74100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58668,
+    "quantity": -7
+  },
+  "74000": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -1
+  },
+  "73900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58669,
+    "quantity": -20
+  },
+  "73700": {
+    "product": "CROISSANTS",
+    "price": 4275,
+    "quantity": 46
+  },
+  "73600": {
+    "product": "CROISSANTS",
+    "price": 4275,
+    "quantity": -147
+  },
+  "73300": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": -13
+  },
+  "73200": {
+    "product": "CROISSANTS",
+    "price": 4275,
+    "quantity": 51
+  },
+  "72900": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 1
+  },
+  "72800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58673,
+    "quantity": -13
+  },
+  "72700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30272,
+    "quantity": -2
+  },
+  "72600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58686,
+    "quantity": -2
+  },
+  "72500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58685,
+    "quantity": 20
+  },
+  "72400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58673,
+    "quantity": 7
+  },
+  "72300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30268,
+    "quantity": -18
+  },
+  "72200": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 7
+  },
+  "72100": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": 1
+  },
+  "72000": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": -20
+  },
+  "71900": {
+    "product": "JAMS",
+    "price": 6527,
+    "quantity": -100
+  },
+  "71800": {
+    "product": "JAMS",
+    "price": 6527,
+    "quantity": 225
+  },
+  "71600": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": 2
+  },
+  "71500": {
+    "product": "SQUID_INK",
+    "price": 1841,
+    "quantity": 30
+  },
+  "71400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 3
+  },
+  "71300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "71100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30267,
+    "quantity": 20
+  },
+  "70900": {
+    "product": "JAMS",
+    "price": 6525,
+    "quantity": 214
+  },
+  "70800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58670,
+    "quantity": 1
+  },
+  "70600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58664,
+    "quantity": 20
+  },
+  "70400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "70300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58667,
+    "quantity": -44
+  },
+  "70200": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": 63
+  },
+  "70100": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": -9
+  },
+  "70000": {
+    "product": "PICNIC_BASKET2",
+    "price": 30258,
+    "quantity": 18
+  },
+  "69500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30263,
+    "quantity": -31
+  },
+  "69400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58671,
+    "quantity": -2
+  },
+  "69300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30269,
+    "quantity": 18
+  },
+  "69200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58668,
+    "quantity": 14
+  },
+  "69100": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 54
+  },
+  "69000": {
+    "product": "DJEMBES",
+    "price": 13384,
+    "quantity": 54
+  },
+  "68900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30275,
+    "quantity": -14
+  },
+  "68800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 5
+  },
+  "68700": {
+    "product": "CROISSANTS",
+    "price": 4275,
+    "quantity": -51
+  },
+  "68600": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 8
+  },
+  "68500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -10
+  },
+  "68400": {
+    "product": "JAMS",
+    "price": 6525,
+    "quantity": -251
+  },
+  "68300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "68200": {
+    "product": "SQUID_INK",
+    "price": 1835,
+    "quantity": -27
+  },
+  "68000": {
+    "product": "SQUID_INK",
+    "price": 1836,
+    "quantity": 31
+  },
+  "67900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30287,
+    "quantity": 20
+  },
+  "67800": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": 38
+  },
+  "67700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -7
+  },
+  "67600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "67500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -10
+  },
+  "67300": {
+    "product": "SQUID_INK",
+    "price": 1834,
+    "quantity": 5
+  },
+  "67200": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -22
+  },
+  "67100": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 8
+  },
+  "67000": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "66800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58672,
+    "quantity": -2
+  },
+  "66600": {
+    "product": "SQUID_INK",
+    "price": 1835,
+    "quantity": -19
+  },
+  "66500": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": -30
+  },
+  "66400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": 3
+  },
+  "66300": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 1
+  },
+  "66200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": -1
+  },
+  "66100": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 2
+  },
+  "66000": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -49
+  },
+  "65900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": 31
+  },
+  "65800": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": -18
+  },
+  "65700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 4
+  },
+  "65600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -9
+  },
+  "65500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30282,
+    "quantity": -7
+  },
+  "65300": {
+    "product": "DJEMBES",
+    "price": 13391,
+    "quantity": -58
+  },
+  "65200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30285,
+    "quantity": 21
+  },
+  "65000": {
+    "product": "JAMS",
+    "price": 6527,
+    "quantity": -61
+  },
+  "64800": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 9
+  },
+  "64700": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": -29
+  },
+  "64600": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": 26
+  },
+  "64500": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -1
+  },
+  "64300": {
+    "product": "SQUID_INK",
+    "price": 1836,
+    "quantity": 20
+  },
+  "64200": {
+    "product": "DJEMBES",
+    "price": 13392,
+    "quantity": 62
+  },
+  "64100": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 2
+  },
+  "64000": {
+    "product": "SQUID_INK",
+    "price": 1834,
+    "quantity": 26
+  },
+  "63900": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 5
+  },
+  "63800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30292,
+    "quantity": 11
+  },
+  "63700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58692,
+    "quantity": 19
+  },
+  "63600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30284,
+    "quantity": -13
+  },
+  "63500": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": 63
+  },
+  "63400": {
+    "product": "SQUID_INK",
+    "price": 1836,
+    "quantity": 6
+  },
+  "63200": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": -18
+  },
+  "63100": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": 6
+  },
+  "62900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30285,
+    "quantity": -15
+  },
+  "62800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "62700": {
+    "product": "DJEMBES",
+    "price": 13391,
+    "quantity": -68
+  },
+  "62600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58706,
+    "quantity": -14
+  },
+  "62500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30288,
+    "quantity": -14
+  },
+  "62400": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -30
+  },
+  "62300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 2
+  },
+  "62200": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": -55
+  },
+  "62100": {
+    "product": "SQUID_INK",
+    "price": 1841,
+    "quantity": 2
+  },
+  "62000": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": 54
+  },
+  "61900": {
+    "product": "JAMS",
+    "price": 6530,
+    "quantity": 78
+  },
+  "61800": {
+    "product": "JAMS",
+    "price": 6529,
+    "quantity": 58
+  },
+  "61700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58696,
+    "quantity": 1
+  },
+  "61600": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": -22
+  },
+  "61500": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 32
+  },
+  "61400": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": -60
+  },
+  "61300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "61200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58701,
+    "quantity": -13
+  },
+  "61000": {
+    "product": "DJEMBES",
+    "price": 13391,
+    "quantity": -3
+  },
+  "60900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58702,
+    "quantity": 1
+  },
+  "60800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58696,
+    "quantity": 1
+  },
+  "60600": {
+    "product": "DJEMBES",
+    "price": 13392,
+    "quantity": -62
+  },
+  "60500": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": -29
+  },
+  "60400": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": 21
+  },
+  "60300": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": 80
+  },
+  "60200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30285,
+    "quantity": 12
+  },
+  "60100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": 8
+  },
+  "60000": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 29
+  },
+  "59900": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": -13
+  },
+  "59800": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": 10
+  },
+  "59700": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": 2
+  },
+  "59400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58668,
+    "quantity": -11
+  },
+  "59300": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 25
+  },
+  "59200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "58900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30271,
+    "quantity": 20
+  },
+  "58800": {
+    "product": "SQUID_INK",
+    "price": 1840,
+    "quantity": 1
+  },
+  "58600": {
+    "product": "SQUID_INK",
+    "price": 1840,
+    "quantity": -20
+  },
+  "58500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58668,
+    "quantity": 2
+  },
+  "58400": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": 2
+  },
+  "58300": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": 1
+  },
+  "58200": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 49
+  },
+  "58000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58670,
+    "quantity": -18
+  },
+  "57700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -5
+  },
+  "57600": {
+    "product": "SQUID_INK",
+    "price": 1841,
+    "quantity": -22
+  },
+  "57500": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": -29
+  },
+  "57400": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": -27
+  },
+  "57300": {
+    "product": "JAMS",
+    "price": 6531,
+    "quantity": 66
+  },
+  "57200": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": -23
+  },
+  "57100": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": -59
+  },
+  "57000": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -3
+  },
+  "56900": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 20
+  },
+  "56700": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": 26
+  },
+  "56600": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": 31
+  },
+  "56500": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": 26
+  },
+  "56400": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 71
+  },
+  "56200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "56100": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": -23
+  },
+  "56000": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -24
+  },
+  "55900": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": -21
+  },
+  "55800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "55700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30275,
+    "quantity": 21
+  },
+  "55600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -2
+  },
+  "55400": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": 25
+  },
+  "55200": {
+    "product": "JAMS",
+    "price": 6530,
+    "quantity": -84
+  },
+  "55000": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": -70
+  },
+  "54800": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 80
+  },
+  "54700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58659,
+    "quantity": 1
+  },
+  "54600": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": 29
+  },
+  "54500": {
+    "product": "JAMS",
+    "price": 6530,
+    "quantity": 12
+  },
+  "54400": {
+    "product": "JAMS",
+    "price": 6529,
+    "quantity": 242
+  },
+  "54300": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": -33
+  },
+  "54200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58642,
+    "quantity": 40
+  },
+  "54100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58634,
+    "quantity": 20
+  },
+  "53900": {
+    "product": "JAMS",
+    "price": 6528,
+    "quantity": -51
+  },
+  "53800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58630,
+    "quantity": 2
+  },
+  "53700": {
+    "product": "SQUID_INK",
+    "price": 1840,
+    "quantity": -26
+  },
+  "53600": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "53500": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -61
+  },
+  "53300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30264,
+    "quantity": 6
+  },
+  "53200": {
+    "product": "JAMS",
+    "price": 6527,
+    "quantity": -266
+  },
+  "53000": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": 65
+  },
+  "52900": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": 29
+  },
+  "52800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30271,
+    "quantity": 51
+  },
+  "52600": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": 27
+  },
+  "52500": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -50
+  },
+  "52400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30272,
+    "quantity": -14
+  },
+  "52300": {
+    "product": "SQUID_INK",
+    "price": 1829,
+    "quantity": 1
+  },
+  "52100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30274,
+    "quantity": -19
+  },
+  "52000": {
+    "product": "DJEMBES",
+    "price": 13390,
+    "quantity": -70
+  },
+  "51900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30283,
+    "quantity": -29
+  },
+  "51800": {
+    "product": "DJEMBES",
+    "price": 13392,
+    "quantity": 28
+  },
+  "51700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30290,
+    "quantity": -16
+  },
+  "51600": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": 69
+  },
+  "51500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30290,
+    "quantity": -16
+  },
+  "51400": {
+    "product": "JAMS",
+    "price": 6529,
+    "quantity": 71
+  },
+  "51200": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": -28
+  },
+  "51100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58621,
+    "quantity": 1
+  },
+  "50900": {
+    "product": "DJEMBES",
+    "price": 13390,
+    "quantity": -69
+  },
+  "50800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": 12
+  },
+  "50700": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": 43
+  },
+  "50600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30267,
+    "quantity": 7
+  },
+  "50500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58616,
+    "quantity": -10
+  },
+  "50400": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -28
+  },
+  "50300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "50200": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": -40
+  },
+  "50100": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": 20
+  },
+  "50000": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": 39
+  },
+  "49900": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": -45
+  },
+  "49800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "49700": {
+    "product": "SQUID_INK",
+    "price": 1832,
+    "quantity": 6
+  },
+  "49500": {
+    "product": "JAMS",
+    "price": 6529,
+    "quantity": -284
+  },
+  "49400": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": 42
+  },
+  "49300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30282,
+    "quantity": 1
+  },
+  "49100": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": -20
+  },
+  "49000": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": -5
+  },
+  "48900": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "48600": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 74
+  },
+  "48500": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": -1
+  },
+  "48300": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": -61
+  },
+  "48200": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": -26
+  },
+  "48100": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": 30
+  },
+  "48000": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -58
+  },
+  "47900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30278,
+    "quantity": -15
+  },
+  "47500": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": 29
+  },
+  "47400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58636,
+    "quantity": 18
+  },
+  "47300": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -29
+  },
+  "47200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58633,
+    "quantity": 2
+  },
+  "47100": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": 28
+  },
+  "47000": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": 14
+  },
+  "46900": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": -25
+  },
+  "46800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30269,
+    "quantity": 18
+  },
+  "46700": {
+    "product": "DJEMBES",
+    "price": 13383,
+    "quantity": 48
+  },
+  "46500": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": 118
+  },
+  "46400": {
+    "product": "SQUID_INK",
+    "price": 1847,
+    "quantity": -24
+  },
+  "46100": {
+    "product": "DJEMBES",
+    "price": 13383,
+    "quantity": 58
+  },
+  "46000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58610,
+    "quantity": -1
+  },
+  "45900": {
+    "product": "SQUID_INK",
+    "price": 1849,
+    "quantity": 2
+  },
+  "45700": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": -37
+  },
+  "45600": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": -55
+  },
+  "45500": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 15
+  },
+  "45400": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 55
+  },
+  "45300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30262,
+    "quantity": 21
+  },
+  "45100": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 22
+  },
+  "45000": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": -51
+  },
+  "44900": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -152
+  },
+  "44700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58636,
+    "quantity": -14
+  },
+  "44600": {
+    "product": "DJEMBES",
+    "price": 13390,
+    "quantity": -69
+  },
+  "44500": {
+    "product": "DJEMBES",
+    "price": 13390,
+    "quantity": 29
+  },
+  "44400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58650,
+    "quantity": -7
+  },
+  "44300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30264,
+    "quantity": -15
+  },
+  "44200": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": 22
+  },
+  "44100": {
+    "product": "SQUID_INK",
+    "price": 1849,
+    "quantity": -30
+  },
+  "44000": {
+    "product": "SQUID_INK",
+    "price": 1852,
+    "quantity": -23
+  },
+  "43900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30268,
+    "quantity": -38
+  },
+  "43800": {
+    "product": "DJEMBES",
+    "price": 13386,
+    "quantity": 66
+  },
+  "43700": {
+    "product": "SQUID_INK",
+    "price": 1854,
+    "quantity": 5
+  },
+  "43600": {
+    "product": "JAMS",
+    "price": 6534,
+    "quantity": 89
+  },
+  "43500": {
+    "product": "SQUID_INK",
+    "price": 1861,
+    "quantity": -24
+  },
+  "43400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58654,
+    "quantity": -5
+  },
+  "43200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58651,
+    "quantity": 19
+  },
+  "43000": {
+    "product": "DJEMBES",
+    "price": 13384,
+    "quantity": -72
+  },
+  "42900": {
+    "product": "DJEMBES",
+    "price": 13383,
+    "quantity": 46
+  },
+  "42800": {
+    "product": "DJEMBES",
+    "price": 13382,
+    "quantity": 51
+  },
+  "42700": {
+    "product": "CROISSANTS",
+    "price": 4277,
+    "quantity": -42
+  },
+  "42600": {
+    "product": "SQUID_INK",
+    "price": 1860,
+    "quantity": 6
+  },
+  "42500": {
+    "product": "SQUID_INK",
+    "price": 1861,
+    "quantity": -3
+  },
+  "42300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30285,
+    "quantity": 16
+  },
+  "42200": {
+    "product": "SQUID_INK",
+    "price": 1860,
+    "quantity": 3
+  },
+  "42000": {
+    "product": "DJEMBES",
+    "price": 13387,
+    "quantity": -42
+  },
+  "41900": {
+    "product": "DJEMBES",
+    "price": 13389,
+    "quantity": -27
+  },
+  "41800": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": 6
+  },
+  "41600": {
+    "product": "SQUID_INK",
+    "price": 1856,
+    "quantity": 31
+  },
+  "41500": {
+    "product": "DJEMBES",
+    "price": 13390,
+    "quantity": 21
+  },
+  "41400": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": 46
+  },
+  "41300": {
+    "product": "CROISSANTS",
+    "price": 4277,
+    "quantity": 78
+  },
+  "41200": {
+    "product": "SQUID_INK",
+    "price": 1855,
+    "quantity": 27
+  },
+  "41100": {
+    "product": "PICNIC_BASKET2",
+    "price": 30281,
+    "quantity": 49
+  },
+  "40700": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -55
+  },
+  "40600": {
+    "product": "DJEMBES",
+    "price": 13391,
+    "quantity": -63
+  },
+  "40300": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 31
+  },
+  "40200": {
+    "product": "DJEMBES",
+    "price": 13384,
+    "quantity": 21
+  },
+  "40100": {
+    "product": "DJEMBES",
+    "price": 13383,
+    "quantity": 68
+  },
+  "40000": {
+    "product": "DJEMBES",
+    "price": 13383,
+    "quantity": -22
+  },
+  "39900": {
+    "product": "DJEMBES",
+    "price": 13384,
+    "quantity": -56
+  },
+  "39800": {
+    "product": "CROISSANTS",
+    "price": 4276,
+    "quantity": 103
+  },
+  "39700": {
+    "product": "CROISSANTS",
+    "price": 4276,
+    "quantity": -45
+  },
+  "39500": {
+    "product": "DJEMBES",
+    "price": 13385,
+    "quantity": 74
+  },
+  "39400": {
+    "product": "DJEMBES",
+    "price": 13388,
+    "quantity": -22
+  },
+  "39300": {
+    "product": "JAMS",
+    "price": 6531,
+    "quantity": 281
+  },
+  "39000": {
+    "product": "DJEMBES",
+    "price": 13391,
+    "quantity": 26
+  },
+  "38900": {
+    "product": "DJEMBES",
+    "price": 13392,
+    "quantity": -50
+  },
+  "38700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30263,
+    "quantity": -1
+  },
+  "38600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58641,
+    "quantity": -2
+  },
+  "38500": {
+    "product": "DJEMBES",
+    "price": 13396,
+    "quantity": -28
+  },
+  "38400": {
+    "product": "CROISSANTS",
+    "price": 4276,
+    "quantity": -117
+  },
+  "38300": {
+    "product": "DJEMBES",
+    "price": 13396,
+    "quantity": 62
+  },
+  "38200": {
+    "product": "DJEMBES",
+    "price": 13396,
+    "quantity": -22
+  },
+  "38100": {
+    "product": "DJEMBES",
+    "price": 13396,
+    "quantity": 23
+  },
+  "38000": {
+    "product": "DJEMBES",
+    "price": 13395,
+    "quantity": 15
+  },
+  "37900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30265,
+    "quantity": 22
+  },
+  "37800": {
+    "product": "DJEMBES",
+    "price": 13395,
+    "quantity": -47
+  },
+  "37700": {
+    "product": "DJEMBES",
+    "price": 13398,
+    "quantity": -73
+  },
+  "37600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58647,
+    "quantity": -20
+  },
+  "37500": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": 24
+  },
+  "37400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30261,
+    "quantity": 14
+  },
+  "37300": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": 6
+  },
+  "37200": {
+    "product": "DJEMBES",
+    "price": 13401,
+    "quantity": 54
+  },
+  "37100": {
+    "product": "DJEMBES",
+    "price": 13400,
+    "quantity": 66
+  },
+  "37000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58635,
+    "quantity": -19
+  },
+  "36800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "36700": {
+    "product": "DJEMBES",
+    "price": 13408,
+    "quantity": -54
+  },
+  "36500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58647,
+    "quantity": 1
+  },
+  "36400": {
+    "product": "DJEMBES",
+    "price": 13410,
+    "quantity": -15
+  },
+  "36300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58644,
+    "quantity": 2
+  },
+  "36200": {
+    "product": "DJEMBES",
+    "price": 13409,
+    "quantity": 69
+  },
+  "36100": {
+    "product": "DJEMBES",
+    "price": 13409,
+    "quantity": -50
+  },
+  "35900": {
+    "product": "SQUID_INK",
+    "price": 1841,
+    "quantity": 6
+  },
+  "35800": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": -26
+  },
+  "35700": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 1
+  },
+  "35600": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": -24
+  },
+  "35500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "35400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30253,
+    "quantity": -6
+  },
+  "35100": {
+    "product": "DJEMBES",
+    "price": 13410,
+    "quantity": -27
+  },
+  "34800": {
+    "product": "DJEMBES",
+    "price": 13410,
+    "quantity": 19
+  },
+  "34500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30250,
+    "quantity": 41
+  },
+  "34400": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": -26
+  },
+  "34300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58667,
+    "quantity": -10
+  },
+  "34200": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -62
+  },
+  "34100": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 58
+  },
+  "33700": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 29
+  },
+  "33600": {
+    "product": "CROISSANTS",
+    "price": 4277,
+    "quantity": 132
+  },
+  "33500": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": 26
+  },
+  "33400": {
+    "product": "SQUID_INK",
+    "price": 1836,
+    "quantity": 21
+  },
+  "33300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30250,
+    "quantity": -13
+  },
+  "33200": {
+    "product": "SQUID_INK",
+    "price": 1835,
+    "quantity": -18
+  },
+  "33000": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 62
+  },
+  "32900": {
+    "product": "SQUID_INK",
+    "price": 1836,
+    "quantity": 5
+  },
+  "32800": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": -24
+  },
+  "32700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58688,
+    "quantity": -3
+  },
+  "32600": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": -23
+  },
+  "32500": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": -14
+  },
+  "32400": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 2
+  },
+  "32300": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": -52
+  },
+  "32200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10000,
+    "quantity": 4
+  },
+  "32100": {
+    "product": "SQUID_INK",
+    "price": 1848,
+    "quantity": -20
+  },
+  "32000": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 4
+  },
+  "31900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30248,
+    "quantity": -41
+  },
+  "31800": {
+    "product": "CROISSANTS",
+    "price": 4277,
+    "quantity": -151
+  },
+  "31700": {
+    "product": "SQUID_INK",
+    "price": 1852,
+    "quantity": -20
+  },
+  "31600": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -54
+  },
+  "31500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58698,
+    "quantity": 13
+  },
+  "31300": {
+    "product": "KELP",
+    "price": 2036,
+    "quantity": -1
+  },
+  "31100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58695,
+    "quantity": 2
+  },
+  "30900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58683,
+    "quantity": 1
+  },
+  "30800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30238,
+    "quantity": 17
+  },
+  "30700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30234,
+    "quantity": 36
+  },
+  "30600": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 1
+  },
+  "30500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30224,
+    "quantity": 1
+  },
+  "30400": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": 25
+  },
+  "30300": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "30200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58663,
+    "quantity": 4
+  },
+  "30100": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -25
+  },
+  "30000": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 49
+  },
+  "29800": {
+    "product": "DJEMBES",
+    "price": 13411,
+    "quantity": 70
+  },
+  "29700": {
+    "product": "SQUID_INK",
+    "price": 1854,
+    "quantity": 8
+  },
+  "29600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30235,
+    "quantity": -22
+  },
+  "29500": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": 23
+  },
+  "29400": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -1
+  },
+  "29300": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": 23
+  },
+  "29200": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -62
+  },
+  "29100": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -58
+  },
+  "28800": {
+    "product": "SQUID_INK",
+    "price": 1851,
+    "quantity": 30
+  },
+  "28700": {
+    "product": "JAMS",
+    "price": 6534,
+    "quantity": -97
+  },
+  "28600": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": 7
+  },
+  "28500": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -7
+  },
+  "28400": {
+    "product": "SQUID_INK",
+    "price": 1849,
+    "quantity": -22
+  },
+  "28200": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 54
+  },
+  "28100": {
+    "product": "SQUID_INK",
+    "price": 1851,
+    "quantity": 23
+  },
+  "28000": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 4
+  },
+  "27900": {
+    "product": "DJEMBES",
+    "price": 13411,
+    "quantity": 53
+  },
+  "27800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "27700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58659,
+    "quantity": 2
+  },
+  "27600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30246,
+    "quantity": -15
+  },
+  "27500": {
+    "product": "JAMS",
+    "price": 6536,
+    "quantity": 12
+  },
+  "27400": {
+    "product": "JAMS",
+    "price": 6536,
+    "quantity": -77
+  },
+  "27300": {
+    "product": "CROISSANTS",
+    "price": 4274,
+    "quantity": 86
+  },
+  "27200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30245,
+    "quantity": 16
+  },
+  "27100": {
+    "product": "SQUID_INK",
+    "price": 1851,
+    "quantity": 5
+  },
+  "27000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58649,
+    "quantity": -1
+  },
+  "26900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30238,
+    "quantity": 2
+  },
+  "26800": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": -1
+  },
+  "26700": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 4
+  },
+  "26600": {
+    "product": "SQUID_INK",
+    "price": 1847,
+    "quantity": -30
+  },
+  "26500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58661,
+    "quantity": -2
+  },
+  "26400": {
+    "product": "PICNIC_BASKET1",
+    "price": 58658,
+    "quantity": 6
+  },
+  "26300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30237,
+    "quantity": 2
+  },
+  "26200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30236,
+    "quantity": -17
+  },
+  "26100": {
+    "product": "KELP",
+    "price": 2035,
+    "quantity": 5
+  },
+  "26000": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -73
+  },
+  "25900": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 23
+  },
+  "25800": {
+    "product": "DJEMBES",
+    "price": 13411,
+    "quantity": 56
+  },
+  "25600": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -25
+  },
+  "25500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58673,
+    "quantity": -1
+  },
+  "25300": {
+    "product": "SQUID_INK",
+    "price": 1854,
+    "quantity": -28
+  },
+  "25200": {
+    "product": "DJEMBES",
+    "price": 13411,
+    "quantity": -50
+  },
+  "25100": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": 37
+  },
+  "25000": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": -123
+  },
+  "24900": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 22
+  },
+  "24800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58669,
+    "quantity": 1
+  },
+  "24600": {
+    "product": "SQUID_INK",
+    "price": 1849,
+    "quantity": 25
+  },
+  "24500": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": 2
+  },
+  "24200": {
+    "product": "SQUID_INK",
+    "price": 1849,
+    "quantity": -4
+  },
+  "24100": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": 23
+  },
+  "24000": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": -2
+  },
+  "23900": {
+    "product": "SQUID_INK",
+    "price": 1846,
+    "quantity": 31
+  },
+  "23800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "23700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30238,
+    "quantity": 2
+  },
+  "23600": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 7
+  },
+  "23500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30235,
+    "quantity": 1
+  },
+  "23300": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": 28
+  },
+  "23100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58671,
+    "quantity": 18
+  },
+  "23000": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": -29
+  },
+  "22900": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -69
+  },
+  "22800": {
+    "product": "SQUID_INK",
+    "price": 1847,
+    "quantity": -27
+  },
+  "22700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30234,
+    "quantity": -15
+  },
+  "22600": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -22
+  },
+  "22500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58674,
+    "quantity": -12
+  },
+  "22300": {
+    "product": "SQUID_INK",
+    "price": 1848,
+    "quantity": -28
+  },
+  "22200": {
+    "product": "CROISSANTS",
+    "price": 4272,
+    "quantity": 51
+  },
+  "22100": {
+    "product": "JAMS",
+    "price": 6538,
+    "quantity": -54
+  },
+  "22000": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 60
+  },
+  "21900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58667,
+    "quantity": 1
+  },
+  "21700": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 2
+  },
+  "21500": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": 29
+  },
+  "21400": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": 26
+  },
+  "21300": {
+    "product": "JAMS",
+    "price": 6538,
+    "quantity": -73
+  },
+  "21200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58682,
+    "quantity": -19
+  },
+  "21100": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": -51
+  },
+  "21000": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": 80
+  },
+  "20900": {
+    "product": "SQUID_INK",
+    "price": 1837,
+    "quantity": -21
+  },
+  "20800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30237,
+    "quantity": 5
+  },
+  "20700": {
+    "product": "JAMS",
+    "price": 6540,
+    "quantity": 63
+  },
+  "20600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30232,
+    "quantity": 1
+  },
+  "20500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30227,
+    "quantity": 40
+  },
+  "20400": {
+    "product": "SQUID_INK",
+    "price": 1833,
+    "quantity": 27
+  },
+  "20300": {
+    "product": "SQUID_INK",
+    "price": 1833,
+    "quantity": -17
+  },
+  "20100": {
+    "product": "CROISSANTS",
+    "price": 4271,
+    "quantity": 51
+  },
+  "20000": {
+    "product": "SQUID_INK",
+    "price": 1833,
+    "quantity": 3
+  },
+  "19900": {
+    "product": "SQUID_INK",
+    "price": 1829,
+    "quantity": 2
+  },
+  "19700": {
+    "product": "JAMS",
+    "price": 6539,
+    "quantity": -56
+  },
+  "19600": {
+    "product": "SQUID_INK",
+    "price": 1828,
+    "quantity": -28
+  },
+  "19500": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 18
+  },
+  "19300": {
+    "product": "SQUID_INK",
+    "price": 1828,
+    "quantity": 24
+  },
+  "19200": {
+    "product": "SQUID_INK",
+    "price": 1825,
+    "quantity": 5
+  },
+  "19100": {
+    "product": "SQUID_INK",
+    "price": 1822,
+    "quantity": 2
+  },
+  "19000": {
+    "product": "SQUID_INK",
+    "price": 1828,
+    "quantity": -28
+  },
+  "18900": {
+    "product": "SQUID_INK",
+    "price": 1832,
+    "quantity": -1
+  },
+  "18800": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": -10
+  },
+  "18600": {
+    "product": "SQUID_INK",
+    "price": 1838,
+    "quantity": 4
+  },
+  "18500": {
+    "product": "CROISSANTS",
+    "price": 4270,
+    "quantity": -131
+  },
+  "18300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58680,
+    "quantity": -2
+  },
+  "18200": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -24
+  },
+  "18100": {
+    "product": "SQUID_INK",
+    "price": 1843,
+    "quantity": -6
+  },
+  "18000": {
+    "product": "CROISSANTS",
+    "price": 4270,
+    "quantity": 81
+  },
+  "17900": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": 22
+  },
+  "17600": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 66
+  },
+  "17300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58668,
+    "quantity": 13
+  },
+  "17200": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "17100": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": -9
+  },
+  "17000": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 28
+  },
+  "16900": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -68
+  },
+  "16800": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": 9
+  },
+  "16700": {
+    "product": "SQUID_INK",
+    "price": 1842,
+    "quantity": -27
+  },
+  "16600": {
+    "product": "SQUID_INK",
+    "price": 1847,
+    "quantity": -29
+  },
+  "16500": {
+    "product": "DJEMBES",
+    "price": 13418,
+    "quantity": 77
+  },
+  "16200": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -23
+  },
+  "16100": {
+    "product": "DJEMBES",
+    "price": 13419,
+    "quantity": -62
+  },
+  "16000": {
+    "product": "PICNIC_BASKET2",
+    "price": 30228,
+    "quantity": -27
+  },
+  "15900": {
+    "product": "SQUID_INK",
+    "price": 1856,
+    "quantity": 31
+  },
+  "15800": {
+    "product": "SQUID_INK",
+    "price": 1854,
+    "quantity": 25
+  },
+  "15700": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": 21
+  },
+  "15600": {
+    "product": "DJEMBES",
+    "price": 13418,
+    "quantity": -58
+  },
+  "15500": {
+    "product": "CROISSANTS",
+    "price": 4268,
+    "quantity": 121
+  },
+  "15400": {
+    "product": "DJEMBES",
+    "price": 13418,
+    "quantity": 37
+  },
+  "15300": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": -27
+  },
+  "15200": {
+    "product": "SQUID_INK",
+    "price": 1851,
+    "quantity": 25
+  },
+  "15100": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": 59
+  },
+  "15000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58650,
+    "quantity": -8
+  },
+  "14900": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 7
+  },
+  "14800": {
+    "product": "PICNIC_BASKET1",
+    "price": 58646,
+    "quantity": -1
+  },
+  "14700": {
+    "product": "SQUID_INK",
+    "price": 1852,
+    "quantity": -1
+  },
+  "14600": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": 5
+  },
+  "14500": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -64
+  },
+  "14400": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -32
+  },
+  "14300": {
+    "product": "SQUID_INK",
+    "price": 1852,
+    "quantity": 32
+  },
+  "14200": {
+    "product": "SQUID_INK",
+    "price": 1852,
+    "quantity": -15
+  },
+  "14100": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -4
+  },
+  "14000": {
+    "product": "CROISSANTS",
+    "price": 4268,
+    "quantity": 55
+  },
+  "13900": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": 3
+  },
+  "13700": {
+    "product": "DJEMBES",
+    "price": 13416,
+    "quantity": 61
+  },
+  "13600": {
+    "product": "SQUID_INK",
+    "price": 1850,
+    "quantity": -3
+  },
+  "13500": {
+    "product": "SQUID_INK",
+    "price": 1853,
+    "quantity": -23
+  },
+  "13400": {
+    "product": "JAMS",
+    "price": 6543,
+    "quantity": -65
+  },
+  "13300": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 27
+  },
+  "13200": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": -68
+  },
+  "13100": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -52
+  },
+  "13000": {
+    "product": "PICNIC_BASKET1",
+    "price": 58633,
+    "quantity": 8
+  },
+  "12900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58634,
+    "quantity": -6
+  },
+  "12800": {
+    "product": "SQUID_INK",
+    "price": 1855,
+    "quantity": 1
+  },
+  "12700": {
+    "product": "CROISSANTS",
+    "price": 4268,
+    "quantity": 147
+  },
+  "12600": {
+    "product": "SQUID_INK",
+    "price": 1858,
+    "quantity": -32
+  },
+  "12500": {
+    "product": "CROISSANTS",
+    "price": 4269,
+    "quantity": -55
+  },
+  "12400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30234,
+    "quantity": -21
+  },
+  "12300": {
+    "product": "SQUID_INK",
+    "price": 1857,
+    "quantity": 3
+  },
+  "12200": {
+    "product": "KELP",
+    "price": 2033,
+    "quantity": -7
+  },
+  "12100": {
+    "product": "JAMS",
+    "price": 6542,
+    "quantity": 94
+  },
+  "12000": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 47
+  },
+  "11900": {
+    "product": "SQUID_INK",
+    "price": 1858,
+    "quantity": -8
+  },
+  "11700": {
+    "product": "SQUID_INK",
+    "price": 1858,
+    "quantity": 3
+  },
+  "11600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30242,
+    "quantity": 18
+  },
+  "11400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "11300": {
+    "product": "SQUID_INK",
+    "price": 1862,
+    "quantity": -29
+  },
+  "11200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30233,
+    "quantity": 21
+  },
+  "11100": {
+    "product": "JAMS",
+    "price": 6541,
+    "quantity": 64
+  },
+  "11000": {
+    "product": "DJEMBES",
+    "price": 13409,
+    "quantity": 73
+  },
+  "10900": {
+    "product": "DJEMBES",
+    "price": 13410,
+    "quantity": -44
+  },
+  "10800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30232,
+    "quantity": 2
+  },
+  "10600": {
+    "product": "JAMS",
+    "price": 6539,
+    "quantity": -51
+  },
+  "10300": {
+    "product": "PICNIC_BASKET2",
+    "price": 30229,
+    "quantity": 4
+  },
+  "10000": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -59
+  },
+  "9900": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": 5
+  },
+  "9800": {
+    "product": "SQUID_INK",
+    "price": 1857,
+    "quantity": 2
+  },
+  "9700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58653,
+    "quantity": -1
+  },
+  "9600": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 64
+  },
+  "9500": {
+    "product": "SQUID_INK",
+    "price": 1856,
+    "quantity": 28
+  },
+  "9400": {
+    "product": "SQUID_INK",
+    "price": 1855,
+    "quantity": -29
+  },
+  "9300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58651,
+    "quantity": -1
+  },
+  "9200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30227,
+    "quantity": -17
+  },
+  "9100": {
+    "product": "DJEMBES",
+    "price": 13411,
+    "quantity": 22
+  },
+  "9000": {
+    "product": "PICNIC_BASKET2",
+    "price": 30226,
+    "quantity": 20
+  },
+  "8900": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -46
+  },
+  "8800": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": 63
+  },
+  "8700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58651,
+    "quantity": -7
+  },
+  "8500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58655,
+    "quantity": 11
+  },
+  "8300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58650,
+    "quantity": 1
+  },
+  "8200": {
+    "product": "DJEMBES",
+    "price": 13412,
+    "quantity": -19
+  },
+  "8100": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -11
+  },
+  "8000": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 30
+  },
+  "7900": {
+    "product": "PICNIC_BASKET1",
+    "price": 58646,
+    "quantity": -1
+  },
+  "7800": {
+    "product": "SQUID_INK",
+    "price": 1860,
+    "quantity": -1
+  },
+  "7700": {
+    "product": "PICNIC_BASKET1",
+    "price": 58652,
+    "quantity": -12
+  },
+  "7600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -2
+  },
+  "7500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30227,
+    "quantity": -26
+  },
+  "7400": {
+    "product": "PICNIC_BASKET2",
+    "price": 30233,
+    "quantity": -2
+  },
+  "7300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58663,
+    "quantity": -2
+  },
+  "7000": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -2
+  },
+  "6800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30238,
+    "quantity": 16
+  },
+  "6700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 5
+  },
+  "6600": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -6
+  },
+  "6500": {
+    "product": "PICNIC_BASKET1",
+    "price": 58656,
+    "quantity": -2
+  },
+  "6400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 1
+  },
+  "6200": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -50
+  },
+  "6100": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 50
+  },
+  "6000": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -52
+  },
+  "5900": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -4
+  },
+  "5800": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 21
+  },
+  "5600": {
+    "product": "PICNIC_BASKET1",
+    "price": 58653,
+    "quantity": 3
+  },
+  "5500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30234,
+    "quantity": -19
+  },
+  "5400": {
+    "product": "KELP",
+    "price": 2033,
+    "quantity": 5
+  },
+  "5300": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -1
+  },
+  "5200": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -61
+  },
+  "5100": {
+    "product": "DJEMBES",
+    "price": 13416,
+    "quantity": -27
+  },
+  "5000": {
+    "product": "DJEMBES",
+    "price": 13416,
+    "quantity": 72
+  },
+  "4900": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 7
+  },
+  "4800": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": -62
+  },
+  "4700": {
+    "product": "SQUID_INK",
+    "price": 1858,
+    "quantity": 10
+  },
+  "4600": {
+    "product": "CROISSANTS",
+    "price": 4273,
+    "quantity": -63
+  },
+  "4500": {
+    "product": "DJEMBES",
+    "price": 13416,
+    "quantity": -18
+  },
+  "4300": {
+    "product": "KELP",
+    "price": 2033,
+    "quantity": 5
+  },
+  "4100": {
+    "product": "DJEMBES",
+    "price": 13415,
+    "quantity": 2
+  },
+  "3900": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -4
+  },
+  "3800": {
+    "product": "PICNIC_BASKET2",
+    "price": 30245,
+    "quantity": -37
+  },
+  "3700": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 59
+  },
+  "3600": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": -61
+  },
+  "3500": {
+    "product": "PICNIC_BASKET2",
+    "price": 30248,
+    "quantity": -2
+  },
+  "3400": {
+    "product": "JAMS",
+    "price": 6544,
+    "quantity": 50
+  },
+  "3300": {
+    "product": "DJEMBES",
+    "price": 13416,
+    "quantity": 61
+  },
+  "3200": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -61
+  },
+  "3100": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": 16
+  },
+  "3000": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": -16
+  },
+  "2900": {
+    "product": "DJEMBES",
+    "price": 13417,
+    "quantity": 35
+  },
+  "2700": {
+    "product": "PICNIC_BASKET2",
+    "price": 30243,
+    "quantity": 2
+  },
+  "2400": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -1
+  },
+  "2300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58682,
+    "quantity": -2
+  },
+  "2200": {
+    "product": "PICNIC_BASKET2",
+    "price": 30243,
+    "quantity": -33
+  },
+  "2100": {
+    "product": "PICNIC_BASKET1",
+    "price": 58686,
+    "quantity": -16
+  },
+  "2000": {
+    "product": "DJEMBES",
+    "price": 13414,
+    "quantity": 56
+  },
+  "1800": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 30
+  },
+  "1700": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": 29
+  },
+  "1600": {
+    "product": "SQUID_INK",
+    "price": 1844,
+    "quantity": -1
+  },
+  "1500": {
+    "product": "SQUID_INK",
+    "price": 1845,
+    "quantity": 31
+  },
+  "1300": {
+    "product": "PICNIC_BASKET1",
+    "price": 58694,
+    "quantity": 10
+  },
+  "1200": {
+    "product": "PICNIC_BASKET1",
+    "price": 58690,
+    "quantity": 1
+  },
+  "1100": {
+    "product": "DJEMBES",
+    "price": 13413,
+    "quantity": -60
+  },
+  "1000": {
+    "product": "RAINFOREST_RESIN",
+    "price": 10002,
+    "quantity": -2
+  },
+  "900": {
+    "product": "PICNIC_BASKET2",
+    "price": 30255,
+    "quantity": 38
+  },
+  "800": {
+    "product": "SQUID_INK",
+    "price": 1839,
+    "quantity": 28
+  },
+  "700": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": 9
+  },
+  "600": {
+    "product": "PICNIC_BASKET2",
+    "price": 30256,
+    "quantity": -37
+  },
+  "500": {
+    "product": "SQUID_INK",
+    "price": 1834,
+    "quantity": -22
+  },
+  "300": {
+    "product": "CROISSANTS",
+    "price": 4275,
+    "quantity": -36
+  },
+  "200": {
+    "product": "KELP",
+    "price": 2034,
+    "quantity": -1
+  },
+  "100": {
+    "product": "SQUID_INK",
+    "price": 1835,
+    "quantity": -26
+  },
+  "0": {
+    "product": "RAINFOREST_RESIN",
+    "price": 9998,
+    "quantity": -3
+  }
+}
