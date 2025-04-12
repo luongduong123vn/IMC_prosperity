@@ -188,12 +188,14 @@ PARAMS = {
         "default_spread_mean": 48,
         "default_spread_std": 70,
         "spread_std_window": 100,
-        "zscore_threshold_high": 2.5, # 3 is better on backtester, 2 is better on website
+        "zscore_threshold_high": 2.5, # 2.5 is better on backtester, 2 is better on website
         "zscore_threshold_low": -2.5,
+        "zscore_threshold_exit_high": -2.5,
+        "zscore_threshold_exit_low": 2.5,
         "target_position": 58,
     },
     Product.SPREAD_1: {
-        "default_spread_mean_high": 60,
+        "default_spread_mean_high": 60, #60, -40
         "default_spread_mean_low": -40,
         "default_spread_std": 50,
         "spread_std_window": 200,
@@ -1393,7 +1395,7 @@ class Trader:
                     spread_product,
                 )
 
-        if zscore <= self.params[spread_product]["zscore_threshold_low"]:
+        elif zscore <= self.params[spread_product]["zscore_threshold_low"]:
             if basket_position != self.params[spread_product]["target_position"]:
                 return self.execute_spread_orders(
                     self.params[spread_product]["target_position"],
@@ -1402,6 +1404,43 @@ class Trader:
                     product,
                     spread_product,
                 )
+            
+        # if zscore >= self.params[spread_product]["zscore_threshold_high"]:
+        #     if basket_position != -self.params[spread_product]["target_position"]:
+        #         return self.execute_spread_orders(
+        #             -self.params[spread_product]["target_position"],
+        #             basket_position,
+        #             order_depths,
+        #             product,
+        #             spread_product,
+        #         )
+        # elif zscore <= self.params[spread_product]["zscore_threshold_exit_high"]:
+        #     if basket_position < 0:
+        #         return self.execute_spread_orders(
+        #             self.params[spread_product]["target_position"],
+        #             basket_position,
+        #             order_depths,
+        #             product,
+        #             spread_product,
+        #         )
+        # elif zscore <= self.params[spread_product]["zscore_threshold_low"]:
+        #     if basket_position != self.params[spread_product]["target_position"]:
+        #         return self.execute_spread_orders(
+        #             self.params[spread_product]["target_position"],
+        #             basket_position,
+        #             order_depths,
+        #             product,
+        #             spread_product,
+        #         )
+        # elif zscore >= self.params[spread_product]["zscore_threshold_exit_low"]:
+        #     if basket_position > 0:
+        #         return self.execute_spread_orders(
+        #             -self.params[spread_product]["target_position"],
+        #             basket_position,
+        #             order_depths,
+        #             product,
+        #             spread_product,
+        #         )
 
         spread_data["prev_zscore"] = zscore
         return None
