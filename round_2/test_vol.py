@@ -156,22 +156,24 @@ PARAMS = {
         "min_spread": 0
     },
     Product.STARFRUIT: {
-        "take_width": 1.5,
+        "take_width": 1,
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
-        "reversion_beta": 0,
+        "reversion_beta": -0.26,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
         'ret_vol': 0.00035,
     },
     Product.SQUID_INK: {
-        "take_width": 2,
+        "take_width": 1,
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
-        "reversion_beta": -0.055,
+        "reversion_beta": -0.1,
+        "reversion_alpha": -0.065,
+        "reversion_gamma": -0.05,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
@@ -186,8 +188,8 @@ PARAMS = {
         "default_spread_mean": 48,
         "default_spread_std": 70,
         "spread_std_window": 100,
-        "zscore_threshold_high": 2, # 3 is better on website
-        "zscore_threshold_low": -2,
+        "zscore_threshold_high": 2.5, # 3 is better on backtester, 2 is better on website
+        "zscore_threshold_low": -2.5,
         "target_position": 58,
     },
     Product.SPREAD_1: {
@@ -202,7 +204,7 @@ PARAMS = {
         "target_position": 98,
     },
     Product.STRAWBERRIES: {
-        "take_width": 2,
+        "take_width": 1,
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 0,
@@ -212,7 +214,45 @@ PARAMS = {
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
+        'ret_vol': 0.0001,
+        "drift": 0,
+        "manage_position": False,
+        "soft_position_limit": 30,
+        "spread_adjustment": 1
+    },
+    Product.ROSES: {
+        "take_width": 1,
+        "clear_width": 0,
+        "prevent_adverse": True,
+        "adverse_volume": 0,
+        "adverse_volume_low": 50,
+        'adverse_volume_high': 100,
+        "reversion_beta": 0,
+        "disregard_edge": 1,
+        "join_edge": 0,
+        "default_edge": 1,
         'ret_vol': 0.001,
+        "drift": 0,
+        "manage_position": False,
+        "soft_position_limit": 30,
+        "spread_adjustment": 1
+    },
+    Product.CHOCOLATE: {
+        "take_width": 1,
+        "clear_width": 0,
+        "prevent_adverse": True,
+        "adverse_volume": 0,
+        "adverse_volume_low": 50,
+        'adverse_volume_high': 100,
+        "reversion_beta": -0.12,
+        "disregard_edge": 1,
+        "join_edge": 0,
+        "default_edge": 1,
+        'ret_vol': 0.0001,
+        "drift": 0,
+        "manage_position": False,
+        "soft_position_limit": 30,
+        "spread_adjustment": 1
     },
 }
 
@@ -444,7 +484,7 @@ class Trader:
                 last_returns = (mmmid_price - last_price) / last_price
                 pred_returns = ret_vol * z
                 #fair = round(sum(starfruit_fv_history)/len(starfruit_fv_history))
-                fair = mmmid_price
+                fair = mmmid_price * (1 + last_returns*self.params[Product.STARFRUIT]["reversion_beta"])
             else:
                 fair = mmmid_price
             traderObject["starfruit_last_price"] = mmmid_price
@@ -509,22 +549,25 @@ class Trader:
                 # next_prices = recent_mean + slope * (n - (n-1)/2)
             else:
                 slope = 0
+            beta = self.params[Product.SQUID_INK]["reversion_beta"]
+            alpha = self.params[Product.SQUID_INK]["reversion_alpha"]
+            gamma = self.params[Product.SQUID_INK]["reversion_gamma"]
             if traderObject.get("ink_last_price", None) != None:
                 last_price = traderObject["ink_last_price"]
                 if len(traderObject["ink_price_history"]) >= 10:
                     last_10_price = traderObject["ink_price_history"][-10]
                 else:
                     last_10_price = last_price
-                if len(returns) >= 3:
-                    last_returns = returns[-1]
-                    last_returns_3 = returns[-3]
-                else:
-                    last_returns = 0
-                    last_returns_3 = 0
+
+                last_returns = returns[-1]  
+                last_returns_3 = returns[-3] if len(returns) >= 3 else 0
+                last_returns_11 = returns[-11] if len(returns) >= 11 else 0
+
                 last_10_returns = (mmmid_price - last_10_price) / last_10_price
                 pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
-                fair = mmmid_price * (1 + last_returns_3*self.params[Product.SQUID_INK]["reversion_beta"])
+                fair = mmmid_price * (1 + last_returns_3*beta + last_returns_11*alpha)
+                #fair = mmmid_price * (1 + last_returns*gamma)
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
@@ -575,7 +618,7 @@ class Trader:
                 ret_vol = float(np.std(returns))
             else:
                 # Use default volatility from params
-                ret_vol = self.params[Product.SQUID_INK]["ret_vol"]
+                ret_vol = self.params[product]["ret_vol"]
 
             traderObject[f'{product}_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
@@ -601,9 +644,9 @@ class Trader:
                     last_10_price = last_price
                 last_returns = (mmmid_price - last_price) / last_price
                 last_10_returns = (mmmid_price - last_10_price) / last_10_price
-                pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
+                pred_returns = self.params[product]["drift"] + ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
-                fair = mmmid_price * (1 + last_returns*self.params[Product.STRAWBERRIES]["reversion_beta"])
+                fair = mmmid_price * (1 + last_returns*self.params[product]["reversion_beta"])
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
@@ -709,7 +752,7 @@ class Trader:
         best_bid_below_fair = max(bids_below_fair) if len(bids_below_fair) > 0 else None
         best_ask_volume = order_depth.sell_orders[best_ask_above_fair] if best_ask_above_fair != None else 0
         best_bid_volume = order_depth.buy_orders[best_bid_below_fair] if best_bid_below_fair != None else 0
-        spread = best_ask_above_fair - best_bid_below_fair
+        #spread = best_ask_above_fair - best_bid_below_fair
 
         ask = round(fair_value + default_edge)
         if best_ask_above_fair != None:
@@ -730,18 +773,18 @@ class Trader:
                 ask -= 1
             elif position < -1 * soft_position_limit:
                 bid += 1
-        if spread > self.params[product]["min_spread"]:
-            buy_order_volume, sell_order_volume = self.market_make(
-                product,
-                orders,
-                bid,
-                ask,
-                position,
-                buy_order_volume,
-                sell_order_volume,
-                best_bid_volume,
-                best_ask_volume,
-            )
+
+        buy_order_volume, sell_order_volume = self.market_make(
+            product,
+            orders,
+            bid,
+            ask,
+            position,
+            buy_order_volume,
+            sell_order_volume,
+            best_bid_volume,
+            best_ask_volume,
+        )
 
         return orders, buy_order_volume, sell_order_volume
 
@@ -801,26 +844,17 @@ class Trader:
             # Calculate volatility
             realized_vol = float(np.std(returns))
             
-            if ask_volume <= 35:
-                ask_edge = 1
-            else:
-                ask_edge = 1
-
-            if bid_volume <= 35:
-                bid_edge = 1
-            else:
-                bid_edge = 1
+            edge = default_edge
         else:
             # Use default volatility from params
-            ask_edge = default_edge
-            bid_edge = default_edge
+            edge = default_edge
         ask = round(fair_value + edge)
         if best_ask_above_fair != None:
             if abs(best_ask_above_fair - fair_value) <= join_edge:
                 ask = best_ask_above_fair  # join
             else:
                 #ask = best_ask_above_fair - 1  # penny
-                ask = min(best_ask_above_fair - ask_edge,round(fair_value + edge))
+                ask = best_ask_above_fair - edge
 
         bid = round(fair_value - edge)
         if best_bid_below_fair != None:
@@ -828,7 +862,7 @@ class Trader:
                 bid = best_bid_below_fair
             else:
                 #bid = best_bid_below_fair + 1
-                bid = max(best_bid_below_fair + bid_edge,round(fair_value - edge))
+                bid = best_bid_below_fair + edge
 
         if manage_position:
             if position > soft_position_limit:
@@ -930,7 +964,7 @@ class Trader:
             else:
                 #bid = best_bid_below_fair + 1
                 bid = best_bid_below_fair + edge
-        spread_factor = self.params[Product.SQUID_INK]["spread_adjustment"]
+        spread_factor = self.params[product]["spread_adjustment"]
         if manage_position:
             if position > soft_position_limit:
                 bid = best_bid_below_fair - spread_factor * edge if best_bid_below_fair != None else fair_value - spread_factor*edge
@@ -1650,7 +1684,7 @@ class Trader:
             result[Product.ROSES] = spread_orders[Product.ROSES]
             result[Product.GIFT_BASKET_1] = spread_orders[Product.GIFT_BASKET_1]
 
-        for product in [Product.STRAWBERRIES]:
+        for product in [Product.CHOCOLATE, Product.STRAWBERRIES]:
             if product in state.order_depths:
                 position = (
                     state.position[product]
@@ -1659,7 +1693,7 @@ class Trader:
                 )
                 # tinh fair value trc
                 fair_value = self.product_fair_value(
-                    state.order_depths[product], traderObject, product, adverse_volume = 0
+                    state.order_depths[product], traderObject, product, self.params[product]["adverse_volume"]
                 )
                 
                 
@@ -1668,10 +1702,10 @@ class Trader:
                         product,
                         state.order_depths[product],
                         fair_value,
-                        2, #take_width
+                        self.params[product]["take_width"],
                         position,
-                        self.params[Product.SQUID_INK]["prevent_adverse"],
-                        self.params[Product.SQUID_INK]["adverse_volume"],
+                        self.params[product]["prevent_adverse"],
+                        self.params[product]["adverse_volume"],
                     )
                 )
                 clear_orders, buy_order_volume, sell_order_volume = (
@@ -1679,7 +1713,7 @@ class Trader:
                         product,
                         state.order_depths[product],
                         fair_value,
-                        self.params[Product.SQUID_INK]["clear_width"],
+                        self.params[product]["clear_width"],
                         position,
                         buy_order_volume,
                         sell_order_volume,
@@ -1693,14 +1727,14 @@ class Trader:
                     position,
                     buy_order_volume,
                     sell_order_volume,
-                    self.params[Product.SQUID_INK]["disregard_edge"],
-                    self.params[Product.SQUID_INK]["join_edge"],
-                    self.params[Product.SQUID_INK]["default_edge"],
-                    self.params[Product.SQUID_INK]["manage_position"],
-                    self.params[Product.SQUID_INK]["soft_position_limit"],
+                    self.params[product]["disregard_edge"],
+                    self.params[product]["join_edge"],
+                    self.params[product]["default_edge"],
+                    self.params[product]["manage_position"],
+                    self.params[product]["soft_position_limit"],
                 )
                 result[product] = (
-                    clear_orders + make_orders
+                    take_orders + clear_orders + make_orders
                 )
 
         conversions = 0
