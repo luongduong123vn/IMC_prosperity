@@ -150,7 +150,7 @@ PARAMS = {
         "clear_width": 0,
         # for making
         "disregard_edge": 1,  # disregards orders for joining or pennying within this value from fair
-        "join_edge": 0,  # joins orders within this edge
+        "join_edge": 2,  # joins orders within this edge
         "default_edge": 4,
         "soft_position_limit": 50,
         "min_spread": 0
@@ -171,7 +171,7 @@ PARAMS = {
         "clear_width": 0,
         "prevent_adverse": True,
         "adverse_volume": 19,
-        "reversion_beta": 0,
+        "reversion_beta": -0.055,
         "disregard_edge": 1,
         "join_edge": 0,
         "default_edge": 1,
@@ -186,7 +186,7 @@ PARAMS = {
         "default_spread_mean": 48,
         "default_spread_std": 70,
         "spread_std_window": 100,
-        "zscore_threshold_high": 2,
+        "zscore_threshold_high": 2, # 3 is better on website
         "zscore_threshold_low": -2,
         "target_position": 58,
     },
@@ -200,6 +200,19 @@ PARAMS = {
         "zscore_threshold_high": 15,
         "zscore_threshold_low": -15,
         "target_position": 98,
+    },
+    Product.STRAWBERRIES: {
+        "take_width": 2,
+        "clear_width": 0,
+        "prevent_adverse": True,
+        "adverse_volume": 0,
+        "adverse_volume_low": 50,
+        'adverse_volume_high': 100,
+        "reversion_beta": -0.055,
+        "disregard_edge": 1,
+        "join_edge": 0,
+        "default_edge": 1,
+        'ret_vol': 0.001,
     },
 }
 
@@ -502,15 +515,20 @@ class Trader:
                     last_10_price = traderObject["ink_price_history"][-10]
                 else:
                     last_10_price = last_price
-                last_returns = (mmmid_price - last_price) / last_price
+                if len(returns) >= 3:
+                    last_returns = returns[-1]
+                    last_returns_3 = returns[-3]
+                else:
+                    last_returns = 0
+                    last_returns_3 = 0
                 last_10_returns = (mmmid_price - last_10_price) / last_10_price
                 pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
-                #fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
+                fair = mmmid_price * (1 + last_returns_3*self.params[Product.SQUID_INK]["reversion_beta"])
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
-                fair = mmmid_price
+                #fair = mmmid_price
             else:
                 fair = mmmid_price
             traderObject["ink_last_price"] = mmmid_price
@@ -585,11 +603,11 @@ class Trader:
                 last_10_returns = (mmmid_price - last_10_price) / last_10_price
                 pred_returns = self.params[Product.SQUID_INK]["drift"] + ret_vol * z
                 #fair = round(sum(ink_fv_history)/len(ink_fv_history),2)
-                #fair = mmmid_price * (1 + last_returns*self.params[Product.SQUID_INK]["reversion_beta"])
+                fair = mmmid_price * (1 + last_returns*self.params[Product.STRAWBERRIES]["reversion_beta"])
                 #fair = mmmid_price * (1 + last_returns)
                 #fair = mmmid_price * (1 + next_return)
                 #fair = next_prices
-                fair = mmmid_price
+                #fair = mmmid_price
             else:
                 fair = mmmid_price
             traderObject[f"{product}_last_price"] = mmmid_price
@@ -1579,59 +1597,6 @@ class Trader:
             result[Product.SQUID_INK] = (
                 ink_take_orders + ink_clear_orders + ink_make_orders
             )
-
-        # for product in [Product.STRAWBERRIES]:
-        #     if product in state.order_depths:
-        #         position = (
-        #             state.position[product]
-        #             if product in state.position
-        #             else 0
-        #         )
-        #         # tinh fair value trc
-        #         fair_value = self.product_fair_value(
-        #             state.order_depths[product], traderObject, product, adverse_volume = 0
-        #         )
-                
-                
-        #         take_orders, buy_order_volume, sell_order_volume = (
-        #             self.take_orders(
-        #                 product,
-        #                 state.order_depths[product],
-        #                 fair_value,
-        #                 2, #take_width
-        #                 position,
-        #                 self.params[Product.SQUID_INK]["prevent_adverse"],
-        #                 self.params[Product.SQUID_INK]["adverse_volume"],
-        #             )
-        #         )
-        #         clear_orders, buy_order_volume, sell_order_volume = (
-        #             self.clear_orders(
-        #                 product,
-        #                 state.order_depths[product],
-        #                 fair_value,
-        #                 self.params[Product.SQUID_INK]["clear_width"],
-        #                 position,
-        #                 buy_order_volume,
-        #                 sell_order_volume,
-        #             )
-        #         )
-        #         make_orders, _, _ = self.make_order_new(
-        #             product,
-        #             traderObject,
-        #             state.order_depths[product],
-        #             fair_value,
-        #             position,
-        #             buy_order_volume,
-        #             sell_order_volume,
-        #             self.params[Product.SQUID_INK]["disregard_edge"],
-        #             self.params[Product.SQUID_INK]["join_edge"],
-        #             self.params[Product.SQUID_INK]["default_edge"],
-        #             self.params[Product.SQUID_INK]["manage_position"],
-        #             self.params[Product.SQUID_INK]["soft_position_limit"],
-        #         )
-        #         result[product] = (
-        #             clear_orders + make_orders
-        #         )
                 
         if Product.SPREAD not in traderObject:
             traderObject[Product.SPREAD] = {
@@ -1684,6 +1649,59 @@ class Trader:
             result[Product.STRAWBERRIES] = spread_orders[Product.STRAWBERRIES]
             result[Product.ROSES] = spread_orders[Product.ROSES]
             result[Product.GIFT_BASKET_1] = spread_orders[Product.GIFT_BASKET_1]
+
+        for product in [Product.STRAWBERRIES]:
+            if product in state.order_depths:
+                position = (
+                    state.position[product]
+                    if product in state.position
+                    else 0
+                )
+                # tinh fair value trc
+                fair_value = self.product_fair_value(
+                    state.order_depths[product], traderObject, product, adverse_volume = 0
+                )
+                
+                
+                take_orders, buy_order_volume, sell_order_volume = (
+                    self.take_orders(
+                        product,
+                        state.order_depths[product],
+                        fair_value,
+                        2, #take_width
+                        position,
+                        self.params[Product.SQUID_INK]["prevent_adverse"],
+                        self.params[Product.SQUID_INK]["adverse_volume"],
+                    )
+                )
+                clear_orders, buy_order_volume, sell_order_volume = (
+                    self.clear_orders(
+                        product,
+                        state.order_depths[product],
+                        fair_value,
+                        self.params[Product.SQUID_INK]["clear_width"],
+                        position,
+                        buy_order_volume,
+                        sell_order_volume,
+                    )
+                )
+                make_orders, _, _ = self.make_order_new(
+                    product,
+                    traderObject,
+                    state.order_depths[product],
+                    fair_value,
+                    position,
+                    buy_order_volume,
+                    sell_order_volume,
+                    self.params[Product.SQUID_INK]["disregard_edge"],
+                    self.params[Product.SQUID_INK]["join_edge"],
+                    self.params[Product.SQUID_INK]["default_edge"],
+                    self.params[Product.SQUID_INK]["manage_position"],
+                    self.params[Product.SQUID_INK]["soft_position_limit"],
+                )
+                result[product] = (
+                    clear_orders + make_orders
+                )
 
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
