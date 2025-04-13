@@ -149,8 +149,8 @@ class Trader:
             Product.CHOCOLATE: 250,
             Product.STRAWBERRIES: 350,
             Product.ROSES: 60,
-            Product.COCONUT: 300,
-            Product.COCONUT_COUPON: 600,
+            Product.COCONUT: 600,
+            Product.COCONUT_COUPON: 300,
         }
 
     # Returns buy_order_volume, sell_order_volume
