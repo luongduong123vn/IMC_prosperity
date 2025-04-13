@@ -4254,7 +4254,7 @@ class Trader:
         traderObject = {}
         if state.traderData != None and state.traderData != "":
             traderObject = jsonpickle.decode(state.traderData)
-        
+            
         # Check if current timestamp has an optimal trade
         if str(state.timestamp) in OPTIMAL_TRADES:
             product, price, quantity = OPTIMAL_TRADES[str(state.timestamp)]["product"], OPTIMAL_TRADES[str(state.timestamp)]["price"], OPTIMAL_TRADES[str(state.timestamp)]["quantity"]
@@ -4263,7 +4263,7 @@ class Trader:
             if abs(self.positions[product] + quantity) <= self.position_limits[product]:
                 result[product] = [Order(product, price, quantity)]
                 self.positions[product] += quantity
-        
+
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
         logger.flush(state, result, conversions, traderData)
