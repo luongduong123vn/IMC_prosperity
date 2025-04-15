@@ -270,7 +270,7 @@ PARAMS = {
         "mean_volatility": 0.8621,
         "threshold": 0.0845123235721419,
         "strike": 9750,
-        "starting_time_to_expiry": 5 / 252,
+        "time_to_expiry": 5 / 252,
         "std_window": 50,
         "zscore_threshold": 1.5,
         "zscore_threshold_low": -1.5,
@@ -282,7 +282,7 @@ PARAMS = {
         "mean_volatility": 0.15959997370608378,
         "threshold": 0.00163,
         "strike": 9500,
-        "starting_time_to_expiry": 4 / 252,
+        "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
@@ -290,7 +290,7 @@ PARAMS = {
         "mean_volatility": 0.15959997370608378,
         "threshold": 0.00163,
         "strike": 9750,
-        "starting_time_to_expiry": 4 / 252,
+        "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
@@ -298,7 +298,7 @@ PARAMS = {
         "mean_volatility": 0.15959997370608378,
         "threshold": 0.00163,
         "strike": 10000,
-        "starting_time_to_expiry": 4 / 252,
+        "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
@@ -306,7 +306,7 @@ PARAMS = {
         "mean_volatility": 0.15959997370608378,
         "threshold": 0.00163,
         "strike": 10250,
-        "starting_time_to_expiry": 4 / 252,
+        "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
@@ -314,7 +314,7 @@ PARAMS = {
         "mean_volatility": 0.15959997370608378,
         "threshold": 0.00163,
         "strike": 10500,
-        "starting_time_to_expiry": 4 / 252,
+        "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
@@ -1640,6 +1640,7 @@ class Trader:
             underlying_price = (best_bid + best_ask) / 2
         else:
             underlying_price = self._get_last_price("VOLCANIC_ROCK")
+        self._update_history("VOLCANIC_ROCK", underlying_price)
 
         for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750", "VOLCANIC_ROCK_VOUCHER_10000", "VOLCANIC_ROCK_VOUCHER_10250", "VOLCANIC_ROCK_VOUCHER_10500"]:
             order_depth = state.order_depths[product]
@@ -1655,7 +1656,7 @@ class Trader:
             position = state.position.get(product, 0)
             self._update_history(product, mid_price)
 
-            orders = self._volcanic_rock_voucher_orders(underlying_price, mid_price, product, position)
+            orders = self._volcanic_rock_voucher_orders(underlying_price, mid_price, product, position, best_bid, best_ask)
             result[product] = orders
 
         if Product.AMETHYSTS in self.params and Product.AMETHYSTS in state.order_depths:
@@ -1962,26 +1963,48 @@ class Trader:
     def _black_scholes_call(self, spot, strike, time_to_expiry, volatility):
         d1 = (np.log(spot / strike) + (0.5 * volatility ** 2) * time_to_expiry) / (volatility * np.sqrt(time_to_expiry))
         d2 = d1 - volatility * np.sqrt(time_to_expiry)
-        call_price = (spot * statistics.NormalDist.cdf(d1) - strike * statistics.NormalDist.cdf(d2))
+        nd = statistics.NormalDist(0, 1)
+        call_price = (spot * nd.cdf(d1) - strike * nd.cdf(d2))
         return call_price
     
-    def _volcanic_rock_voucher_orders(self, spot, mid_price, voucher_product, position):
-        strike = voucher_product.split("_")[-1]
-        if len(self.history["VOLCANIC_ROCK"]) > 20:
-            recent_prices = self.history["VOLCANIC_ROCK"][-20:] # 9500 good for arbitrage
-            volatility = ((np.std(recent_prices)/recent_prices).mean())*np.sqrt(252)
+    def _volcanic_rock_voucher_orders(self, spot, mid_price, voucher_product, position, best_bid, best_ask):
+        strike = int(voucher_product.split("_")[-1])
+        if len(self.history["VOLCANIC_ROCK"]) > 50:
+            recent_prices = self.history["VOLCANIC_ROCK"][-50:] 
+            volatility = ((np.std(recent_prices)/recent_prices[-1])*np.sqrt(252))
         else:
             volatility = 0.2178
        
         theoretical_price = self._black_scholes_call(spot, strike, self.params[voucher_product]["time_to_expiry"], volatility)
         spread = theoretical_price - mid_price
+        logger.print(f"theoretical_price: {theoretical_price}, mid_price: {mid_price}, spread: {spread}")
         orders = []
-        if spread > 0:
-            volume = POSITION_LIMITS[voucher_product] - position
-            orders.append(Order(voucher_product, strike, volume))
-        elif spread < 0:
-            volume = POSITION_LIMITS[voucher_product] - position
-            orders.append(Order(voucher_product, strike, -volume))
+        spread_threshold = 0
+        in_the_money = (strike - spot) / spot
+        if in_the_money > 0.05:
+            spread_threshold = -2
+        elif in_the_money <= 0.05 and in_the_money >= 0:
+            spread_threshold = -30
+        elif in_the_money > -0.025 and in_the_money < 0:
+            spread_threshold = -30
+        elif in_the_money <= -0.025 and in_the_money >= -0.05:
+            spread_threshold = -50
+        elif in_the_money <= -0.05:
+            spread_threshold = -70
+        if spread_threshold == 1:
+            if spread > spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] - position, 10)
+                orders.append(Order(voucher_product, best_ask, volume))
+            elif spread < -spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] + position, 10)
+                orders.append(Order(voucher_product, best_bid, -volume))
+        else:
+            if spread < spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] - position, 10)
+                orders.append(Order(voucher_product, best_bid, -volume))
+            elif spread > -spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] + position, 10)
+                orders.append(Order(voucher_product, best_ask, volume))
         return orders
 
 POSITION_LIMITS = {
