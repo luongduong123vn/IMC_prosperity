@@ -295,24 +295,30 @@ PARAMS = {
         "zscore_threshold": 21,
     },
     Product.VOLCANIC_ROCK_VOUCHER_10000: {
-        "mean_volatility": 0.15959997370608378,
-        "threshold": 0.00163,
+        "mean_volatility": 0.159,
+        "threshold_high": 17.178,
+        "threshold_low": 0.877,
+        "threshold_exit": 8.31,
         "strike": 10000,
         "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
     Product.VOLCANIC_ROCK_VOUCHER_10250: {
-        "mean_volatility": 0.15959997370608378,
-        "threshold": 0.00163,
+        "mean_volatility": 0.1598,
+        "threshold_high": 3.975,
+        "threshold_low": 0.249,
+        "threshold_exit": 1.41,
         "strike": 10250,
         "time_to_expiry": 4 / 252,
         "std_window": 6,
         "zscore_threshold": 21,
     },
     Product.VOLCANIC_ROCK_VOUCHER_10500: {
-        "mean_volatility": 0.15959997370608378,
-        "threshold": 0.00163,
+        "mean_volatility": 0.159,
+        "threshold_high": 9.80,
+        "threshold_low": 1.55,
+        "threshold_exit": 3.47,
         "strike": 10500,
         "time_to_expiry": 4 / 252,
         "std_window": 6,
@@ -342,6 +348,11 @@ class Trader:
             Product.DJEMBES: 60,
             Product.COCONUT: 400,
             Product.COCONUT_COUPON: 200,
+            Product.VOLCANIC_ROCK_VOUCHER_9500: 200,
+            Product.VOLCANIC_ROCK_VOUCHER_9750: 200,
+            Product.VOLCANIC_ROCK_VOUCHER_10000: 200,
+            Product.VOLCANIC_ROCK_VOUCHER_10250: 200,
+            Product.VOLCANIC_ROCK_VOUCHER_10500: 200,
         }
         self.history = {}
         self.risk_adjustment = 0.8
@@ -1325,123 +1336,6 @@ class Trader:
         else:
             return traderData["prev_coupon_price"]
 
-    def delta_hedge_coconut_position(
-        self,
-        coconut_order_depth: OrderDepth,
-        coconut_coupon_position: int,
-        coconut_position: int,
-        coconut_buy_orders: int,
-        coconut_sell_orders: int,
-        delta: float,
-    ) -> List[Order]:
-        """
-        Delta hedge the overall position in COCONUT_COUPON by creating orders in COCONUT.
-
-        Args:
-            coconut_order_depth (OrderDepth): The order depth for the COCONUT product.
-            coconut_coupon_position (int): The current position in COCONUT_COUPON.
-            coconut_position (int): The current position in COCONUT.
-            coconut_buy_orders (int): The total quantity of buy orders for COCONUT in the current iteration.
-            coconut_sell_orders (int): The total quantity of sell orders for COCONUT in the current iteration.
-            delta (float): The current value of delta for the COCONUT_COUPON product.
-            traderData (Dict[str, Any]): The trader data for the COCONUT_COUPON product.
-
-        Returns:
-            List[Order]: A list of orders to delta hedge the COCONUT_COUPON position.
-        """
-
-        target_coconut_position = -int(delta * coconut_coupon_position)
-        hedge_quantity = target_coconut_position - (
-            coconut_position + coconut_buy_orders - coconut_sell_orders
-        )
-
-        orders: List[Order] = []
-        if hedge_quantity > 0:
-            # Buy COCONUT
-            best_ask = min(coconut_order_depth.sell_orders.keys())
-            quantity = min(
-                abs(hedge_quantity), -coconut_order_depth.sell_orders[best_ask]
-            )
-            quantity = min(
-                quantity,
-                self.LIMIT[Product.COCONUT] - (coconut_position + coconut_buy_orders),
-            )
-            if quantity > 0:
-                orders.append(Order(Product.COCONUT, best_ask, quantity))
-        elif hedge_quantity < 0:
-            # Sell COCONUT
-            best_bid = max(coconut_order_depth.buy_orders.keys())
-            quantity = min(
-                abs(hedge_quantity), coconut_order_depth.buy_orders[best_bid]
-            )
-            quantity = min(
-                quantity,
-                self.LIMIT[Product.COCONUT] + (coconut_position - coconut_sell_orders),
-            )
-            if quantity > 0:
-                orders.append(Order(Product.COCONUT, best_bid, -quantity))
-
-        return orders
-
-    def delta_hedge_coconut_coupon_orders(
-        self,
-        coconut_order_depth: OrderDepth,
-        coconut_coupon_orders: List[Order],
-        coconut_position: int,
-        coconut_buy_orders: int,
-        coconut_sell_orders: int,
-        delta: float,
-    ) -> List[Order]:
-        """
-        Delta hedge the new orders for COCONUT_COUPON by creating orders in COCONUT.
-
-        Args:
-            coconut_order_depth (OrderDepth): The order depth for the COCONUT product.
-            coconut_coupon_orders (List[Order]): The new orders for COCONUT_COUPON.
-            coconut_position (int): The current position in COCONUT.
-            coconut_buy_orders (int): The total quantity of buy orders for COCONUT in the current iteration.
-            coconut_sell_orders (int): The total quantity of sell orders for COCONUT in the current iteration.
-            delta (float): The current value of delta for the COCONUT_COUPON product.
-
-        Returns:
-            List[Order]: A list of orders to delta hedge the new COCONUT_COUPON orders.
-        """
-        if len(coconut_coupon_orders) == 0:
-            return None
-
-        net_coconut_coupon_quantity = sum(
-            order.quantity for order in coconut_coupon_orders
-        )
-        target_coconut_quantity = -int(delta * net_coconut_coupon_quantity)
-
-        orders: List[Order] = []
-        if target_coconut_quantity > 0:
-            # Buy COCONUT
-            best_ask = min(coconut_order_depth.sell_orders.keys())
-            quantity = min(
-                abs(target_coconut_quantity), -coconut_order_depth.sell_orders[best_ask]
-            )
-            quantity = min(
-                quantity,
-                self.LIMIT[Product.COCONUT] - (coconut_position + coconut_buy_orders),
-            )
-            if quantity > 0:
-                orders.append(Order(Product.COCONUT, best_ask, quantity))
-        elif target_coconut_quantity < 0:
-            # Sell COCONUT
-            best_bid = max(coconut_order_depth.buy_orders.keys())
-            quantity = min(
-                abs(target_coconut_quantity), coconut_order_depth.buy_orders[best_bid]
-            )
-            quantity = min(
-                quantity,
-                self.LIMIT[Product.COCONUT] + (coconut_position - coconut_sell_orders),
-            )
-            if quantity > 0:
-                orders.append(Order(Product.COCONUT, best_bid, -quantity))
-
-        return orders
-
     def coconut_hedge_orders(
         self,
         coconut_order_depth: OrderDepth,
@@ -1490,10 +1384,12 @@ class Trader:
 
     def coconut_coupon_orders(
         self,
+        product: str,
         coconut_coupon_order_depth: OrderDepth,
         coconut_coupon_position: int,
         traderData: Dict[str, Any],
         volatility: float,
+        atm_vol: float,
     ) -> List[Order]:
         traderData["past_coupon_vol"].append(volatility)
         # if (
@@ -1504,22 +1400,14 @@ class Trader:
 
         if (
             len(traderData["past_coupon_vol"])
-            > self.params[Product.COCONUT_COUPON]["std_window"]
+            > self.params[product]["std_window"]
         ):
             traderData["past_coupon_vol"].pop(0)
-        if len(traderData["past_coupon_vol"]) > self.params[Product.COCONUT_COUPON]["std_window"]:
-            vol_of_vol = np.std(traderData["past_coupon_vol"])
-            #vol_of_vol = self.params[Product.COCONUT_COUPON]["threshold"]
-        else:
-            vol_of_vol = self.params[Product.COCONUT_COUPON]["threshold"]
-        vol_z_score = (
-            volatility - self.params[Product.COCONUT_COUPON]["mean_volatility"]
-        ) / vol_of_vol
-        # print(f"vol_z_score: {vol_z_score}")
-        # print(f"zscore_threshold: {self.params[Product.COCONUT_COUPON]['zscore_threshold']}")
-        if vol_z_score >= self.params[Product.COCONUT_COUPON]["zscore_threshold_high"]:
-            if coconut_coupon_position != -self.LIMIT[Product.COCONUT_COUPON]:
-                target_coconut_coupon_position = -self.LIMIT[Product.COCONUT_COUPON]
+
+        vol_relative = (volatility / atm_vol - 1) * 100
+        if vol_relative > self.params[product]["threshold_high"]:
+            if coconut_coupon_position != -self.LIMIT[product]:
+                target_coconut_coupon_position = -self.LIMIT[product]
                 if len(coconut_coupon_order_depth.buy_orders) > 0:
                     best_bid = max(coconut_coupon_order_depth.buy_orders.keys())
                     target_quantity = abs(
@@ -1531,32 +1419,34 @@ class Trader:
                     )
                     quote_quantity = target_quantity - quantity
                     if quote_quantity == 0:
-                        return [Order(Product.COCONUT_COUPON, best_bid, -quantity)], []
+                        return [Order(product, best_bid, -quantity)], []
                     else:
-                        return [Order(Product.COCONUT_COUPON, best_bid, -quantity)], [
-                            Order(Product.COCONUT_COUPON, best_bid, -quote_quantity)
+                        return [Order(product, best_bid, -quantity)], [
+                            Order(product, best_bid, -quote_quantity)
                         ]
-        # elif vol_z_score <= self.params[Product.COCONUT_COUPON]["zscore_threshold_high_exit"]:
-        #     if coconut_coupon_position < 0:
-        #         if len(coconut_coupon_order_depth.sell_orders) > 0:
-        #             best_ask = min(coconut_coupon_order_depth.sell_orders.keys())
-        #             target_quantity = abs(
-        #                 coconut_coupon_position
-        #             )
-        #             quantity = min(
-        #                 target_quantity,
-        #                 abs(coconut_coupon_order_depth.sell_orders[best_ask]),
-        #             )
-        #             quote_quantity = target_quantity - quantity
-        #             if quote_quantity == 0:
-        #                 return [Order(Product.COCONUT_COUPON, best_ask, quantity)], []
-        #             else:
-        #                 return [Order(Product.COCONUT_COUPON, best_ask, quantity)], [
-        #                     Order(Product.COCONUT_COUPON, best_ask, quote_quantity)
-        #                 ]
-        if vol_z_score <= self.params[Product.COCONUT_COUPON]["zscore_threshold_low"]:
-            if coconut_coupon_position != self.LIMIT[Product.COCONUT_COUPON]:
-                target_coconut_coupon_position = self.LIMIT[Product.COCONUT_COUPON]
+        elif vol_relative < self.params[product]["threshold_exit"]:
+            if coconut_coupon_position < 0:
+                target_coconut_coupon_position = self.LIMIT[product]
+                if len(coconut_coupon_order_depth.buy_orders) > 0:
+                    best_ask = max(coconut_coupon_order_depth.buy_orders.keys())
+                    target_quantity = abs(
+                        coconut_coupon_position
+                    )
+                    quantity = min(
+                        target_quantity,
+                        abs(coconut_coupon_order_depth.buy_orders[best_ask]),
+                    )
+                    quote_quantity = target_quantity - quantity
+                    if quote_quantity == 0:
+                        return [Order(product, best_ask, quantity)], []
+                    else:
+                        return [Order(product, best_ask, quantity)], [
+                            Order(product, best_ask, quote_quantity)
+                        ]
+
+        if vol_relative < self.params[product]["threshold_low"]:
+            if coconut_coupon_position != self.LIMIT[product]:
+                target_coconut_coupon_position = self.LIMIT[product]
                 if len(coconut_coupon_order_depth.sell_orders) > 0:
                     best_ask = min(coconut_coupon_order_depth.sell_orders.keys())
                     target_quantity = abs(
@@ -1568,30 +1458,30 @@ class Trader:
                     )
                     quote_quantity = target_quantity - quantity
                     if quote_quantity == 0:
-                        return [Order(Product.COCONUT_COUPON, best_ask, quantity)], []
+                        return [Order(product, best_ask, quantity)], []
                     else:
-                        return [Order(Product.COCONUT_COUPON, best_ask, quantity)], [
-                            Order(Product.COCONUT_COUPON, best_ask, quote_quantity)
+                        return [Order(product, best_ask, quantity)], [
+                            Order(product, best_ask, quote_quantity)
                         ]
-        # elif vol_z_score >= self.params[Product.COCONUT_COUPON]["zscore_threshold_low_exit"]:
-        #     if coconut_coupon_position > 0:
-        #         if len(coconut_coupon_order_depth.buy_orders) > 0:
-        #             best_bid = max(coconut_coupon_order_depth.buy_orders.keys())
-        #             target_quantity = abs(
-        #                 coconut_coupon_position
-        #             )
-        #             quantity = min(
-        #                 target_quantity,
-        #                 abs(coconut_coupon_order_depth.buy_orders[best_bid]),
-        #             )
-        #             quote_quantity = target_quantity - quantity
-        #             if quote_quantity == 0:
-        #                 return [Order(Product.COCONUT_COUPON, best_bid, -quantity)], []
-        #             else:
-        #                 return [Order(Product.COCONUT_COUPON, best_bid, -quantity)], [
-        #                     Order(Product.COCONUT_COUPON, best_bid, -quote_quantity)
-        #                 ]
-
+        elif vol_relative > self.params[product]["threshold_exit"]:
+            if coconut_coupon_position > 0:
+                target_coconut_coupon_position = -self.LIMIT[product]
+                if len(coconut_coupon_order_depth.buy_orders) > 0:
+                    best_bid = max(coconut_coupon_order_depth.buy_orders.keys())
+                    target_quantity = abs(
+                        coconut_coupon_position
+                    )
+                    quantity = min(
+                        target_quantity,
+                        abs(coconut_coupon_order_depth.buy_orders[best_bid]),
+                    )
+                    quote_quantity = target_quantity - quantity
+                    if quote_quantity == 0:
+                        return [Order(product, best_bid, -quantity)], []
+                    else:
+                        return [Order(product, best_bid, -quantity)], [
+                            Order(product, best_bid, -quote_quantity)
+                        ]
         return None, None
     
     def run(self, state: TradingState):
@@ -1611,7 +1501,7 @@ class Trader:
         result = {}
 
         self.history = traderObject
-        for product in ["PICNIC_BASKET1", "PICNIC_BASKET2", "CROISSANTS", "JAMS", "DJEMBES"]:
+        for product in ["PICNIC_BASKET2", "CROISSANTS", "JAMS", "DJEMBES"]:
             order_depth = state.order_depths[product]
             orders = []
             
@@ -1627,37 +1517,37 @@ class Trader:
 
             if product in ["PICNIC_BASKET1", "PICNIC_BASKET2"]:
                 orders = self._basket_arbitrage(product, position)
-            elif product in ["CROISSANTS", "JAMS", "DJEMBES"]: # give 350k on backtest but bad on website
-                orders = self._dynamic_market_make(product, mid_price, position)
+            # elif product in ["CROISSANTS", "JAMS", "DJEMBES"]: # give 350k on backtest but bad on website
+            #     orders = self._dynamic_market_make(product, mid_price, position)
             result[product] = orders
         #get underlying price
-        order_depth = state.order_depths["VOLCANIC_ROCK"]
-        orders = []
+        # order_depth = state.order_depths["VOLCANIC_ROCK"]
+        # orders = []
         
-        if order_depth.buy_orders and order_depth.sell_orders:
-            best_bid = max(order_depth.buy_orders.keys())
-            best_ask = min(order_depth.sell_orders.keys())
-            underlying_price = (best_bid + best_ask) / 2
-        else:
-            underlying_price = self._get_last_price("VOLCANIC_ROCK")
-        self._update_history("VOLCANIC_ROCK", underlying_price)
+        # if order_depth.buy_orders and order_depth.sell_orders:
+        #     best_bid = max(order_depth.buy_orders.keys())
+        #     best_ask = min(order_depth.sell_orders.keys())
+        #     underlying_price = (best_bid + best_ask) / 2
+        # else:
+        #     underlying_price = self._get_last_price("VOLCANIC_ROCK")
+        # self._update_history("VOLCANIC_ROCK", underlying_price)
 
-        for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750", "VOLCANIC_ROCK_VOUCHER_10000", "VOLCANIC_ROCK_VOUCHER_10250", "VOLCANIC_ROCK_VOUCHER_10500"]:
-            order_depth = state.order_depths[product]
-            orders = []
+        # for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750", "VOLCANIC_ROCK_VOUCHER_10000", "VOLCANIC_ROCK_VOUCHER_10250", "VOLCANIC_ROCK_VOUCHER_10500"]:
+        #     order_depth = state.order_depths[product]
+        #     orders = []
             
-            if order_depth.buy_orders and order_depth.sell_orders:
-                best_bid = max(order_depth.buy_orders.keys())
-                best_ask = min(order_depth.sell_orders.keys())
-                mid_price = (best_bid + best_ask) / 2
-            else:
-                mid_price = self._get_last_price(product)
+        #     if order_depth.buy_orders and order_depth.sell_orders:
+        #         best_bid = max(order_depth.buy_orders.keys())
+        #         best_ask = min(order_depth.sell_orders.keys())
+        #         mid_price = (best_bid + best_ask) / 2
+        #     else:
+        #         mid_price = self._get_last_price(product)
 
-            position = state.position.get(product, 0)
-            self._update_history(product, mid_price)
+        #     position = state.position.get(product, 0)
+        #     self._update_history(product, mid_price)
 
-            orders = self._volcanic_rock_voucher_orders(underlying_price, mid_price, product, position, best_bid, best_ask)
-            result[product] = orders
+        #     orders = self._volcanic_rock_voucher_orders(underlying_price, mid_price, product, position, best_bid, best_ask)
+        #     result[product] = orders
 
         if Product.AMETHYSTS in self.params and Product.AMETHYSTS in state.order_depths:
             amethyst_position = (
@@ -1802,95 +1692,127 @@ class Trader:
                 ink_take_orders + ink_clear_orders + ink_make_orders
             )
 
-        # if Product.SPREAD not in traderObject:
-        #     traderObject[Product.SPREAD] = {"spread_history": {}, "prev_zscore": 0}
-        #     # We'll store a spread history for the basket product here.
-        #     traderObject[Product.SPREAD]["spread_history"] = []
-        # basket_position = state.position[Product.PICNIC_BASKET1] if Product.PICNIC_BASKET1 in state.position else 0
-        # spread_orders = self.spread_orders(state.order_depths, Product.PICNIC_BASKET1, basket_position, traderObject[Product.SPREAD])
-        # if spread_orders is not None:
-        #     # In the conversion, the synthetic basket orders are converted into component orders.
-        #     result[Product.JAMS] = spread_orders[Product.JAMS]
-        #     result[Product.CROISSANTS] = spread_orders[Product.CROISSANTS]
-        #     result[Product.DJEMBES] = spread_orders[Product.DJEMBES]
-        #     result[Product.PICNIC_BASKET1] = spread_orders[Product.PICNIC_BASKET1]
-        
-        # if Product.COCONUT_COUPON not in traderObject:
-        #     traderObject[Product.COCONUT_COUPON] = {
-        #         "prev_coupon_price": 0,
-        #         "past_coupon_vol": [],
-        #     }
+        if Product.SPREAD not in traderObject:
+            traderObject[Product.SPREAD] = {"spread_history": {}, "prev_zscore": 0}
+            # We'll store a spread history for the basket product here.
+            traderObject[Product.SPREAD]["spread_history"] = []
+        basket_position = state.position[Product.PICNIC_BASKET1] if Product.PICNIC_BASKET1 in state.position else 0
+        spread_orders = self.spread_orders(state.order_depths, Product.PICNIC_BASKET1, basket_position, traderObject[Product.SPREAD])
+        if spread_orders is not None:
+            # In the conversion, the synthetic basket orders are converted into component orders.
+            result[Product.JAMS] = spread_orders[Product.JAMS]
+            result[Product.CROISSANTS] = spread_orders[Product.CROISSANTS]
+            result[Product.DJEMBES] = spread_orders[Product.DJEMBES]
+            result[Product.PICNIC_BASKET1] = spread_orders[Product.PICNIC_BASKET1]
 
-        # if (
-        #     Product.COCONUT_COUPON in self.params
-        #     and Product.COCONUT_COUPON in state.order_depths
-        # ):
-        #     coconut_coupon_position = (
-        #         state.position[Product.COCONUT_COUPON]
-        #         if Product.COCONUT_COUPON in state.position
-        #         else 0
-        #     )
+        product_list = [Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500]
+        coconut_order_depth = state.order_depths[Product.COCONUT]
+        coconut_mid_price = (
+            min(coconut_order_depth.buy_orders.keys())
+            + max(coconut_order_depth.sell_orders.keys())
+        ) / 2
+        strikes = [int(col.split('_')[-1]) for col in product_list]
+        atm_strike = min(strikes, key=lambda x: abs(x - coconut_mid_price))
+        coconut_coupon_order_depth = state.order_depths[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]
+        if f"VOLCANIC_ROCK_VOUCHER_{atm_strike}" not in traderObject:
+            traderObject[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"] = {
+                "prev_coupon_price": 0,
+                "past_coupon_vol": [],
+            }
+        coconut_coupon_mid_price = self.get_coconut_coupon_mid_price(
+            coconut_coupon_order_depth, traderObject[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]
+        )
+        tte = (
+            self.params[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]["time_to_expiry"]
+        )
+        atm_vol = BlackScholes.implied_volatility(
+            coconut_coupon_mid_price,
+            coconut_mid_price,
+            atm_strike,
+            tte,
+        )
+        traderObject["atm_vol"] = atm_vol
+        result[Product.COCONUT] = []
 
-        #     coconut_position = (
-        #         state.position[Product.COCONUT]
-        #         if Product.COCONUT in state.position
-        #         else 0
-        #     )
-        #     # print(f"coconut_coupon_position: {coconut_coupon_position}")
-        #     # print(f"coconut_position: {coconut_position}")
-        #     coconut_order_depth = state.order_depths[Product.COCONUT]
-        #     coconut_coupon_order_depth = state.order_depths[Product.COCONUT_COUPON]
-        #     coconut_mid_price = (
-        #         min(coconut_order_depth.buy_orders.keys())
-        #         + max(coconut_order_depth.sell_orders.keys())
-        #     ) / 2
-        #     coconut_coupon_mid_price = self.get_coconut_coupon_mid_price(
-        #         coconut_coupon_order_depth, traderObject[Product.COCONUT_COUPON]
-        #     )
-        #     tte = (
-        #         self.params[Product.COCONUT_COUPON]["starting_time_to_expiry"]
-        #     )
-        #     volatility = BlackScholes.implied_volatility(
-        #         coconut_coupon_mid_price,
-        #         coconut_mid_price,
-        #         self.params[Product.COCONUT_COUPON]["strike"],
-        #         tte,
-        #     )
-        #     delta = BlackScholes.delta(
-        #         coconut_mid_price,
-        #         self.params[Product.COCONUT_COUPON]["strike"],
-        #         tte,
-        #         volatility,
-        #     )
+        for product in product_list:
+            if product not in traderObject:
+                traderObject[product] = {
+                    "prev_coupon_price": 0,
+                    "past_coupon_vol": [],
+                }
 
-        #     coconut_coupon_take_orders, coconut_coupon_make_orders = (
-        #         self.coconut_coupon_orders(
-        #             state.order_depths[Product.COCONUT_COUPON],
-        #             coconut_coupon_position,
-        #             traderObject[Product.COCONUT_COUPON],
-        #             volatility,
-        #         )
-        #     )
+            if (
+                product in self.params
+                and product in state.order_depths
+            ):
+                coconut_coupon_position = (
+                    state.position[product]
+                    if product in state.position
+                    else 0
+                )
 
-        #     coconut_orders = self.coconut_hedge_orders(
-        #         state.order_depths[Product.COCONUT],
-        #         state.order_depths[Product.COCONUT_COUPON],
-        #         coconut_coupon_take_orders,
-        #         coconut_position,
-        #         coconut_coupon_position,
-        #         delta,
-        #     )
+                coconut_position = (
+                    state.position[Product.COCONUT]
+                    if Product.COCONUT in state.position
+                    else 0
+                )
+                # print(f"coconut_coupon_position: {coconut_coupon_position}")
+                # print(f"coconut_position: {coconut_position}")
+                # coconut_order_depth = state.order_depths[Product.COCONUT]
+                coconut_coupon_order_depth = state.order_depths[product]
+                # best_bid = max(coconut_order_depth.buy_orders.keys())
+                # best_ask = min(coconut_order_depth.sell_orders.keys())
+                # coconut_mid_price = (best_bid + best_ask) / 2
+                
+                coconut_coupon_mid_price = self.get_coconut_coupon_mid_price(
+                    coconut_coupon_order_depth, traderObject[product]
+                )
+                tte = (
+                    self.params[product]["time_to_expiry"]
+                )
+                volatility = BlackScholes.implied_volatility(
+                    coconut_coupon_mid_price,
+                    coconut_mid_price,
+                    self.params[product]["strike"],
+                    tte,
+                )
+                delta = BlackScholes.delta(
+                    coconut_mid_price,
+                    self.params[product]["strike"],
+                    tte,
+                    volatility,
+                )
 
-        #     if coconut_coupon_take_orders != None or coconut_coupon_make_orders != None:
-        #         result[Product.COCONUT_COUPON] = (
-        #             coconut_coupon_take_orders + coconut_coupon_make_orders
-        #         )
-        #         # print(f"COCONUT_COUPON: {result[Product.COCONUT_COUPON]}")
+                coconut_coupon_take_orders, coconut_coupon_make_orders = (
+                    self.coconut_coupon_orders(
+                        product,
+                        state.order_depths[product],
+                        coconut_coupon_position,
+                        traderObject[product],
+                        volatility,
+                        atm_vol,
+                    )
+                )
 
-        #     if coconut_orders != None:
-        #         result[Product.COCONUT] = coconut_orders
-        #         # print(f"COCONUT: {result[Product.COCONUT]}")
-        
+                coconut_orders = self.coconut_hedge_orders(
+                    state.order_depths[Product.COCONUT],
+                    state.order_depths[product],
+                    coconut_coupon_take_orders,
+                    coconut_position,
+                    coconut_coupon_position,
+                    delta,
+                )
+
+                if coconut_coupon_take_orders != None or coconut_coupon_make_orders != None:
+                    result[product] = (
+                        coconut_coupon_take_orders + coconut_coupon_make_orders
+                    )
+                    # print(f"COCONUT_COUPON: {result[Product.COCONUT_COUPON]}")
+
+                if coconut_orders != None:
+                    result[Product.COCONUT].extend(coconut_orders)
+                    #print(f"COCONUT: {result[Product.COCONUT]}")
+            
 
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
