@@ -1804,22 +1804,22 @@ class Trader:
                 if coconut_orders != None:
                     result[Product.COCONUT] = coconut_orders
                     #logger.print(f"COCONUT: {result[Product.COCONUT]}")
-        # for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750"]:
-        #     order_depth = state.order_depths[product]
-        #     orders = []
+        for product in ["VOLCANIC_ROCK_VOUCHER_9500","VOLCANIC_ROCK_VOUCHER_9750"]:
+            order_depth = state.order_depths[product]
+            orders = []
             
-        #     if order_depth.buy_orders and order_depth.sell_orders:
-        #         best_bid = max(order_depth.buy_orders.keys())
-        #         best_ask = min(order_depth.sell_orders.keys())
-        #         mid_price = (best_bid + best_ask) / 2
-        #     else:
-        #         mid_price = self._get_last_price(product)
+            if order_depth.buy_orders and order_depth.sell_orders:
+                best_bid = max(order_depth.buy_orders.keys())
+                best_ask = min(order_depth.sell_orders.keys())
+                mid_price = (best_bid + best_ask) / 2
+            else:
+                mid_price = self._get_last_price(product)
 
-        #     position = state.position.get(product, 0)
-        #     self._update_history(product, mid_price)
+            position = state.position.get(product, 0)
+            self._update_history(product, mid_price)
 
-        #     orders = self._volcanic_rock_voucher_orders(coconut_mid_price, mid_price, product, position, best_bid, best_ask, atm_vol)
-        #     result[product] = orders
+            orders = self._volcanic_rock_voucher_orders(coconut_mid_price, mid_price, product, position, best_bid, best_ask, atm_vol)
+            result[product] = orders
 
             
         conversions = 0
@@ -1905,18 +1905,19 @@ class Trader:
         # else:
         #     volatility = 0.2178
         volatility = volatility
-        theoretical_price = self._black_scholes_call(spot, strike, self.params[voucher_product]["time_to_expiry"], volatility)
+        #theoretical_price = self._black_scholes_call(spot, strike, self.params[voucher_product]["time_to_expiry"], volatility)
+        theoretical_price = spot - strike
         spread = theoretical_price - mid_price
-        logger.print(f"theoretical_price: {theoretical_price}, mid_price: {mid_price}, spread: {spread}")
         orders = []
         spread_threshold = 0
+        spread_threshold_exit = 0
         in_the_money = (spot - strike) / spot
-        if in_the_money > 0.05:
-            spread_threshold = -5
+        if in_the_money > 0.04:
+            spread_threshold = 1
             spread_threshold_exit = -1
-        elif in_the_money <= 0.05 and in_the_money >= 0:
-            spread_threshold = -5
-            spread_threshold_exit = -1
+        # elif in_the_money <= 0.05 and in_the_money >= 0:
+        #     spread_threshold = -10
+        #     spread_threshold_exit = -1
         # elif in_the_money > -0.025 and in_the_money < 0:
         #     spread_threshold = -30
         # elif in_the_money <= -0.025 and in_the_money >= -0.05:
@@ -1925,10 +1926,10 @@ class Trader:
         #     spread_threshold = -70
         if spread_threshold == 1:
             if spread >= spread_threshold:
-                volume = min(POSITION_LIMITS[voucher_product] - position, 5)
+                volume = min(POSITION_LIMITS[voucher_product] - position, 10)
                 orders.append(Order(voucher_product, best_ask, volume))
             elif spread <= -spread_threshold:
-                volume = min(POSITION_LIMITS[voucher_product] + position, 5)
+                volume = min(POSITION_LIMITS[voucher_product] + position, 10)
                 orders.append(Order(voucher_product, best_bid, -volume))
         else:
             if spread <= spread_threshold:
