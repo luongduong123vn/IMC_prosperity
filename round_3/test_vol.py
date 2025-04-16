@@ -1939,7 +1939,6 @@ class Trader:
         price_2 = price_dict[Product.VOLCANIC_ROCK_VOUCHER_10250][1]
         price_1 = price_dict[Product.VOLCANIC_ROCK_VOUCHER_10000][0]    
         if available_volume > 0:
-            
             if price_3 - price_2 > price_2 - price_1:
                 order_10000 = [Order(Product.VOLCANIC_ROCK_VOUCHER_10000, price_1, -round(available_volume/2))]
                 order_10250 = [Order(Product.VOLCANIC_ROCK_VOUCHER_10250, price_2, available_volume)]
