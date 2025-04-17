@@ -1226,6 +1226,8 @@ class Trader:
             return traderData["prev_coupon_price"]
         
     def trade_10000(self, state, market_data,traderObject, product, strike):
+        if "iv_arb_limit" not in traderObject:
+            traderObject["iv_arb_limit"] = 100
         delta_sum = 0
         orders = {}
         for p in ["VOLCANIC_ROCK", product]:
@@ -1234,7 +1236,8 @@ class Trader:
         underlying_fair = market_data.fair["VOLCANIC_ROCK"]
         dte = 4 - state.timestamp / 1_000_000
         v_t = self.implied_vol_call(fair, underlying_fair, strike, dte, 0)
-        delta = self.call_delta(fair, underlying_fair, dte, v_t)
+        delta = BlackScholes.delta(underlying_fair, strike, dte, v_t)
+        gamma = BlackScholes.gamma(underlying_fair, strike, dte, v_t)
         m_t = np.log(strike / underlying_fair) / np.sqrt(dte / 365)
         # print(f"m_t = {m_t}")
 
@@ -1251,41 +1254,44 @@ class Trader:
         else:
             traderObject[f"prices_{product}"].append(diff)
         threshold = 0.0035
+        fill_amount = 0
         # print(diff)
         if len(traderObject[f"prices_{product}"]) > 25:
             diff -= np.mean(np.array(traderObject[f"prices_{product}"][-20:]))
             traderObject[f"prices_{product}"].pop(0)
+            current_position = market_data.end_pos[f"{product}"]
             if diff > threshold:  # short vol so sell option, buy und
-                amount = min(market_data.buy_sum["VOLCANIC_ROCK"], market_data.sell_sum[f"{product}"])
+                amount = min(market_data.buy_sum["VOLCANIC_ROCK"], market_data.sell_sum[f"{product}"],traderObject["iv_arb_limit"] - current_position)
                 amount = min(amount, -sum(market_data.ask_volumes["VOLCANIC_ROCK"]),
                              sum(market_data.bid_volumes[f"{product}"]))
                 option_amount = amount
                 rock_amount = amount
 
-                # print(rock_amount)
-                '''for i in range(0, len(market_data.ask_prices["VOLCANIC_ROCK"])):
-                    fill = min(-market_data.ask_volumes["VOLCANIC_ROCK"][i], rock_amount)
-                    #print(fill)
-                    if fill != 0:
-                        orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.ask_prices["VOLCANIC_ROCK"][i], fill))
-                        market_data.buy_sum["VOLCANIC_ROCK"] -= fill
-                        market_data.end_pos["VOLCANIC_ROCK"] += fill
-                        rock_amount -= fill
-                        #print(fill)'''
 
                 for i in range(0, len(market_data.bid_prices[f"{product}"])):
                     fill = min(market_data.bid_volumes[f"{product}"][i], option_amount)
+                    fill_amount = fill
                     delta_sum -= delta * fill
                     if fill != 0:
                         orders[f"{product}"].append(Order(f"{product}",market_data.bid_prices[f"{product}"][i],-fill))
                         market_data.sell_sum[f"{product}"] -= fill
                         market_data.end_pos[f"{product}"] -= fill
                         option_amount -= fill
+                # print(rock_amount)
+                # for i in range(0, len(market_data.ask_prices["VOLCANIC_ROCK"])):
+                #     delta_fill = delta * fill_amount
+                #     #print(fill)
+                #     if delta_fill != 0:
+                #         orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.ask_prices["VOLCANIC_ROCK"][i], delta_fill))
+                #         market_data.buy_sum["VOLCANIC_ROCK"] -= delta_fill
+                #         market_data.end_pos["VOLCANIC_ROCK"] += delta_fill
+                #         rock_amount -= delta_fill
+                #         #print(fill)
 
             elif diff < -threshold:  # long vol
                 # print("LONG")
                 # print("----")
-                amount = min(market_data.buy_sum[f"{product}"], market_data.sell_sum[f"VOLCANIC_ROCK"])
+                amount = min(market_data.buy_sum[f"{product}"], market_data.sell_sum[f"VOLCANIC_ROCK"],traderObject["iv_arb_limit"] + current_position)
                 # print(amount)
                 amount = min(amount, -sum(market_data.ask_volumes[f"{product}"]),sum(market_data.bid_volumes["VOLCANIC_ROCK"]))
                 # print(amount)
@@ -1294,6 +1300,7 @@ class Trader:
                 # print(f"{rock_amount} rocks")
                 for i in range(0, len(market_data.ask_prices[f"{product}"])):
                     fill = min(-market_data.ask_volumes[f"{product}"][i], option_amount)
+                    fill_amount = fill
                     delta_sum += delta * fill
                     if fill != 0:
                         orders[f"{product}"].append(Order(f"{product}",market_data.ask_prices[f"{product}"][i], fill))
@@ -1301,16 +1308,64 @@ class Trader:
                         market_data.end_pos[f"{product}"] += fill
                         option_amount -= fill
 
-                '''for i in range(0, len(market_data.bid_prices["VOLCANIC_ROCK"])):
-                        fill = min(market_data.bid_volumes["VOLCANIC_ROCK"][i], rock_amount)
-                        #print(fill)
-                        if fill != 0:
-                            orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.bid_prices["VOLCANIC_ROCK"][i], -fill))
-                            market_data.sell_sum["VOLCANIC_ROCK"] -= fill
-                            market_data.end_pos["VOLCANIC_ROCK"] -= fill
-                            rock_amount -= fill'''
+                # for i in range(0, len(market_data.bid_prices["VOLCANIC_ROCK"])):
+                #     delta_fill = delta * fill_amount
+                #     #print(fill)
+                #     if delta_fill != 0:
+                #         orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.bid_prices["VOLCANIC_ROCK"][i], -delta_fill))
+                #         market_data.sell_sum["VOLCANIC_ROCK"] -= delta_fill
+                #         market_data.end_pos["VOLCANIC_ROCK"] -= delta_fill
+                #         rock_amount -= delta_fill
 
-        return orders[f"{product}"]
+        return orders[f"{product}"], delta, gamma
+
+    def coconut_hedge_orders(
+        self,
+        coconut_order_depth: OrderDepth,
+        coconut_coupon_order_depth: OrderDepth,
+        coconut_coupon_orders: List[Order],
+        coconut_position: int,
+        coconut_coupon_position: int,
+        delta: float,
+        gamma: float,
+    ) -> List[Order]:
+        if coconut_coupon_orders == None or len(coconut_coupon_orders) == 0:
+            coconut_coupon_position_after_trade = coconut_coupon_position
+        else:
+            coconut_coupon_position_after_trade = coconut_coupon_position + sum(
+                order.quantity for order in coconut_coupon_orders
+            )
+
+        target_coconut_position = -delta * coconut_coupon_position_after_trade - 0.5 * gamma * coconut_coupon_position_after_trade**2
+        #target_coconut_position = -delta * coconut_coupon_position_after_trade
+
+        if target_coconut_position == coconut_position:
+            return None
+
+        target_coconut_quantity = target_coconut_position - coconut_position
+
+        orders: List[Order] = []
+        if target_coconut_quantity > 0:
+            # Buy COCONUT
+            best_ask = min(coconut_order_depth.sell_orders.keys())
+            quantity = min(
+                abs(target_coconut_quantity),
+                self.LIMIT[Product.COCONUT] - coconut_position,
+            )
+            if quantity > 0:
+                orders.append(Order(Product.COCONUT, best_ask, round(quantity)))
+
+        elif target_coconut_quantity < 0:
+            # Sell COCONUT
+            best_bid = max(coconut_order_depth.buy_orders.keys())
+            quantity = min(
+                abs(target_coconut_quantity),
+                self.LIMIT[Product.COCONUT] + coconut_position,
+            )
+            if quantity > 0:
+                orders.append(Order(Product.COCONUT, best_bid, -round(quantity)))
+
+        return orders
     
     def submit_order(self, product, orders, price, volume):
         orders.append(Order(product, round(price), volume))
@@ -1568,6 +1623,7 @@ class Trader:
             min(coconut_order_depth.buy_orders.keys())
             + max(coconut_order_depth.sell_orders.keys())
         ) / 2
+        
         # product_list = [Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500]
         # strikes = [int(col.split('_')[-1]) for col in product_list]
         # atm_strike = min(strikes, key=lambda x: abs(x - coconut_mid_price))
@@ -1607,54 +1663,54 @@ class Trader:
             else:
                 mid_price = self._get_last_price(product)
 
-        products = ["VOLCANIC_ROCK_VOUCHER_10000","VOLCANIC_ROCK_VOUCHER_10250","VOLCANIC_ROCK_VOUCHER_10500","VOLCANIC_ROCK"]
-        for product in products:
-            position = state.position.get(product, 0)
-            order_depth = state.order_depths[product]
-            bids, asks = order_depth.buy_orders, order_depth.sell_orders
-            if order_depth.buy_orders:
-                mm_bid = max(bids.items(), key=lambda tup: tup[1])[0]
-            if order_depth.sell_orders:
-                mm_ask = min(asks.items(), key=lambda tup: tup[1])[0]
-            if order_depth.sell_orders and order_depth.buy_orders:
-                fair_price = (mm_ask + mm_bid) / 2
-            elif order_depth.sell_orders:
-                fair_price = mm_ask
-            elif order_depth.buy_orders:
-                fair_price = mm_bid
-            else:
-                fair_price = traderObject.get(f"prev_fair_{product}", 0)
-            traderObject[f"prev_fair_{product}"] = fair_price
+        # products = ["VOLCANIC_ROCK_VOUCHER_10000","VOLCANIC_ROCK"]
+        # for product in products:
+        #     position = state.position.get(product, 0)
+        #     order_depth = state.order_depths[product]
+        #     bids, asks = order_depth.buy_orders, order_depth.sell_orders
+        #     if order_depth.buy_orders:
+        #         mm_bid = max(bids.items(), key=lambda tup: tup[1])[0]
+        #     if order_depth.sell_orders:
+        #         mm_ask = min(asks.items(), key=lambda tup: tup[1])[0]
+        #     if order_depth.sell_orders and order_depth.buy_orders:
+        #         fair_price = (mm_ask + mm_bid) / 2
+        #     elif order_depth.sell_orders:
+        #         fair_price = mm_ask
+        #     elif order_depth.buy_orders:
+        #         fair_price = mm_bid
+        #     else:
+        #         fair_price = traderObject.get(f"prev_fair_{product}", 0)
+        #     traderObject[f"prev_fair_{product}"] = fair_price
 
-            market_data.end_pos[product] = position
-            market_data.buy_sum[product] = 50 - position
-            market_data.sell_sum[product] = 50 + position
-            market_data.bid_prices[product] = list(bids.keys())
-            market_data.bid_volumes[product] = list(bids.values())
-            market_data.ask_prices[product] = list(asks.keys())
-            market_data.ask_volumes[product] = list(asks.values())
-            market_data.fair[product] = fair_price
+        #     market_data.end_pos[product] = position
+        #     market_data.buy_sum[product] = 50 - position
+        #     market_data.sell_sum[product] = 50 + position
+        #     market_data.bid_prices[product] = list(bids.keys())
+        #     market_data.bid_volumes[product] = list(bids.values())
+        #     market_data.ask_prices[product] = list(asks.keys())
+        #     market_data.ask_volumes[product] = list(asks.values())
+        #     market_data.fair[product] = fair_price
         
-        if Product.VOLCANIC_ROCK_VOUCHER_10000 not in result:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10000] = []
+        # if Product.VOLCANIC_ROCK_VOUCHER_10000 not in result:
+        #     result[Product.VOLCANIC_ROCK_VOUCHER_10000] = []
 
-        orders_10000 = self.trade_10000(state, market_data, traderObject,"VOLCANIC_ROCK_VOUCHER_10000",10000)
-        if orders_10000:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10000].extend(orders_10000)
-
-        if Product.VOLCANIC_ROCK_VOUCHER_10250 not in result:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10250] = []
+        # orders_10000, delta_10000, gamma_10000 = self.trade_10000(state, market_data, traderObject,"VOLCANIC_ROCK_VOUCHER_10000",10000)
+        # if orders_10000:
+        #     result[Product.VOLCANIC_ROCK_VOUCHER_10000].extend(orders_10000)
         
-        orders_10250 = self.trade_10000(state, market_data, traderObject,"VOLCANIC_ROCK_VOUCHER_10250",10250)
-        if orders_10250:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10250].extend(orders_10250)
-
-        if Product.VOLCANIC_ROCK_VOUCHER_10500 not in result:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10500] = []
-        
-        orders_10500 = self.trade_10000(state, market_data, traderObject,"VOLCANIC_ROCK_VOUCHER_10500",10500)
-        if orders_10500:
-            result[Product.VOLCANIC_ROCK_VOUCHER_10500].extend(orders_10500)
+        # if Product.COCONUT not in result:
+        #     result[Product.COCONUT] = []
+        # volcanic_rock_orders = self.coconut_hedge_orders(
+        #             state.order_depths[Product.COCONUT],
+        #             state.order_depths[Product.VOLCANIC_ROCK_VOUCHER_10000],
+        #             orders_10000,
+        #             coconut_position = market_data.end_pos[Product.COCONUT],
+        #             coconut_coupon_position = market_data.end_pos[Product.VOLCANIC_ROCK_VOUCHER_10000],
+        #             delta = delta_10000,
+        #             gamma = gamma_10000,
+        #         )
+        # if volcanic_rock_orders != None:
+        #     result[Product.COCONUT].extend(volcanic_rock_orders)
 
         arb_dict = {}
         trade_combinations = []
@@ -1693,6 +1749,8 @@ class Trader:
             best_trade = max(trade_combinations, key=lambda x: x['profit'])
             # Update result with orders from best trade
             for product, orders in best_trade['orders'].items():
+                if result.get(product) is None:
+                    result[product] = []
                 if orders:  # Only update if there are orders
                     result[product].extend(orders)
 
