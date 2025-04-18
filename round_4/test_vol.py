@@ -216,7 +216,7 @@ class Product:
     SQUID_INK = "SQUID_INK"
     PICNIC_BASKET1 = "PICNIC_BASKET1"  
     PICNIC_BASKET2 = "PICNIC_BASKET2" 
-    ORCHIDS = "MAGNIFICENT_MACARON"    
+    ORCHIDS = "MAGNIFICENT_MACARONS"    
     JAMS = "JAMS"                          # was CHOCOLATE
     CROISSANTS = "CROISSANTS"              # was STRAWBERRIES
     DJEMBES = "DJEMBES" 
@@ -350,8 +350,9 @@ PARAMS = {
         "zscore_threshold": 21,
     },
     Product.ORCHIDS: {
-        "make_edge": 2,
-        "make_probability": 0.800,
+        "make_edge": 1,
+        "make_probability": 0.8,
+        "conversion_limit": 10,
     },
 }
 
@@ -583,7 +584,7 @@ class Trader:
 
             traderObject['starfruit_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-100:]
+            traderObject['starfruit_price_history'] = traderObject['starfruit_price_history'][-50:]
             starfruit_fv_history = traderObject['starfruit_price_history'][-15:]
                 
             if traderObject.get("starfruit_last_price", None) != None:
@@ -642,7 +643,7 @@ class Trader:
 
             traderObject['ink_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject['ink_price_history'] = traderObject['ink_price_history'][-100:]
+            traderObject['ink_price_history'] = traderObject['ink_price_history'][-50:]
             ink_fv_history = traderObject['ink_price_history'][-5:]
             starfruit_price_history = traderObject['ink_price_history']
             prices = starfruit_price_history
@@ -729,7 +730,7 @@ class Trader:
 
             traderObject[f'{product}_price_history'].append(mmmid_price)
             # Keep only the last 10 prices
-            traderObject[f'{product}_price_history'] = traderObject[f'{product}_price_history'][-100:]
+            traderObject[f'{product}_price_history'] = traderObject[f'{product}_price_history'][-50:]
             fv_history = traderObject[f'{product}_price_history'][-5:]
             price_history = traderObject[f'{product}_price_history']
             prices = price_history
@@ -1407,7 +1408,9 @@ class Trader:
         ask = round(observation.askPrice) - 2
 
         if ask > implied_ask:
-            edge = (ask - implied_ask) * self.params[Product.ORCHIDS]["make_probability"]
+            edge = (ask - implied_ask) * self.params[Product.ORCHIDS][
+                "make_probability"
+            ]
         else:
             edge = 0
 
@@ -1438,7 +1441,7 @@ class Trader:
         return orders, buy_order_volume, sell_order_volume
 
     def orchids_arb_clear(self, position: int) -> int:
-        conversions = -position
+        conversions = min(-position, self.params[Product.ORCHIDS]["conversion_limit"])
         return conversions
 
     def orchids_arb_make(
@@ -1455,8 +1458,8 @@ class Trader:
         # Implied Ask = observation.askPrice + observation.importTariff + observation.transportFees
         implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
 
-        aggressive_ask = round(observation.askPrice) - 2
-        aggressive_bid = round(observation.bidPrice) + 2
+        aggressive_ask = round(observation.askPrice) - self.params[Product.ORCHIDS]["make_edge"]
+        aggressive_bid = round(observation.bidPrice) + self.params[Product.ORCHIDS]["make_edge"]
 
         if aggressive_bid < implied_bid:
             bid = aggressive_bid
@@ -1466,15 +1469,11 @@ class Trader:
         if aggressive_ask >= implied_ask + 0.5:
             ask = aggressive_ask
         elif aggressive_ask + 1 >= implied_ask + 0.5:
-            ask = aggressive_ask + 1
+            ask = aggressive_ask 
+            #ask = aggressive_ask + 1
         else:
-            ask = implied_ask + 2
-
-        print(f"ALGO_ASK: {round(ask)}")
-        print(f"IMPLIED_BID: {implied_bid}")
-        print(f"IMPLIED_ASK: {implied_ask}")
-        print(f"FOREIGN_ASK: {observation.askPrice}")
-        print(f"FOREIGN_BID: {observation.bidPrice}")
+            ask = implied_ask + 1
+            #ask = implied_ask + 2
 
         buy_quantity = position_limit - (position + buy_order_volume)
         if buy_quantity > 0:
@@ -1500,7 +1499,8 @@ class Trader:
         # for product in [Product.CHOCOLATE, Product.STRAWBERRIES, Product.ROSES, Product.GIFT_BASKET, Product.GIFT_BASKET_1]:
         #     if f'{product}_price_history' not in traderObject:
         #         traderObject[f'{product}_price_history'] = []
-            
+        
+        conversions = 0
         result = {}
 
         #self.history = traderObject
@@ -1742,7 +1742,6 @@ class Trader:
                 if Product.ORCHIDS in state.position
                 else 0
             )
-            print(f"ORCHIDS POSITION: {orchids_position}")
 
             conversions = self.orchids_arb_clear(orchids_position)
 
@@ -1923,7 +1922,6 @@ class Trader:
                 if order_10500:
                     result[p3].extend(order_10500)
         
-        conversions = 0
         traderData = jsonpickle.encode(traderObject)
         logger.flush(state, result, conversions, traderData)
 
@@ -2068,11 +2066,11 @@ class Trader:
         strike_3 = int(product_3.split("_")[-1])
         price_dict = {}
         for product in [product_1, product_2, product_3]:
-            if product not in traderObject:
-                traderObject[product] = {
-                    "prev_coupon_price": 0,
-                    "past_coupon_vol": [],
-                }
+            # if product not in traderObject:
+            #     traderObject[product] = {
+            #         "prev_coupon_price": 0,
+            #         "past_coupon_vol": [],
+            #     }
 
             if (
                 product in self.params
@@ -2111,7 +2109,7 @@ class Trader:
         expected_profit = 0
         
         if available_volume > 0:
-            if price_3 - price_2 > price_2 - price_1 + 10:
+            if price_3 - price_2 > price_2 - price_1 + 30:
                 volume_1 = round(available_volume * arb_ratio_1)
                 volume_2 = available_volume
                 volume_3 = round(available_volume * arb_ratio_2)
@@ -2165,7 +2163,7 @@ class Trader:
         price_1 = price_dict[product_1][1]
         
         # Create closing orders with stored volumes
-        if price_3 - price_2 <= price_2 - price_1 + 3:
+        if price_3 - price_2 <= price_2 - price_1 + 5:
             order_10000 = [Order(stored_products[0], price_1, stored_volumes[0])]
             order_10250 = [Order(stored_products[1], price_2, -stored_volumes[1])]
             order_10500 = [Order(stored_products[2], price_3, stored_volumes[2])]
@@ -2192,36 +2190,42 @@ class Trader:
         in_the_money = (spot - strike) / spot
         if in_the_money > 0.04:
             spread_threshold = 1
-            spread_threshold_exit = -1
-        # elif in_the_money <= 0.05 and in_the_money >= 0:
-        #     spread_threshold = 1
-        #     spread_threshold_exit = -1
+            spread_threshold_exit = 0
+        elif in_the_money <= 0.04 and in_the_money >= 0:
+            spread_threshold = 1
+            spread_threshold_exit = 0
         # elif in_the_money > -0.025 and in_the_money < 0:
         #     spread_threshold = -30
         # elif in_the_money <= -0.025 and in_the_money >= -0.05:
         #     spread_threshold = -50
         # elif in_the_money <= -0.05:
         #     spread_threshold = -70
-        if spread_threshold == 1:
+        if in_the_money > 0.04:
             if spread >= spread_threshold:
                 volume = min(POSITION_LIMITS[voucher_product] - position, 10)
                 orders.append(Order(voucher_product, best_ask, volume))
+            elif position > 0 and spread <= spread_threshold_exit:
+                volume = min(position, 10)
+                orders.append(Order(voucher_product, best_bid, -volume))
             elif spread <= -spread_threshold:
                 volume = min(POSITION_LIMITS[voucher_product] + position, 10)
                 orders.append(Order(voucher_product, best_bid, -volume))
+            elif position < 0 and spread >= -spread_threshold_exit:
+                volume = min(position, 10)
+                orders.append(Order(voucher_product, best_ask, volume))
         else:
-            if spread <= spread_threshold:
-                volume = min(POSITION_LIMITS[voucher_product] - position, 5)
-                orders.append(Order(voucher_product, best_bid, -volume))
-            elif position < 0 and spread >= spread_threshold_exit:
-                volume = min(position, 5)
+            if spread >= spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] - position, 10)
                 orders.append(Order(voucher_product, best_ask, volume))
-            elif spread >= -spread_threshold:
-                volume = min(POSITION_LIMITS[voucher_product] + position, 5)
-                orders.append(Order(voucher_product, best_ask, volume))
-            elif position > 0 and spread <= -spread_threshold_exit:
-                volume = min(position, 5)
+            elif position > 0 and spread <= spread_threshold_exit:
+                volume = min(position, 10)
                 orders.append(Order(voucher_product, best_bid, -volume))
+            elif spread <= -spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] + position, 10)
+                orders.append(Order(voucher_product, best_bid, -volume))
+            elif position < 0 and spread >= -spread_threshold_exit:
+                volume = min(position, 10)
+                orders.append(Order(voucher_product, best_ask, volume))
         return orders
 
 POSITION_LIMITS = {

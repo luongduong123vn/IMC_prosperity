@@ -10,7 +10,7 @@ import statistics
 import json
 from typing import Any
 
-from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState
+from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState, ConversionObservation
 from typing import List, Tuple, Union, Dict
 
 
@@ -215,7 +215,8 @@ class Product:
     STARFRUIT = "KELP"
     SQUID_INK = "SQUID_INK"
     PICNIC_BASKET1 = "PICNIC_BASKET1"  
-    PICNIC_BASKET2 = "PICNIC_BASKET2"      # was GIFT_BASKET
+    PICNIC_BASKET2 = "PICNIC_BASKET2" 
+    ORCHIDS = "MAGNIFICENT_MACARONS"    
     JAMS = "JAMS"                          # was CHOCOLATE
     CROISSANTS = "CROISSANTS"              # was STRAWBERRIES
     DJEMBES = "DJEMBES" 
@@ -348,6 +349,10 @@ PARAMS = {
         "std_window": 6,
         "zscore_threshold": 21,
     },
+    Product.ORCHIDS: {
+        "make_edge": 1,
+        "make_probability": 0.8,
+    },
 }
 
 PICNIC1_WEIGHTS = {
@@ -380,6 +385,7 @@ class Trader:
             Product.VOLCANIC_ROCK_VOUCHER_10000: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10250: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10500: 200,
+            Product.ORCHIDS: 75
         }
         self.history = {}
         self.risk_adjustment = 0.8
@@ -1225,18 +1231,20 @@ class Trader:
         else:
             return traderData["prev_coupon_price"]
         
-    def trade_10000(self, state, market_data,traderObject):
-        product = "VOLCANIC_ROCK_VOUCHER_10000"
+    def trade_10000(self, state, market_data,traderObject, product, strike):
+        if "iv_arb_limit" not in traderObject:
+            traderObject["iv_arb_limit"] = 100
         delta_sum = 0
         orders = {}
-        for p in ["VOLCANIC_ROCK", "VOLCANIC_ROCK_VOUCHER_10000"]:
+        for p in ["VOLCANIC_ROCK", product]:
             orders[p] = []
         fair = market_data.fair[product]
         underlying_fair = market_data.fair["VOLCANIC_ROCK"]
         dte = 4 - state.timestamp / 1_000_000
-        v_t = self.implied_vol_call(fair, underlying_fair, 10000, dte, 0)
-        delta = self.call_delta(fair, underlying_fair, dte, v_t)
-        m_t = np.log(10000 / underlying_fair) / np.sqrt(dte / 365)
+        v_t = self.implied_vol_call(fair, underlying_fair, strike, dte, 0)
+        delta = BlackScholes.delta(underlying_fair, strike, dte, v_t)
+        gamma = BlackScholes.gamma(underlying_fair, strike, dte, v_t)
+        m_t = np.log(strike / underlying_fair) / np.sqrt(dte / 365)
         # print(f"m_t = {m_t}")
 
         # , ,
@@ -1247,127 +1255,677 @@ class Trader:
         # print(fair_iv)
 
         diff = v_t - fair_iv
-        if "prices_10000" not in traderObject:
-            traderObject["prices_10000"] = [diff]
+        if f"prices_{product}" not in traderObject:
+            traderObject[f"prices_{product}"] = [diff]
         else:
-            traderObject["prices_10000"].append(diff)
+            traderObject[f"prices_{product}"].append(diff)
         threshold = 0.0035
+        fill_amount = 0
         # print(diff)
-        if len(traderObject["prices_10000"]) > 25:
-            diff -= np.mean(np.array(traderObject["prices_10000"][-20:]))
-            traderObject["prices_10000"].pop(0)
+        if len(traderObject[f"prices_{product}"]) > 25:
+            diff -= np.mean(np.array(traderObject[f"prices_{product}"][-20:]))
+            traderObject[f"prices_{product}"].pop(0)
+            current_position = market_data.end_pos[f"{product}"]
             if diff > threshold:  # short vol so sell option, buy und
-                amount = min(market_data.buy_sum["VOLCANIC_ROCK"], market_data.sell_sum["VOLCANIC_ROCK_VOUCHER_10000"])
+                amount = min(market_data.buy_sum["VOLCANIC_ROCK"], market_data.sell_sum[f"{product}"],traderObject["iv_arb_limit"] - current_position)
                 amount = min(amount, -sum(market_data.ask_volumes["VOLCANIC_ROCK"]),
-                             sum(market_data.bid_volumes["VOLCANIC_ROCK_VOUCHER_10000"]))
+                             sum(market_data.bid_volumes[f"{product}"]))
                 option_amount = amount
                 rock_amount = amount
 
-                # print(rock_amount)
-                '''for i in range(0, len(market_data.ask_prices["VOLCANIC_ROCK"])):
-                    fill = min(-market_data.ask_volumes["VOLCANIC_ROCK"][i], rock_amount)
-                    #print(fill)
-                    if fill != 0:
-                        orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.ask_prices["VOLCANIC_ROCK"][i], fill))
-                        market_data.buy_sum["VOLCANIC_ROCK"] -= fill
-                        market_data.end_pos["VOLCANIC_ROCK"] += fill
-                        rock_amount -= fill
-                        #print(fill)'''
 
-                for i in range(0, len(market_data.bid_prices["VOLCANIC_ROCK_VOUCHER_10000"])):
-                    fill = min(market_data.bid_volumes["VOLCANIC_ROCK_VOUCHER_10000"][i], option_amount)
+                for i in range(0, len(market_data.bid_prices[f"{product}"])):
+                    fill = min(market_data.bid_volumes[f"{product}"][i], option_amount)
+                    fill_amount = fill
                     delta_sum -= delta * fill
                     if fill != 0:
-                        orders["VOLCANIC_ROCK_VOUCHER_10000"].append(Order("VOLCANIC_ROCK_VOUCHER_10000",
-                                                                           market_data.bid_prices[
-                                                                               "VOLCANIC_ROCK_VOUCHER_10000"][i],
-                                                                           -fill))
-                        market_data.sell_sum["VOLCANIC_ROCK_VOUCHER_10000"] -= fill
-                        market_data.end_pos["VOLCANIC_ROCK_VOUCHER_10000"] -= fill
+                        orders[f"{product}"].append(Order(f"{product}",market_data.bid_prices[f"{product}"][i],-fill))
+                        market_data.sell_sum[f"{product}"] -= fill
+                        market_data.end_pos[f"{product}"] -= fill
                         option_amount -= fill
+                # print(rock_amount)
+                # for i in range(0, len(market_data.ask_prices["VOLCANIC_ROCK"])):
+                #     delta_fill = delta * fill_amount
+                #     #print(fill)
+                #     if delta_fill != 0:
+                #         orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.ask_prices["VOLCANIC_ROCK"][i], delta_fill))
+                #         market_data.buy_sum["VOLCANIC_ROCK"] -= delta_fill
+                #         market_data.end_pos["VOLCANIC_ROCK"] += delta_fill
+                #         rock_amount -= delta_fill
+                #         #print(fill)
 
             elif diff < -threshold:  # long vol
                 # print("LONG")
                 # print("----")
-                amount = min(market_data.buy_sum["VOLCANIC_ROCK_VOUCHER_10000"], market_data.sell_sum["VOLCANIC_ROCK"])
+                amount = min(market_data.buy_sum[f"{product}"], market_data.sell_sum[f"VOLCANIC_ROCK"],traderObject["iv_arb_limit"] + current_position)
                 # print(amount)
-                amount = min(amount, -sum(market_data.ask_volumes["VOLCANIC_ROCK_VOUCHER_10000"]),
-                             sum(market_data.bid_volumes["VOLCANIC_ROCK"]))
+                amount = min(amount, -sum(market_data.ask_volumes[f"{product}"]),sum(market_data.bid_volumes["VOLCANIC_ROCK"]))
                 # print(amount)
                 option_amount = amount
                 rock_amount = amount
                 # print(f"{rock_amount} rocks")
-                for i in range(0, len(market_data.ask_prices["VOLCANIC_ROCK_VOUCHER_10000"])):
-                    fill = min(-market_data.ask_volumes["VOLCANIC_ROCK_VOUCHER_10000"][i], option_amount)
+                for i in range(0, len(market_data.ask_prices[f"{product}"])):
+                    fill = min(-market_data.ask_volumes[f"{product}"][i], option_amount)
+                    fill_amount = fill
                     delta_sum += delta * fill
                     if fill != 0:
-                        orders["VOLCANIC_ROCK_VOUCHER_10000"].append(Order("VOLCANIC_ROCK_VOUCHER_10000",
-                                                                           market_data.ask_prices[
-                                                                               "VOLCANIC_ROCK_VOUCHER_10000"][i], fill))
-                        market_data.buy_sum["VOLCANIC_ROCK_VOUCHER_10000"] -= fill
-                        market_data.end_pos["VOLCANIC_ROCK_VOUCHER_10000"] += fill
+                        orders[f"{product}"].append(Order(f"{product}",market_data.ask_prices[f"{product}"][i], fill))
+                        market_data.buy_sum[f"{product}"] -= fill
+                        market_data.end_pos[f"{product}"] += fill
                         option_amount -= fill
 
-                '''for i in range(0, len(market_data.bid_prices["VOLCANIC_ROCK"])):
-                        fill = min(market_data.bid_volumes["VOLCANIC_ROCK"][i], rock_amount)
-                        #print(fill)
-                        if fill != 0:
-                            orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.bid_prices["VOLCANIC_ROCK"][i], -fill))
-                            market_data.sell_sum["VOLCANIC_ROCK"] -= fill
-                            market_data.end_pos["VOLCANIC_ROCK"] -= fill
-                            rock_amount -= fill'''
+                # for i in range(0, len(market_data.bid_prices["VOLCANIC_ROCK"])):
+                #     delta_fill = delta * fill_amount
+                #     #print(fill)
+                #     if delta_fill != 0:
+                #         orders["VOLCANIC_ROCK"].append(Order("VOLCANIC_ROCK", market_data.bid_prices["VOLCANIC_ROCK"][i], -delta_fill))
+                #         market_data.sell_sum["VOLCANIC_ROCK"] -= delta_fill
+                #         market_data.end_pos["VOLCANIC_ROCK"] -= delta_fill
+                #         rock_amount -= delta_fill
 
-        return orders["VOLCANIC_ROCK_VOUCHER_10000"]
+        return orders[f"{product}"], delta, gamma
+
+    def coconut_hedge_orders(
+        self,
+        coconut_order_depth: OrderDepth,
+        coconut_coupon_order_depth: OrderDepth,
+        coconut_coupon_orders: List[Order],
+        coconut_position: int,
+        coconut_coupon_position: int,
+        delta: float,
+        gamma: float,
+    ) -> List[Order]:
+        if coconut_coupon_orders == None or len(coconut_coupon_orders) == 0:
+            coconut_coupon_position_after_trade = coconut_coupon_position
+        else:
+            coconut_coupon_position_after_trade = coconut_coupon_position + sum(
+                order.quantity for order in coconut_coupon_orders
+            )
+
+        target_coconut_position = -delta * coconut_coupon_position_after_trade - 0.5 * gamma * coconut_coupon_position_after_trade**2
+        #target_coconut_position = -delta * coconut_coupon_position_after_trade
+
+        if target_coconut_position == coconut_position:
+            return None
+
+        target_coconut_quantity = target_coconut_position - coconut_position
+
+        orders: List[Order] = []
+        if target_coconut_quantity > 0:
+            # Buy COCONUT
+            best_ask = min(coconut_order_depth.sell_orders.keys())
+            quantity = min(
+                abs(target_coconut_quantity),
+                self.LIMIT[Product.COCONUT] - coconut_position,
+            )
+            if quantity > 0:
+                orders.append(Order(Product.COCONUT, best_ask, round(quantity)))
+
+        elif target_coconut_quantity < 0:
+            # Sell COCONUT
+            best_bid = max(coconut_order_depth.buy_orders.keys())
+            quantity = min(
+                abs(target_coconut_quantity),
+                self.LIMIT[Product.COCONUT] + coconut_position,
+            )
+            if quantity > 0:
+                orders.append(Order(Product.COCONUT, best_bid, -round(quantity)))
+
+        return orders
     
     def submit_order(self, product, orders, price, volume):
         orders.append(Order(product, round(price), volume))
 
+    def orchids_implied_bid_ask(
+        self,
+        observation: ConversionObservation,
+    ) -> (float, float):
+        return (
+            observation.bidPrice
+            - observation.exportTariff
+            - observation.transportFees
+            - 0.1,
+            observation.askPrice + observation.importTariff + observation.transportFees,
+        )
+
+    def orchids_arb_take(
+        self,
+        order_depth: OrderDepth,
+        observation: ConversionObservation,
+        position: int,
+    ) -> (List[Order], int, int):
+        orders: List[Order] = []
+        position_limit = self.LIMIT[Product.ORCHIDS]
+        buy_order_volume = 0
+        sell_order_volume = 0
+
+        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
+
+        buy_quantity = position_limit - position
+        sell_quantity = position_limit + position
+
+        ask = round(observation.askPrice) - 2
+
+        if ask > implied_ask:
+            edge = (ask - implied_ask) * self.params[Product.ORCHIDS]["make_probability"]
+        else:
+            edge = 0
+
+        for price in sorted(list(order_depth.sell_orders.keys())):
+            if price > implied_bid - edge:
+                break
+
+            if price < implied_bid - edge:
+                quantity = min(
+                    abs(order_depth.sell_orders[price]), buy_quantity
+                )  # max amount to buy
+                if quantity > 0:
+                    orders.append(Order(Product.ORCHIDS, round(price), quantity))
+                    buy_order_volume += quantity
+
+        for price in sorted(list(order_depth.buy_orders.keys()), reverse=True):
+            if price < implied_ask + edge:
+                break
+
+            if price > implied_ask + edge:
+                quantity = min(
+                    abs(order_depth.buy_orders[price]), sell_quantity
+                )  # max amount to sell
+                if quantity > 0:
+                    orders.append(Order(Product.ORCHIDS, round(price), -quantity))
+                    sell_order_volume += quantity
+
+        return orders, buy_order_volume, sell_order_volume
+
+    def orchids_arb_clear(self, position: int) -> int:
+        conversions = -position
+        return conversions
+
+    def orchids_arb_make(
+        self,
+        observation: ConversionObservation,
+        position: int,
+        buy_order_volume: int,
+        sell_order_volume: int,
+    ) -> (List[Order], int, int):
+        orders: List[Order] = []
+        position_limit = self.LIMIT[Product.ORCHIDS]
+
+        # Implied Bid = observation.bidPrice - observation.exportTariff - observation.transportFees - 0.1
+        # Implied Ask = observation.askPrice + observation.importTariff + observation.transportFees
+        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
+
+        aggressive_ask = round(observation.askPrice) - self.params[Product.ORCHIDS]["make_edge"]
+        aggressive_bid = round(observation.bidPrice) + self.params[Product.ORCHIDS]["make_edge"]
+
+        if aggressive_bid < implied_bid:
+            bid = aggressive_bid
+        else:
+            bid = implied_bid - 1
+
+        if aggressive_ask >= implied_ask + 0.5:
+            ask = aggressive_ask
+        elif aggressive_ask + 1 >= implied_ask + 0.5:
+            ask = aggressive_ask 
+            #ask = aggressive_ask + 1
+        else:
+            ask = implied_ask + 1
+            #ask = implied_ask + 2
+
+        print(f"ALGO_ASK: {round(ask)}")
+        print(f"IMPLIED_BID: {implied_bid}")
+        print(f"IMPLIED_ASK: {implied_ask}")
+        print(f"FOREIGN_ASK: {observation.askPrice}")
+        print(f"FOREIGN_BID: {observation.bidPrice}")
+
+        buy_quantity = position_limit - (position + buy_order_volume)
+        if buy_quantity > 0:
+            orders.append(Order(Product.ORCHIDS, round(bid), buy_quantity))
+
+        sell_quantity = position_limit + (position - sell_order_volume)
+        if sell_quantity > 0:
+            orders.append(Order(Product.ORCHIDS, round(ask), -sell_quantity))
+
+        return orders, buy_order_volume, sell_order_volume
+
+
     def run(self, state: TradingState):
         traderObject = {}
-        result = {}
-        market_data = MarketData()
-        products = ["RAINFOREST_RESIN","VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750",
-                    "VOLCANIC_ROCK_VOUCHER_10000", "VOLCANIC_ROCK_VOUCHER_10250",
-                    "VOLCANIC_ROCK_VOUCHER_10500","VOLCANIC_ROCK"]
         if state.traderData != None and state.traderData != "":
             traderObject = jsonpickle.decode(state.traderData)
-        for product in products:
-            position = state.position.get(product, 0)
-            order_depth = state.order_depths[product]
-            bids, asks = order_depth.buy_orders, order_depth.sell_orders
-            if order_depth.buy_orders:
-                mm_bid = max(bids.items(), key=lambda tup: tup[1])[0]
-            if order_depth.sell_orders:
-                mm_ask = min(asks.items(), key=lambda tup: tup[1])[0]
-            if order_depth.sell_orders and order_depth.buy_orders:
-                fair_price = (mm_ask + mm_bid) / 2
-            elif order_depth.sell_orders:
-                fair_price = mm_ask
-            elif order_depth.buy_orders:
-                fair_price = mm_bid
-            else:
-                fair_price = traderObject[f"prev_fair_{product}"]
-            traderObject[f"prev_fair_{product}"] = fair_price
-
-            market_data.end_pos[product] = position
-            market_data.buy_sum[product] = 50 - position
-            market_data.sell_sum[product] = 50 + position
-            market_data.bid_prices[product] = list(bids.keys())
-            market_data.bid_volumes[product] = list(bids.values())
-            market_data.ask_prices[product] = list(asks.keys())
-            market_data.ask_volumes[product] = list(asks.values())
-            market_data.fair[product] = fair_price
-
+        market_data = MarketData()
+        # Initialize price history if it doesn't exist
+        if 'starfruit_price_history' not in traderObject:
+            traderObject['starfruit_price_history'] = []
+        if 'ink_price_history' not in traderObject:
+            traderObject['ink_price_history'] = []
+        # for product in [Product.CHOCOLATE, Product.STRAWBERRIES, Product.ROSES, Product.GIFT_BASKET, Product.GIFT_BASKET_1]:
+        #     if f'{product}_price_history' not in traderObject:
+        #         traderObject[f'{product}_price_history'] = []
+        
+        conversions = 0
         result = {}
 
-        # Round 3
-        VOUCHERS = [Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_9750,
-                    Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250,
-                    Product.VOLCANIC_ROCK_VOUCHER_10500]
-        result[Product.VOLCANIC_ROCK_VOUCHER_10000] = self.trade_10000(state,market_data,traderObject)
+        #self.history = traderObject
+        for product in ["PICNIC_BASKET1","PICNIC_BASKET2", "CROISSANTS", "JAMS", "DJEMBES"]:
+            order_depth = state.order_depths[product]
+            orders = []
+            
+            if order_depth.buy_orders and order_depth.sell_orders:
+                best_bid = max(order_depth.buy_orders.keys())
+                best_ask = min(order_depth.sell_orders.keys())
+                mid_price = (best_bid + best_ask) / 2
+            else:
+                mid_price = self._get_last_price(product)
 
+            position = state.position.get(product, 0)
+            self._update_history(product, mid_price)
 
-        conversions = 1
+            if product in ["PICNIC_BASKET1", "PICNIC_BASKET2"]:
+                orders = self._basket_arbitrage(product, position)
+            if product in ["CROISSANTS", "JAMS", "DJEMBES"]: # give 350k on backtest but bad on website
+                orders = self._dynamic_market_make(product, mid_price, position)
+            result[product] = orders
+
+        for product in ['RAINFOREST_RESIN']:
+            order_depth: OrderDepth = state.order_depths[product]
+            position = state.position[product] if state.position.get(product) else 0
+            orders: List[Order] = []
+
+            acceptable_price = 10000
+
+            #print("Acceptable price : " + str(acceptable_price))
+            #print("Buy Order depth : " + str(len(order_depth.buy_orders)) + ", Sell order depth : " + str(len(order_depth.sell_orders)))
+
+            buy_orders = sorted(order_depth.buy_orders.items(), reverse = True)
+            sell_orders = sorted(order_depth.sell_orders.items())
+
+            buy = abs(50 - position)
+            sell = abs(50 + position)
+
+            spread_buy_pos = 0
+            spread_sell_pos = 0
+                # +EV ORDER MATCH:
+            for price, qty in sell_orders:
+                if price < acceptable_price or (price == acceptable_price and (position <= 0)): # or is better for resin, and is better for kelp
+                    buy_qty = min(buy, -qty)
+                    self.submit_order(product, orders, price, buy_qty)
+                    buy -= buy_qty
+                    spread_sell_pos += 1
+                    if buy == 0:
+                        break
+
+            for price, qty in buy_orders:
+                if price > acceptable_price or (price == acceptable_price and (position >= 0)): #  or is better for resin, and is better for kelp
+                    sell_qty = min(sell, qty)
+                    self.submit_order(product, orders, price, -sell_qty)
+                    sell -= sell_qty
+                    spread_buy_pos += 1
+                    if sell == 0:
+                        break
+
+            # MARKET MAKING:
+            if len(buy_orders) > spread_buy_pos:
+                best_buy = buy_orders[spread_buy_pos][0]
+            else:
+                best_buy = acceptable_price - 5
+
+            if len(sell_orders) > spread_sell_pos:
+                best_sell = sell_orders[spread_sell_pos][0]
+            else:
+                best_sell = acceptable_price + 5
+
+            if buy != 0 and best_buy <= acceptable_price:
+                if abs(best_buy - acceptable_price) <= 1:
+                    if position < 0:
+                        self.submit_order(product, orders, acceptable_price, -position)
+                        buy += position
+                    self.submit_order(product, orders, best_buy, buy)
+                else:
+                    self.submit_order(product, orders, best_buy + 1, buy)
+
+            if sell != 0 and best_sell >= acceptable_price:
+                if abs(best_sell - acceptable_price) <= 1:
+                    if position > 0:
+                        self.submit_order(product, orders, acceptable_price, -position)
+                        sell -= position
+                    self.submit_order(product, orders, best_sell, -sell)
+                else:
+                    self.submit_order(product, orders, best_sell - 1, -sell)
+
+            result[product] = orders
+
+        # if Product.AMETHYSTS in self.params and Product.AMETHYSTS in state.order_depths:
+        #     amethyst_position = (
+        #         state.position[Product.AMETHYSTS]
+        #         if Product.AMETHYSTS in state.position
+        #         else 0
+        #     )
+        #     amethyst_take_orders, buy_order_volume, sell_order_volume = (
+        #         self.take_orders(
+        #             Product.AMETHYSTS,
+        #             state.order_depths[Product.AMETHYSTS],
+        #             self.params[Product.AMETHYSTS]["fair_value"],
+        #             self.params[Product.AMETHYSTS]["take_width"],
+        #             amethyst_position,
+        #         )
+        #     )
+        #     amethyst_clear_orders, buy_order_volume, sell_order_volume = (
+        #         self.clear_orders(
+        #             Product.AMETHYSTS,
+        #             state.order_depths[Product.AMETHYSTS],
+        #             self.params[Product.AMETHYSTS]["fair_value"],
+        #             self.params[Product.AMETHYSTS]["clear_width"],
+        #             amethyst_position,
+        #             buy_order_volume,
+        #             sell_order_volume,
+        #         )
+        #     )
+        #     amethyst_make_orders, _, _ = self.make_orders(
+        #         Product.AMETHYSTS,
+        #         state.order_depths[Product.AMETHYSTS],
+        #         self.params[Product.AMETHYSTS]["fair_value"],
+        #         amethyst_position,
+        #         buy_order_volume,
+        #         sell_order_volume,
+        #         self.params[Product.AMETHYSTS]["disregard_edge"],
+        #         self.params[Product.AMETHYSTS]["join_edge"],
+        #         self.params[Product.AMETHYSTS]["default_edge"],
+        #         True,
+        #         self.params[Product.AMETHYSTS]["soft_position_limit"],
+        #     )
+        #     result[Product.AMETHYSTS] = (
+        #         amethyst_take_orders + amethyst_clear_orders + amethyst_make_orders
+        #     )
+        if Product.STARFRUIT in self.params and Product.STARFRUIT in state.order_depths:
+            starfruit_position = (
+                state.position[Product.STARFRUIT]
+                if Product.STARFRUIT in state.position
+                else 0
+            )
+            starfruit_fair_value = self.starfruit_fair_value(
+                state.order_depths[Product.STARFRUIT], traderObject
+            )
+            
+            
+            starfruit_take_orders, buy_order_volume, sell_order_volume = (
+                self.take_orders(
+                    Product.STARFRUIT,
+                    state.order_depths[Product.STARFRUIT],
+                    starfruit_fair_value,
+                    self.params[Product.STARFRUIT]["take_width"],
+                    starfruit_position,
+                    self.params[Product.STARFRUIT]["prevent_adverse"],
+                    self.params[Product.STARFRUIT]["adverse_volume"],
+                )
+            )
+            starfruit_clear_orders, buy_order_volume, sell_order_volume = (
+                self.clear_orders(
+                    Product.STARFRUIT,
+                    state.order_depths[Product.STARFRUIT],
+                    starfruit_fair_value,
+                    self.params[Product.STARFRUIT]["clear_width"],
+                    starfruit_position,
+                    buy_order_volume,
+                    sell_order_volume,
+                )
+            )
+            starfruit_make_orders, _, _ = self.make_order_starfruit(
+                Product.STARFRUIT,
+                traderObject,
+                state.order_depths[Product.STARFRUIT],
+                starfruit_fair_value,
+                starfruit_position,
+                buy_order_volume,
+                sell_order_volume,
+                self.params[Product.STARFRUIT]["disregard_edge"],
+                self.params[Product.STARFRUIT]["join_edge"],
+                self.params[Product.STARFRUIT]["default_edge"],
+            )
+            result[Product.STARFRUIT] = (
+                starfruit_take_orders + starfruit_clear_orders + starfruit_make_orders
+            )
+
+        if Product.SQUID_INK in self.params and Product.SQUID_INK in state.order_depths:
+            ink_position = (
+                state.position[Product.SQUID_INK]
+                if Product.SQUID_INK in state.position
+                else 0
+            )
+            # tinh fair value trc
+            ink_fair_value = self.ink_fair_value(
+                state.order_depths[Product.SQUID_INK], traderObject
+            )
+            
+            
+            ink_take_orders, buy_order_volume, sell_order_volume = (
+                self.take_orders(
+                    Product.SQUID_INK,
+                    state.order_depths[Product.SQUID_INK],
+                    ink_fair_value,
+                    self.params[Product.SQUID_INK]["take_width"],
+                    ink_position,
+                    self.params[Product.SQUID_INK]["prevent_adverse"],
+                    self.params[Product.SQUID_INK]["adverse_volume"],
+                )
+            )
+            ink_clear_orders, buy_order_volume, sell_order_volume = (
+                self.clear_orders(
+                    Product.SQUID_INK,
+                    state.order_depths[Product.SQUID_INK],
+                    ink_fair_value,
+                    self.params[Product.SQUID_INK]["clear_width"],
+                    ink_position,
+                    buy_order_volume,
+                    sell_order_volume,
+                )
+            )
+            ink_make_orders, _, _ = self.make_order_ink(
+                Product.SQUID_INK,
+                traderObject,
+                state.order_depths[Product.SQUID_INK],
+                ink_fair_value,
+                ink_position,
+                buy_order_volume,
+                sell_order_volume,
+                self.params[Product.SQUID_INK]["disregard_edge"],
+                self.params[Product.SQUID_INK]["join_edge"],
+                self.params[Product.SQUID_INK]["default_edge"],
+                self.params[Product.SQUID_INK]["manage_position"],
+                self.params[Product.SQUID_INK]["soft_position_limit"],
+            )
+            result[Product.SQUID_INK] = (
+                ink_take_orders + ink_clear_orders + ink_make_orders
+            )
+
+        
+        if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths:
+            orchids_position = (
+                state.position[Product.ORCHIDS]
+                if Product.ORCHIDS in state.position
+                else 0
+            )
+            print(f"ORCHIDS POSITION: {orchids_position}")
+
+            conversions = self.orchids_arb_clear(orchids_position)
+
+            orchids_position = 0
+
+            orchids_take_orders, buy_order_volume, sell_order_volume = (
+                self.orchids_arb_take(
+                    state.order_depths[Product.ORCHIDS],
+                    state.observations.conversionObservations[Product.ORCHIDS],
+                    orchids_position,
+                )
+            )
+
+            orchids_make_orders, _, _ = self.orchids_arb_make(
+                state.observations.conversionObservations[Product.ORCHIDS],
+                orchids_position,
+                buy_order_volume,
+                sell_order_volume,
+            )
+
+            result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
+
+        coconut_order_depth = state.order_depths[Product.COCONUT]
+        coconut_mid_price = (
+            min(coconut_order_depth.buy_orders.keys())
+            + max(coconut_order_depth.sell_orders.keys())
+        ) / 2
+        
+        # product_list = [Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500]
+        # strikes = [int(col.split('_')[-1]) for col in product_list]
+        # atm_strike = min(strikes, key=lambda x: abs(x - coconut_mid_price))
+        # coconut_coupon_order_depth = state.order_depths[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]
+        # if f"VOLCANIC_ROCK_VOUCHER_{atm_strike}" not in traderObject:
+        #     traderObject[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"] = {
+        #         "prev_coupon_price": 0,
+        #         "past_coupon_vol": [],
+        #     }
+        # coconut_coupon_mid_price = self.get_coconut_coupon_mid_price(
+        #     coconut_coupon_order_depth, traderObject[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]
+        # )
+        # tte = (
+        #     self.params[f"VOLCANIC_ROCK_VOUCHER_{atm_strike}"]["time_to_expiry"]
+        # )
+        # atm_vol = BlackScholes.implied_volatility(
+        #     coconut_coupon_mid_price,
+        #     coconut_mid_price,
+        #     atm_strike,
+        #     tte,
+        # )
+        # traderObject["atm_vol"] = atm_vol
+        # result[Product.COCONUT] = []
+
+        for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750"]:
+            order_depth = state.order_depths[product]
+            orders = []
+            
+            if order_depth.buy_orders and order_depth.sell_orders:
+                best_bid = max(order_depth.buy_orders.keys())
+                best_ask = min(order_depth.sell_orders.keys())
+                mid_price = (best_bid + best_ask) / 2
+                position = state.position.get(product, 0)
+                self._update_history(product, mid_price)
+                orders = self._volcanic_rock_voucher_orders(coconut_mid_price, mid_price, product, position, best_bid, best_ask)
+                result[product] = orders
+            else:
+                mid_price = self._get_last_price(product)
+
+        # products = ["VOLCANIC_ROCK_VOUCHER_10000","VOLCANIC_ROCK"]
+        # for product in products:
+        #     position = state.position.get(product, 0)
+        #     order_depth = state.order_depths[product]
+        #     bids, asks = order_depth.buy_orders, order_depth.sell_orders
+        #     if order_depth.buy_orders:
+        #         mm_bid = max(bids.items(), key=lambda tup: tup[1])[0]
+        #     if order_depth.sell_orders:
+        #         mm_ask = min(asks.items(), key=lambda tup: tup[1])[0]
+        #     if order_depth.sell_orders and order_depth.buy_orders:
+        #         fair_price = (mm_ask + mm_bid) / 2
+        #     elif order_depth.sell_orders:
+        #         fair_price = mm_ask
+        #     elif order_depth.buy_orders:
+        #         fair_price = mm_bid
+        #     else:
+        #         fair_price = traderObject.get(f"prev_fair_{product}", 0)
+        #     traderObject[f"prev_fair_{product}"] = fair_price
+
+        #     market_data.end_pos[product] = position
+        #     market_data.buy_sum[product] = 50 - position
+        #     market_data.sell_sum[product] = 50 + position
+        #     market_data.bid_prices[product] = list(bids.keys())
+        #     market_data.bid_volumes[product] = list(bids.values())
+        #     market_data.ask_prices[product] = list(asks.keys())
+        #     market_data.ask_volumes[product] = list(asks.values())
+        #     market_data.fair[product] = fair_price
+        
+        # if Product.VOLCANIC_ROCK_VOUCHER_10000 not in result:
+        #     result[Product.VOLCANIC_ROCK_VOUCHER_10000] = []
+
+        # orders_10000, delta_10000, gamma_10000 = self.trade_10000(state, market_data, traderObject,"VOLCANIC_ROCK_VOUCHER_10000",10000)
+        # if orders_10000:
+        #     result[Product.VOLCANIC_ROCK_VOUCHER_10000].extend(orders_10000)
+        
+        # if Product.COCONUT not in result:
+        #     result[Product.COCONUT] = []
+        # volcanic_rock_orders = self.coconut_hedge_orders(
+        #             state.order_depths[Product.COCONUT],
+        #             state.order_depths[Product.VOLCANIC_ROCK_VOUCHER_10000],
+        #             orders_10000,
+        #             coconut_position = market_data.end_pos[Product.COCONUT],
+        #             coconut_coupon_position = market_data.end_pos[Product.VOLCANIC_ROCK_VOUCHER_10000],
+        #             delta = delta_10000,
+        #             gamma = gamma_10000,
+        #         )
+        # if volcanic_rock_orders != None:
+        #     result[Product.COCONUT].extend(volcanic_rock_orders)
+
+        arb_dict = {}
+        trade_combinations = []
+      
+        combinations = [
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10000),
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10250),
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10500),
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250),
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10500),
+            (Product.VOLCANIC_ROCK_VOUCHER_9500, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500),
+            (Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250),
+            (Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10500),
+            (Product.VOLCANIC_ROCK_VOUCHER_9750, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500),
+            (Product.VOLCANIC_ROCK_VOUCHER_10000, Product.VOLCANIC_ROCK_VOUCHER_10250, Product.VOLCANIC_ROCK_VOUCHER_10500)
+        ]
+
+        # Try each combination and store results
+        for combo in combinations:
+            p1, p2, p3 = combo
+            # Only try combinations where we don't already have orders
+            if (result.get(p1) is None and result.get(p2) is None and result.get(p3) is None):
+                order1, order2, order3, profit = self.spread_arbitrage(state, traderObject, p1, p2, p3)
+                if profit > 0:  # Only store profitable trades
+                    trade_combinations.append({
+                        'profit': profit,
+                        'orders': {
+                            p1: order1,
+                            p2: order2,
+                            p3: order3
+                        }
+                    })
+
+        # Select the highest profit trade
+        if trade_combinations:
+            best_trade = max(trade_combinations, key=lambda x: x['profit'])
+            # Update result with orders from best trade
+            for product, orders in best_trade['orders'].items():
+                if result.get(product) is None:
+                    result[product] = []
+                if orders:  # Only update if there are orders
+                    result[product].extend(orders)
+
+        # Handle closing of existing arbitrage positions
+        if "arbitrage_positions" in traderObject:
+            for arb_key, arb_info in traderObject["arbitrage_positions"].items():
+                p1, p2, p3 = arb_info["products"]
+                order_10000, order_10250, order_10500 = self.spread_arbitrage_close(state, traderObject, p1, p2, p3)
+                
+                # Initialize result lists if they don't exist
+                if p1 not in result:
+                    result[p1] = []
+                if p2 not in result:
+                    result[p2] = []
+                if p3 not in result:
+                    result[p3] = []
+                
+                # Add closing orders
+                if order_10000:
+                    result[p1].extend(order_10000)
+                if order_10250:
+                    result[p2].extend(order_10250)
+                if order_10500:
+                    result[p3].extend(order_10500)
+        
         traderData = jsonpickle.encode(traderObject)
         logger.flush(state, result, conversions, traderData)
 
@@ -1418,7 +1976,7 @@ class Trader:
 
         for _ in range(max_iter):
             sigma_mid = (sigma_low + sigma_high) / 2
-            price = self._black_scholes_call(S, K, T_days, sigma_mid)
+            price = self.black_scholes_call(S, K, T_days, r, sigma_mid)
 
             if abs(price - market_price) < tol:
                 return sigma_mid
@@ -1429,6 +1987,244 @@ class Trader:
                 sigma_low = sigma_mid
 
         return (sigma_low + sigma_high) / 2  # Final estimate
+    
+    def norm_cdf(self, x: float) -> float:
+        """Standard normal cumulative distribution function."""
+        return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+    
+    def _load_history(self, trader_data):
+        try:
+            self.history = json.loads(trader_data) if trader_data else {}
+        except:
+            self.history = {}
+
+    def _update_history(self, product, price):
+        if product not in self.history:
+            self.history[product] = []
+        self.history[product].append(price)
+        if len(self.history[product]) > 100:
+            self.history[product].pop(0)
+
+    def _get_last_price(self, product, rolling_window=10):
+        # Use the average of the last `rolling_window` recorded prices.
+        # If there's not enough data, just average all we have.
+        # If no data exists at all, default to 0 (or do no orders).
+        data = self.history.get(product, [])
+        if not data:
+            return 0
+        window_data = data[-rolling_window:]
+        return float(np.mean(window_data))
+
+    def _basket_arbitrage(self, basket, position):
+        if basket == "PICNIC_BASKET1":
+            constituents = [("CROISSANTS", 6), ("JAMS", 3), ("DJEMBES", 1)]
+        else:
+            constituents = [("CROISSANTS", 4), ("JAMS", 2)]
+
+        basket_price = self._get_last_price(basket)
+        theoretical_price = sum(self._get_last_price(prod) * qty for prod, qty in constituents)
+        spread = theoretical_price - basket_price
+
+        orders = []
+        if spread > 50 and position < POSITION_LIMITS[basket]:
+            volume = min(POSITION_LIMITS[basket] - position, 10)
+            orders.append(Order(basket, int(basket_price), volume))
+        elif spread < -50 and position > -POSITION_LIMITS[basket]:
+            volume = min(position + POSITION_LIMITS[basket], 10)
+            orders.append(Order(basket, int(basket_price), -volume))
+
+        return orders
+
+    # Dynamic Market Making Strategy for CROISSANTS, JAMS, and DJEMBES
+    def _dynamic_market_make(self, product, mid_price, position):
+        recent_prices = self.history[product][-10:]
+        volatility = np.std(recent_prices) if recent_prices else 1
+        spread = min(volatility * 1.5, 10)
+        bid_price = int(mid_price - spread / 2)
+        ask_price = int(mid_price + spread / 2)
+
+        max_buy = POSITION_LIMITS[product] - position
+        max_sell = POSITION_LIMITS[product] + position
+
+        orders = []
+        if max_buy > 0:
+            orders.append(Order(product, bid_price, max_buy))
+        if max_sell > 0:
+            orders.append(Order(product, ask_price, -max_sell))
+
+        return orders
+    
+    def black_scholes_call(self, S: float, K: float, T_days: float, r: float, sigma: float) -> float:
+        """Black-Scholes price of a European call option."""
+        T = T_days / 365.0
+        if T <= 0 or sigma <= 0:
+            return max(S - K, 0.0)
+
+        d1 = (math.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * math.sqrt(T))
+        d2 = d1 - sigma * math.sqrt(T)
+        return S * self.norm_cdf(d1) - K * math.exp(-r * T) * self.norm_cdf(d2)
+
+    def spread_arbitrage(self, state, traderObject, product_1, product_2, product_3):
+        strike_1 = int(product_1.split("_")[-1])
+        strike_2 = int(product_2.split("_")[-1])
+        strike_3 = int(product_3.split("_")[-1])
+        price_dict = {}
+        for product in [product_1, product_2, product_3]:
+            if product not in traderObject:
+                traderObject[product] = {
+                    "prev_coupon_price": 0,
+                    "past_coupon_vol": [],
+                }
+
+            if (
+                product in self.params
+                and product in state.order_depths
+            ):
+                coconut_coupon_position = (
+                    state.position[product]
+                    if product in state.position
+                    else 0
+                )
+            coconut_coupon_order_depth = state.order_depths[product]
+            best_bid = max(coconut_coupon_order_depth.buy_orders.keys()) if len(coconut_coupon_order_depth.buy_orders) > 0 else 0
+            best_ask = min(coconut_coupon_order_depth.sell_orders.keys()) if len(coconut_coupon_order_depth.sell_orders) > 0 else 0
+            best_bid_volume = abs(coconut_coupon_order_depth.buy_orders[best_bid]) if len(coconut_coupon_order_depth.buy_orders) > 0 else 0
+            best_ask_volume = abs(coconut_coupon_order_depth.sell_orders[best_ask]) if len(coconut_coupon_order_depth.sell_orders) > 0 else 0
+            
+            # Calculate available volume based on position limits
+            max_buy = POSITION_LIMITS[product] - coconut_coupon_position
+            max_sell = POSITION_LIMITS[product] + coconut_coupon_position
+            
+            # Adjust volumes based on position limits
+            best_bid_volume = min(best_bid_volume, max_buy)
+            best_ask_volume = min(best_ask_volume, max_sell)
+            
+            price_dict[product] = (best_bid, best_ask, best_bid_volume, best_ask_volume, coconut_coupon_position)
+            
+        available_volume = min(price_dict[product_1][2], price_dict[product_2][3], price_dict[product_3][2])
+        order_10000 = []
+        order_10250 = []
+        order_10500 = []
+        price_3 = price_dict[product_3][0]
+        price_2 = price_dict[product_2][1]
+        price_1 = price_dict[product_1][0]
+        arb_ratio_1 = (strike_2 - strike_1) / (strike_3 - strike_1)
+        arb_ratio_2 = (strike_3 - strike_2) / (strike_3 - strike_1)
+        expected_profit = 0
+        
+        if available_volume > 0:
+            if price_3 - price_2 > price_2 - price_1 + 30:
+                volume_1 = round(available_volume * arb_ratio_1)
+                volume_2 = available_volume
+                volume_3 = round(available_volume * arb_ratio_2)
+                
+                # Double check that volumes don't exceed position limits
+                volume_1 = min(volume_1, POSITION_LIMITS[product_1] - price_dict[product_1][4])
+                volume_2 = min(volume_2, POSITION_LIMITS[product_2] - price_dict[product_2][4])
+                volume_3 = min(volume_3, POSITION_LIMITS[product_3] - price_dict[product_3][4])
+                
+                order_10000 = [Order(product_1, price_1, -volume_1)]
+                order_10250 = [Order(product_2, price_2, volume_2)]
+                order_10500 = [Order(product_3, price_3, -volume_3)]
+                expected_profit = (price_1 * arb_ratio_1 + price_3 * arb_ratio_2 - price_2) * available_volume
+                
+                # Store arbitrage information when opening position
+                if "arbitrage_positions" not in traderObject:
+                    traderObject["arbitrage_positions"] = {}
+                
+                traderObject["arbitrage_positions"][f"{product_1}_{product_2}_{product_3}"] = {
+                    "products": [product_1, product_2, product_3],
+                    "volumes": [volume_1, volume_2, volume_3]
+                }
+        
+        return order_10000, order_10250, order_10500, expected_profit
+
+    def spread_arbitrage_close(self, state, traderObject, product_1, product_2, product_3):
+        # Retrieve stored arbitrage information
+        arb_key = f"{product_1}_{product_2}_{product_3}"
+        if "arbitrage_positions" not in traderObject or arb_key not in traderObject["arbitrage_positions"]:
+            return [], [], []
+            
+        arb_info = traderObject["arbitrage_positions"][arb_key]
+        stored_products = arb_info["products"]
+        stored_volumes = arb_info["volumes"]
+        
+        # Create orders to close the stored volumes
+        order_10000 = []
+        order_10250 = []
+        order_10500 = []
+        
+        # Get current prices
+        price_dict = {}
+        for product in [product_1, product_2, product_3]:
+            coconut_coupon_order_depth = state.order_depths[product]
+            best_bid = max(coconut_coupon_order_depth.buy_orders.keys()) if len(coconut_coupon_order_depth.buy_orders) > 0 else 0
+            best_ask = min(coconut_coupon_order_depth.sell_orders.keys()) if len(coconut_coupon_order_depth.sell_orders) > 0 else 0
+            price_dict[product] = (best_bid, best_ask)
+
+        price_3 = price_dict[product_3][1]
+        price_2 = price_dict[product_2][0]
+        price_1 = price_dict[product_1][1]
+        
+        # Create closing orders with stored volumes
+        if price_3 - price_2 <= price_2 - price_1 + 5:
+            order_10000 = [Order(stored_products[0], price_1, stored_volumes[0])]
+            order_10250 = [Order(stored_products[1], price_2, -stored_volumes[1])]
+            order_10500 = [Order(stored_products[2], price_3, stored_volumes[2])]
+        
+            # Remove the closed arbitrage position
+            del traderObject["arbitrage_positions"][arb_key]
+        
+        return order_10000, order_10250, order_10500
+
+    def _volcanic_rock_voucher_orders(self, spot, mid_price, voucher_product, position, best_bid, best_ask,volatility=0.2178):
+        strike = int(voucher_product.split("_")[-1])
+        # if len(self.history["VOLCANIC_ROCK"]) > 50:
+        #     recent_prices = self.history["VOLCANIC_ROCK"][-50:] 
+        #     volatility = ((np.std(recent_prices)/recent_prices[-1])*np.sqrt(252))
+        # else:
+        #     volatility = 0.2178
+        volatility = volatility
+        #theoretical_price = self._black_scholes_call(spot, strike, self.params[voucher_product]["time_to_expiry"], volatility)
+        theoretical_price = spot-strike
+        spread = theoretical_price - mid_price
+        orders = []
+        spread_threshold = 0
+        spread_threshold_exit = 0
+        in_the_money = (spot - strike) / spot
+        if in_the_money > 0.04:
+            spread_threshold = 1
+            spread_threshold_exit = -1
+        # elif in_the_money <= 0.05 and in_the_money >= 0:
+        #     spread_threshold = 1
+        #     spread_threshold_exit = -1
+        # elif in_the_money > -0.025 and in_the_money < 0:
+        #     spread_threshold = -30
+        # elif in_the_money <= -0.025 and in_the_money >= -0.05:
+        #     spread_threshold = -50
+        # elif in_the_money <= -0.05:
+        #     spread_threshold = -70
+        if spread_threshold == 1:
+            if spread >= spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] - position, 10)
+                orders.append(Order(voucher_product, best_ask, volume))
+            elif spread <= -spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] + position, 10)
+                orders.append(Order(voucher_product, best_bid, -volume))
+        else:
+            if spread <= spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] - position, 5)
+                orders.append(Order(voucher_product, best_bid, -volume))
+            elif position < 0 and spread >= spread_threshold_exit:
+                volume = min(position, 5)
+                orders.append(Order(voucher_product, best_ask, volume))
+            elif spread >= -spread_threshold:
+                volume = min(POSITION_LIMITS[voucher_product] + position, 5)
+                orders.append(Order(voucher_product, best_ask, volume))
+            elif position > 0 and spread <= -spread_threshold_exit:
+                volume = min(position, 5)
+                orders.append(Order(voucher_product, best_bid, -volume))
+        return orders
 
 POSITION_LIMITS = {
     "RAINFOREST_RESIN": 50,

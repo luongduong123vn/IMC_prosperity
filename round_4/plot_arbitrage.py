@@ -54,7 +54,7 @@ ax2.tick_params(axis='x', rotation=45)
 plt.tight_layout()
 
 # Save the plot
-plt.savefig('arbitrage_opportunities.png')
+plt.savefig('arbitrage_opportunities_day_3.png')
 plt.close()
 
 # Print some statistics
