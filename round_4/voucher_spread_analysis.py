@@ -5,7 +5,7 @@ from pathlib import Path
 import os
 
 def load_data():
-    data_dir = Path("round_4_data")
+    data_dir = Path("round_4/round_4_data")
     all_data = []
     
     for day in range(1, 4):
@@ -31,7 +31,7 @@ def load_data():
 def calculate_spreads(df):
     # Filter data for VOLCANIC_ROCK and VOLCANIC_ROCK_VOUCHER_9500
     volcanic_rock = df[df['product'] == 'VOLCANIC_ROCK']
-    voucher = df[df['product'] == 'VOLCANIC_ROCK_VOUCHER_9750']
+    voucher = df[df['product'] == 'VOLCANIC_ROCK_VOUCHER_10500']
     
     # Merge the dataframes on timestamp
     merged_df = pd.merge(volcanic_rock, voucher, on='timestamp', suffixes=('', '_voucher'))
@@ -41,7 +41,7 @@ def calculate_spreads(df):
     merged_df['volcanic_rock_voucher_mid'] = merged_df['mid_price_voucher']
     
     # Calculate the theoretical value (spot - strike)
-    merged_df['theoretical_value'] = merged_df['volcanic_rock_mid'] - 9750
+    merged_df['theoretical_value'] = merged_df['volcanic_rock_mid'] - 10500
     
     # Calculate the spread between voucher and theoretical value
     merged_df['spread'] = merged_df['volcanic_rock_voucher_mid'] - merged_df['theoretical_value']
@@ -111,7 +111,7 @@ def plot_analysis(df, spread_stats, correlation, percentiles):
     plt.legend()
     
     plt.tight_layout()
-    plt.savefig('voucher_spread_analysis_1.png')
+    plt.savefig('voucher_spread_analysis_4.png')
     plt.close()
 
 def main():

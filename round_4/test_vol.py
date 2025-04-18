@@ -386,7 +386,7 @@ class Trader:
             Product.VOLCANIC_ROCK_VOUCHER_10000: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10250: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10500: 200,
-            Product.ORCHIDS: 75
+            Product.ORCHIDS: 10
         }
         self.history = {}
         self.risk_adjustment = 0.8
@@ -1405,7 +1405,7 @@ class Trader:
         buy_quantity = position_limit - position
         sell_quantity = position_limit + position
 
-        ask = round(observation.askPrice) - 2
+        ask = round(observation.askPrice) - 1
 
         if ask > implied_ask:
             edge = (ask - implied_ask) * self.params[Product.ORCHIDS][
@@ -1441,7 +1441,7 @@ class Trader:
         return orders, buy_order_volume, sell_order_volume
 
     def orchids_arb_clear(self, position: int) -> int:
-        conversions = min(-position, self.params[Product.ORCHIDS]["conversion_limit"])
+        conversions = -min(position*int(np.sign(position)), self.params[Product.ORCHIDS]["conversion_limit"])*int(np.sign(position))
         return conversions
 
     def orchids_arb_make(
@@ -1469,10 +1469,10 @@ class Trader:
         if aggressive_ask >= implied_ask + 0.5:
             ask = aggressive_ask
         elif aggressive_ask + 1 >= implied_ask + 0.5:
-            ask = aggressive_ask 
+            ask = aggressive_ask +1
             #ask = aggressive_ask + 1
         else:
-            ask = implied_ask + 1
+            ask = implied_ask + 2
             #ask = implied_ask + 2
 
         buy_quantity = position_limit - (position + buy_order_volume)
@@ -1744,8 +1744,7 @@ class Trader:
             )
 
             conversions = self.orchids_arb_clear(orchids_position)
-
-            orchids_position = 0
+            orchids_position += conversions
 
             orchids_take_orders, buy_order_volume, sell_order_volume = (
                 self.orchids_arb_take(
@@ -2192,7 +2191,7 @@ class Trader:
             spread_threshold = 1
             spread_threshold_exit = 0
         elif in_the_money <= 0.04 and in_the_money >= 0:
-            spread_threshold = 1
+            spread_threshold = min(1 / ((in_the_money/0.04)**2), 15)
             spread_threshold_exit = 0
         # elif in_the_money > -0.025 and in_the_money < 0:
         #     spread_threshold = -30

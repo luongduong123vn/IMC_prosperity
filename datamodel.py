@@ -2,6 +2,7 @@ import json
 from typing import Dict, List
 from json import JSONEncoder
 import jsonpickle
+import numpy as np
 
 Time = int
 Symbol = str
@@ -105,5 +106,7 @@ class TradingState(object):
     
 class ProsperityEncoder(JSONEncoder):
 
-        def default(self, o):
-            return o.__dict__
+    def default(self, o):
+        if isinstance(o, (np.int64, np.int32, np.float64, np.float32)):
+            return int(o) if isinstance(o, (np.int64, np.int32)) else float(o)
+        return o.__dict__
