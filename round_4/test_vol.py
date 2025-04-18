@@ -10,7 +10,7 @@ import statistics
 import json
 from typing import Any
 
-from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState
+from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState, ConversionObservation
 from typing import List, Tuple, Union, Dict
 
 
@@ -215,7 +215,8 @@ class Product:
     STARFRUIT = "KELP"
     SQUID_INK = "SQUID_INK"
     PICNIC_BASKET1 = "PICNIC_BASKET1"  
-    PICNIC_BASKET2 = "PICNIC_BASKET2"      # was GIFT_BASKET
+    PICNIC_BASKET2 = "PICNIC_BASKET2" 
+    ORCHIDS = "MAGNIFICENT_MACARON"    
     JAMS = "JAMS"                          # was CHOCOLATE
     CROISSANTS = "CROISSANTS"              # was STRAWBERRIES
     DJEMBES = "DJEMBES" 
@@ -348,6 +349,10 @@ PARAMS = {
         "std_window": 6,
         "zscore_threshold": 21,
     },
+    Product.ORCHIDS: {
+        "make_edge": 2,
+        "make_probability": 0.800,
+    },
 }
 
 PICNIC1_WEIGHTS = {
@@ -380,6 +385,7 @@ class Trader:
             Product.VOLCANIC_ROCK_VOUCHER_10000: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10250: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10500: 200,
+            Product.ORCHIDS: 75
         }
         self.history = {}
         self.risk_adjustment = 0.8
@@ -1370,6 +1376,117 @@ class Trader:
     def submit_order(self, product, orders, price, volume):
         orders.append(Order(product, round(price), volume))
 
+    def orchids_implied_bid_ask(
+        self,
+        observation: ConversionObservation,
+    ) -> (float, float):
+        return (
+            observation.bidPrice
+            - observation.exportTariff
+            - observation.transportFees
+            - 0.1,
+            observation.askPrice + observation.importTariff + observation.transportFees,
+        )
+
+    def orchids_arb_take(
+        self,
+        order_depth: OrderDepth,
+        observation: ConversionObservation,
+        position: int,
+    ) -> (List[Order], int, int):
+        orders: List[Order] = []
+        position_limit = self.LIMIT[Product.ORCHIDS]
+        buy_order_volume = 0
+        sell_order_volume = 0
+
+        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
+
+        buy_quantity = position_limit - position
+        sell_quantity = position_limit + position
+
+        ask = round(observation.askPrice) - 2
+
+        if ask > implied_ask:
+            edge = (ask - implied_ask) * self.params[Product.ORCHIDS]["make_probability"]
+        else:
+            edge = 0
+
+        for price in sorted(list(order_depth.sell_orders.keys())):
+            if price > implied_bid - edge:
+                break
+
+            if price < implied_bid - edge:
+                quantity = min(
+                    abs(order_depth.sell_orders[price]), buy_quantity
+                )  # max amount to buy
+                if quantity > 0:
+                    orders.append(Order(Product.ORCHIDS, round(price), quantity))
+                    buy_order_volume += quantity
+
+        for price in sorted(list(order_depth.buy_orders.keys()), reverse=True):
+            if price < implied_ask + edge:
+                break
+
+            if price > implied_ask + edge:
+                quantity = min(
+                    abs(order_depth.buy_orders[price]), sell_quantity
+                )  # max amount to sell
+                if quantity > 0:
+                    orders.append(Order(Product.ORCHIDS, round(price), -quantity))
+                    sell_order_volume += quantity
+
+        return orders, buy_order_volume, sell_order_volume
+
+    def orchids_arb_clear(self, position: int) -> int:
+        conversions = -position
+        return conversions
+
+    def orchids_arb_make(
+        self,
+        observation: ConversionObservation,
+        position: int,
+        buy_order_volume: int,
+        sell_order_volume: int,
+    ) -> (List[Order], int, int):
+        orders: List[Order] = []
+        position_limit = self.LIMIT[Product.ORCHIDS]
+
+        # Implied Bid = observation.bidPrice - observation.exportTariff - observation.transportFees - 0.1
+        # Implied Ask = observation.askPrice + observation.importTariff + observation.transportFees
+        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
+
+        aggressive_ask = round(observation.askPrice) - 2
+        aggressive_bid = round(observation.bidPrice) + 2
+
+        if aggressive_bid < implied_bid:
+            bid = aggressive_bid
+        else:
+            bid = implied_bid - 1
+
+        if aggressive_ask >= implied_ask + 0.5:
+            ask = aggressive_ask
+        elif aggressive_ask + 1 >= implied_ask + 0.5:
+            ask = aggressive_ask + 1
+        else:
+            ask = implied_ask + 2
+
+        print(f"ALGO_ASK: {round(ask)}")
+        print(f"IMPLIED_BID: {implied_bid}")
+        print(f"IMPLIED_ASK: {implied_ask}")
+        print(f"FOREIGN_ASK: {observation.askPrice}")
+        print(f"FOREIGN_BID: {observation.bidPrice}")
+
+        buy_quantity = position_limit - (position + buy_order_volume)
+        if buy_quantity > 0:
+            orders.append(Order(Product.ORCHIDS, round(bid), buy_quantity))
+
+        sell_quantity = position_limit + (position - sell_order_volume)
+        if sell_quantity > 0:
+            orders.append(Order(Product.ORCHIDS, round(ask), -sell_quantity))
+
+        return orders, buy_order_volume, sell_order_volume
+
+
     def run(self, state: TradingState):
         traderObject = {}
         if state.traderData != None and state.traderData != "":
@@ -1618,6 +1735,36 @@ class Trader:
                 ink_take_orders + ink_clear_orders + ink_make_orders
             )
 
+        
+        if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths:
+            orchids_position = (
+                state.position[Product.ORCHIDS]
+                if Product.ORCHIDS in state.position
+                else 0
+            )
+            print(f"ORCHIDS POSITION: {orchids_position}")
+
+            conversions = self.orchids_arb_clear(orchids_position)
+
+            orchids_position = 0
+
+            orchids_take_orders, buy_order_volume, sell_order_volume = (
+                self.orchids_arb_take(
+                    state.order_depths[Product.ORCHIDS],
+                    state.observations.conversionObservations[Product.ORCHIDS],
+                    orchids_position,
+                )
+            )
+
+            orchids_make_orders, _, _ = self.orchids_arb_make(
+                state.observations.conversionObservations[Product.ORCHIDS],
+                orchids_position,
+                buy_order_volume,
+                sell_order_volume,
+            )
+
+            result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
+
         coconut_order_depth = state.order_depths[Product.COCONUT]
         coconut_mid_price = (
             min(coconut_order_depth.buy_orders.keys())
@@ -1775,7 +1922,6 @@ class Trader:
                     result[p2].extend(order_10250)
                 if order_10500:
                     result[p3].extend(order_10500)
-
         
         conversions = 0
         traderData = jsonpickle.encode(traderObject)
@@ -1965,7 +2111,7 @@ class Trader:
         expected_profit = 0
         
         if available_volume > 0:
-            if price_3 - price_2 > price_2 - price_1 + 2:
+            if price_3 - price_2 > price_2 - price_1 + 10:
                 volume_1 = round(available_volume * arb_ratio_1)
                 volume_2 = available_volume
                 volume_3 = round(available_volume * arb_ratio_2)
@@ -2019,7 +2165,7 @@ class Trader:
         price_1 = price_dict[product_1][1]
         
         # Create closing orders with stored volumes
-        if price_3 - price_2 <= price_2 - price_1:
+        if price_3 - price_2 <= price_2 - price_1 + 3:
             order_10000 = [Order(stored_products[0], price_1, stored_volumes[0])]
             order_10250 = [Order(stored_products[1], price_2, -stored_volumes[1])]
             order_10500 = [Order(stored_products[2], price_3, stored_volumes[2])]
@@ -2028,7 +2174,6 @@ class Trader:
             del traderObject["arbitrage_positions"][arb_key]
         
         return order_10000, order_10250, order_10500
-
 
     def _volcanic_rock_voucher_orders(self, spot, mid_price, voucher_product, position, best_bid, best_ask,volatility=0.2178):
         strike = int(voucher_product.split("_")[-1])
