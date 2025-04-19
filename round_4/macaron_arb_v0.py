@@ -527,48 +527,6 @@ class Trader:
             if len(self.mid_prices[p_i]) > self.mp_window_size:
                 self.mid_prices[p_i].pop(0)
         
-        ### RAINFOREST_RESIN ###
-        if product_strings[Product.RESIN] in state.order_depths:
-            # calculate fair price
-            fair_price = self.calculate_fair_price(state.order_depths[product_strings[Product.RESIN]].buy_orders, state.order_depths[product_strings[Product.RESIN]].sell_orders)
-            
-            # take best orders
-            self.take_best_orders(Product.RESIN, result[product_strings[Product.RESIN]], state.order_depths[product_strings[Product.RESIN]], fair_price, 0, positions[Product.RESIN])
-            
-            # clear position
-            self.clear_position_order(Product.RESIN, result[product_strings[Product.RESIN]], state.order_depths[product_strings[Product.RESIN]], fair_price, positions[Product.RESIN])
-            
-            # market make
-            self.market_make(Product.RESIN, result[product_strings[Product.RESIN]], state.order_depths[product_strings[Product.RESIN]], fair_price, positions[Product.RESIN])
-        
-        ### KELP ###
-        if product_strings[Product.KELP] in state.order_depths:
-            # calculate fair price
-            fair_price = self.calculate_vwap_price(state.order_depths[product_strings[Product.KELP]].buy_orders, state.order_depths[product_strings[Product.KELP]].sell_orders)
-            
-            # clear position
-            self.clear_position_order(Product.KELP, result[product_strings[Product.KELP]], state.order_depths[product_strings[Product.KELP]], fair_price, positions[Product.KELP])
-            
-            # market make
-            self.market_make(Product.KELP, result[product_strings[Product.KELP]], state.order_depths[product_strings[Product.KELP]], fair_price, positions[Product.KELP])
-        
-        ### SQUID INK ###
-        if product_strings[Product.INK] in state.order_depths:
-            # calculate fair price
-            fair_price = self.calculate_vwap_price(state.order_depths[product_strings[Product.INK]].buy_orders, state.order_depths[product_strings[Product.INK]].sell_orders)
-            
-            # clear position
-            self.clear_position_order(Product.INK, result[product_strings[Product.INK]], state.order_depths[product_strings[Product.INK]], fair_price, positions[Product.INK])
-            
-            # market make
-            self.market_make(Product.INK, result[product_strings[Product.INK]], state.order_depths[product_strings[Product.INK]], fair_price, positions[Product.INK])
-        
-        ### BASKET 1 ARBITRAGE ###
-        if product_strings[Product.BASKET1] in state.order_depths:
-            self.basket_arb(2.25, mid_prices, best_bids, best_asks, positions, result)
-        
-        ### TODO: ADD OPTION TRADING HERE ###
-        
         ### MACARON ARB ###
         self.macaron_arb_take(
             result,

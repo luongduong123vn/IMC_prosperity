@@ -21,12 +21,12 @@ containers = [
 BASE_TREASURE = 10000
 TOTAL_PLAYERS = 2000
 SECOND_CONTAINER_COST = 50000
-NUM_SIMULATIONS = 100
+NUM_SIMULATIONS = 200
 
 def distribute_players_by_strategy():
     """Randomly distribute players among the three strategies"""
-    strategy1_percent = random.random() * 0.6 + 0.2  # 20-80% of players
-    strategy2_percent = random.random() * (1 - strategy1_percent) * 0.9  # 0-80% of remaining players
+    strategy1_percent = random.random() * 0 + 0  # 20-80% of players
+    strategy2_percent = random.random() * (1 - strategy1_percent) * 0  # 0-80% of remaining players
     strategy3_percent = 1 - strategy1_percent - strategy2_percent  # Rest are random players
     
     return {

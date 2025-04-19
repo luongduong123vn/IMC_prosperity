@@ -386,7 +386,7 @@ class Trader:
             Product.VOLCANIC_ROCK_VOUCHER_10000: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10250: 200,
             Product.VOLCANIC_ROCK_VOUCHER_10500: 200,
-            Product.ORCHIDS: 10
+            Product.ORCHIDS: 75
         }
         self.history = {}
         self.risk_adjustment = 0.8
@@ -1343,10 +1343,10 @@ class Trader:
                 order.quantity for order in coconut_coupon_orders
             )
 
-        target_coconut_position = -delta * coconut_coupon_position_after_trade - 0.5 * gamma * coconut_coupon_position_after_trade**2
-        #target_coconut_position = -delta * coconut_coupon_position_after_trade
+        #target_coconut_position = -delta * coconut_coupon_position_after_trade - 0.5 * gamma * coconut_coupon_position_after_trade**2
+        target_coconut_position = -delta * coconut_coupon_position_after_trade
 
-        if target_coconut_position == coconut_position:
+        if abs(coconut_position) >= abs(target_coconut_position)*0.5 and abs(coconut_position) <= abs(target_coconut_position)*1.5:
             return None
 
         target_coconut_quantity = target_coconut_position - coconut_position
@@ -1386,7 +1386,7 @@ class Trader:
             - observation.exportTariff
             - observation.transportFees
             - 0.1,
-            observation.askPrice + observation.importTariff + observation.transportFees,
+            observation.askPrice + observation.importTariff + observation.transportFees + 0.1
         )
 
     def orchids_arb_take(
@@ -1442,6 +1442,7 @@ class Trader:
 
     def orchids_arb_clear(self, position: int) -> int:
         conversions = -min(position*int(np.sign(position)), self.params[Product.ORCHIDS]["conversion_limit"])*int(np.sign(position))
+        #conversions = -position
         return conversions
 
     def orchids_arb_make(
@@ -1469,10 +1470,10 @@ class Trader:
         if aggressive_ask >= implied_ask + 0.5:
             ask = aggressive_ask
         elif aggressive_ask + 1 >= implied_ask + 0.5:
-            ask = aggressive_ask +1
+            ask = aggressive_ask
             #ask = aggressive_ask + 1
         else:
-            ask = implied_ask + 2
+            ask = implied_ask + 1
             #ask = implied_ask + 2
 
         buy_quantity = position_limit - (position + buy_order_volume)
@@ -1520,8 +1521,8 @@ class Trader:
 
             if product in ["PICNIC_BASKET1", "PICNIC_BASKET2"]:
                 orders = self._basket_arbitrage(product, position)
-            if product in ["CROISSANTS", "JAMS", "DJEMBES"]: # give 350k on backtest but bad on website
-                orders = self._dynamic_market_make(product, mid_price, position)
+            # if product in ["CROISSANTS", "JAMS", "DJEMBES"]: # give 350k on backtest but bad on website
+            #     orders = self._dynamic_market_make(product, mid_price, position)
             result[product] = orders
 
         for product in ['RAINFOREST_RESIN']:
@@ -1736,32 +1737,32 @@ class Trader:
             )
 
         
-        if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths:
-            orchids_position = (
-                state.position[Product.ORCHIDS]
-                if Product.ORCHIDS in state.position
-                else 0
-            )
+        # if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths:
+        #     orchids_position = (
+        #         state.position[Product.ORCHIDS]
+        #         if Product.ORCHIDS in state.position
+        #         else 0
+        #     )
 
-            conversions = self.orchids_arb_clear(orchids_position)
-            orchids_position += conversions
+        #     # conversions = self.orchids_arb_clear(orchids_position)
+        #     # orchids_position += conversions
 
-            orchids_take_orders, buy_order_volume, sell_order_volume = (
-                self.orchids_arb_take(
-                    state.order_depths[Product.ORCHIDS],
-                    state.observations.conversionObservations[Product.ORCHIDS],
-                    orchids_position,
-                )
-            )
+        #     orchids_take_orders, buy_order_volume, sell_order_volume = (
+        #         self.orchids_arb_take(
+        #             state.order_depths[Product.ORCHIDS],
+        #             state.observations.conversionObservations[Product.ORCHIDS],
+        #             orchids_position,
+        #         )
+        #     )
 
-            orchids_make_orders, _, _ = self.orchids_arb_make(
-                state.observations.conversionObservations[Product.ORCHIDS],
-                orchids_position,
-                buy_order_volume,
-                sell_order_volume,
-            )
+        #     orchids_make_orders, _, _ = self.orchids_arb_make(
+        #         state.observations.conversionObservations[Product.ORCHIDS],
+        #         orchids_position,
+        #         buy_order_volume,
+        #         sell_order_volume,
+        #     )
 
-            result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
+        #     result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
 
         coconut_order_depth = state.order_depths[Product.COCONUT]
         coconut_mid_price = (
@@ -1794,8 +1795,61 @@ class Trader:
         # result[Product.COCONUT] = []
 
         for product in ["VOLCANIC_ROCK_VOUCHER_9500", "VOLCANIC_ROCK_VOUCHER_9750"]:
+            if product not in traderObject:
+                traderObject[product] = {
+                    "prev_coupon_price": 0,
+                    "past_coupon_vol": [],
+                }
+
+            if (
+                product in self.params
+                and product in state.order_depths
+            ):
+                coconut_coupon_position = (
+                    state.position[product]
+                    if product in state.position
+                    else 0
+                )
+
+                coconut_position = (
+                    state.position[Product.COCONUT]
+                    if Product.COCONUT in state.position
+                    else 0
+                )
+
+            coconut_order_depth = state.order_depths[Product.COCONUT]
+            coconut_mid_price = (
+                min(coconut_order_depth.buy_orders.keys())
+                + max(coconut_order_depth.sell_orders.keys())
+            ) / 2
+            
+            coconut_coupon_order_depth = state.order_depths[product]
+            coconut_coupon_mid_price = self.get_coconut_coupon_mid_price(
+                    coconut_coupon_order_depth, traderObject[product]
+                )
+
             order_depth = state.order_depths[product]
             orders = []
+
+            tte = 3/252
+            volatility = BlackScholes.implied_volatility(
+                coconut_coupon_mid_price,
+                coconut_mid_price,
+                self.params[product]["strike"],
+                tte,
+            )
+            delta = BlackScholes.delta(
+                coconut_mid_price,
+                self.params[product]["strike"],
+                tte,
+                volatility,
+            )
+            gamma = BlackScholes.gamma(
+                    coconut_mid_price,
+                    self.params[product]["strike"],
+                    tte,
+                    volatility,
+                )
             
             if order_depth.buy_orders and order_depth.sell_orders:
                 best_bid = max(order_depth.buy_orders.keys())
@@ -1807,6 +1861,20 @@ class Trader:
                 result[product] = orders
             else:
                 mid_price = self._get_last_price(product)
+
+            if Product.COCONUT not in result:
+                result[Product.COCONUT] = []
+            volcanic_rock_orders = self.coconut_hedge_orders(
+                        state.order_depths[Product.COCONUT],
+                        state.order_depths[product],
+                        orders,
+                        coconut_position = coconut_position,
+                        coconut_coupon_position = coconut_coupon_position,
+                        delta = delta,
+                        gamma = gamma,
+                    )
+            if volcanic_rock_orders != None:
+                result[Product.COCONUT] += volcanic_rock_orders
 
         # products = ["VOLCANIC_ROCK_VOUCHER_10000","VOLCANIC_ROCK"]
         # for product in products:
