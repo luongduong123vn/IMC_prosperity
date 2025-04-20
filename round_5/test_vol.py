@@ -13,123 +13,6 @@ from typing import Any
 from datamodel import Listing, Observation, Order, OrderDepth, ProsperityEncoder, Symbol, Trade, TradingState, ConversionObservation
 from typing import List, Tuple, Union, Dict
 
-
-class Logger:
-    def __init__(self) -> None:
-        self.logs = ""
-        self.max_log_length = 3750
-
-    def print(self, *objects: Any, sep: str = " ", end: str = "\n") -> None:
-        self.logs += sep.join(map(str, objects)) + end
-
-    def flush(self, state: TradingState, orders: dict[Symbol, list[Order]], conversions: int, trader_data: str) -> None:
-        base_length = len(
-            self.to_json(
-                [
-                    self.compress_state(state, ""),
-                    self.compress_orders(orders),
-                    conversions,
-                    "",
-                    "",
-                ]
-            )
-        )
-
-        # We truncate state.traderData, trader_data, and self.logs to the same max. length to fit the log limit
-        max_item_length = (self.max_log_length - base_length) // 3
-
-        print(
-            self.to_json(
-                [
-                    self.compress_state(state, self.truncate(state.traderData, max_item_length)),
-                    self.compress_orders(orders),
-                    conversions,
-                    self.truncate(trader_data, max_item_length),
-                    self.truncate(self.logs, max_item_length),
-                ]
-            )
-        )
-
-        self.logs = ""
-
-    def compress_state(self, state: TradingState, trader_data: str) -> list[Any]:
-        return [
-            state.timestamp,
-            trader_data,
-            self.compress_listings(state.listings),
-            self.compress_order_depths(state.order_depths),
-            self.compress_trades(state.own_trades),
-            self.compress_trades(state.market_trades),
-            state.position,
-            self.compress_observations(state.observations),
-        ]
-
-    def compress_listings(self, listings: dict[Symbol, Listing]) -> list[list[Any]]:
-        compressed = []
-        for listing in listings.values():
-            compressed.append([listing.symbol, listing.product, listing.denomination])
-
-        return compressed
-
-    def compress_order_depths(self, order_depths: dict[Symbol, OrderDepth]) -> dict[Symbol, list[Any]]:
-        compressed = {}
-        for symbol, order_depth in order_depths.items():
-            compressed[symbol] = [order_depth.buy_orders, order_depth.sell_orders]
-
-        return compressed
-
-    def compress_trades(self, trades: dict[Symbol, list[Trade]]) -> list[list[Any]]:
-        compressed = []
-        for arr in trades.values():
-            for trade in arr:
-                compressed.append(
-                    [
-                        trade.symbol,
-                        trade.price,
-                        trade.quantity,
-                        trade.buyer,
-                        trade.seller,
-                        trade.timestamp,
-                    ]
-                )
-
-        return compressed
-
-    def compress_observations(self, observations: Observation) -> list[Any]:
-        conversion_observations = {}
-        for product, observation in observations.conversionObservations.items():
-            conversion_observations[product] = [
-                observation.bidPrice,
-                observation.askPrice,
-                observation.transportFees,
-                observation.exportTariff,
-                observation.importTariff,
-                observation.sugarPrice,
-                observation.sunlightIndex,
-            ]
-
-        return [observations.plainValueObservations, conversion_observations]
-
-    def compress_orders(self, orders: dict[Symbol, list[Order]]) -> list[list[Any]]:
-        compressed = []
-        for arr in orders.values():
-            for order in arr:
-                compressed.append([order.symbol, order.price, order.quantity])
-
-        return compressed
-
-    def to_json(self, value: Any) -> str:
-        return json.dumps(value, cls=ProsperityEncoder, separators=(",", ":"))
-
-    def truncate(self, value: str, max_length: int) -> str:
-        if len(value) <= max_length:
-            return value
-
-        return value[: max_length - 3] + "..."
-
-
-logger = Logger()
-
 from math import log, sqrt, exp
 from statistics import NormalDist
 
@@ -350,9 +233,12 @@ PARAMS = {
         "zscore_threshold": 21,
     },
     Product.ORCHIDS: {
-        "make_edge": 1,
+        "make_edge": 2,
         "make_probability": 0.8,
         "conversion_limit": 10,
+        "periods_below_max": 10,
+        "periods_above_min": 30,
+        "hard_level": 50,
     },
 }
 
@@ -1380,32 +1266,90 @@ class Trader:
     def orchids_implied_bid_ask(
         self,
         observation: ConversionObservation,
-    ) -> (float, float):
-        return (
-            observation.bidPrice
-            - observation.exportTariff
-            - observation.transportFees
-            - 0.1,
-            observation.askPrice + observation.importTariff + observation.transportFees + 0.1
-        )
+        traderObject: dict,
+    ) -> (float, float, bool):
+        # Calculate base implied bid and ask
+        base_implied_bid = observation.bidPrice - observation.exportTariff - observation.transportFees - 0.1
+        base_implied_ask = observation.askPrice + observation.importTariff + observation.transportFees + 0.1
+        base_implied_mid = (base_implied_bid + base_implied_ask) / 2
+        
+        # Check if sunlight index exists
+        if hasattr(observation, 'sunlightIndex'):
+            # Track histories in traderObject
+            if 'sunlight_history' not in traderObject:
+                traderObject['sunlight_history'] = []
+            if 'sugar_price_history' not in traderObject:
+                traderObject['sugar_price_history'] = []
+            if 'implied_mid_history' not in traderObject:
+                traderObject['implied_mid_history'] = []
+            
+            # Add current values to histories
+            traderObject['sunlight_history'].append(observation.sunlightIndex)
+            if hasattr(observation, 'sugarPrice'):
+                traderObject['sugar_price_history'].append(observation.sugarPrice)
+            traderObject['implied_mid_history'].append(base_implied_mid)
+            
+            # Keep only last 26 periods for sunlight and 6 periods for prices
+            periods_below_max = self.params[Product.ORCHIDS]["periods_below_max"]
+            periods_above_min = self.params[Product.ORCHIDS]["periods_above_min"]
+            total_lookback = max(periods_below_max, periods_above_min) + 6
+            hard_level = self.params[Product.ORCHIDS]["hard_level"]
+            if len(traderObject['sunlight_history']) > total_lookback:
+                traderObject['sunlight_history'].pop(0)
+            if len(traderObject['sugar_price_history']) > 6:
+                traderObject['sugar_price_history'].pop(0)
+            if len(traderObject['implied_mid_history']) > 6:
+                traderObject['implied_mid_history'].pop(0)
+            
+            # Check conditions if we have enough history
+            if len(traderObject['sunlight_history']) >= total_lookback and len(traderObject['sugar_price_history']) >= 6 and len(traderObject['implied_mid_history']) >= 6:
+                last_10_indices = traderObject['sunlight_history'][-periods_below_max:]
+                period_11_index = traderObject['sunlight_history'][-(periods_below_max+1)]
+                last_20_indices = traderObject['sunlight_history'][-periods_above_min:]
+                period_21_index = traderObject['sunlight_history'][-(periods_above_min+1)]
+                current_sunlight = observation.sunlightIndex
+                current_sugar_price = observation.sugarPrice
+                
+                # Check if all last 10 indices are below period 11 and current sunlight is below 50
+                if all(idx < period_11_index for idx in last_10_indices) and current_sunlight < hard_level:
+                    if not all(idx > period_21_index for idx in last_20_indices):
+                        # Use sugar prices from -6 to -1 (5 periods) and implied mids from -5 to 0 (5 periods)
+                        # This creates a lagged relationship where we compare current implied mid with previous sugar price
+                        lookback_sugar_prices = traderObject['sugar_price_history'][-6:-1]  # Last 5 sugar prices
+                        lookback_implied_mids = traderObject['implied_mid_history'][-5:]  # Current and last 4 implied mids
+                        
+                        if len(lookback_sugar_prices) > 0 and len(lookback_implied_mids) > 0:
+                            # Calculate the ratio for each period, comparing current implied mid with previous sugar price
+                            ratios = [mid/price for mid, price in zip(lookback_implied_mids[1:], lookback_sugar_prices)]
+                            avg_ratio = sum(ratios) / len(ratios)
+                            
+                            # Predict next implied mid using current sugar price
+                            implied_mid = current_sugar_price * avg_ratio
+                            
+                            # Adjust bid and ask around the new implied mid while maintaining the same spread
+                            spread = 2
+                            return implied_mid - spread/2, implied_mid + spread/2, True
+        
+        # Default case - return base calculations
+        return base_implied_bid, base_implied_ask, False
 
     def orchids_arb_take(
         self,
         order_depth: OrderDepth,
         observation: ConversionObservation,
         position: int,
+        implied_bid: float,
+        implied_ask: float,
     ) -> (List[Order], int, int):
         orders: List[Order] = []
         position_limit = self.LIMIT[Product.ORCHIDS]
         buy_order_volume = 0
         sell_order_volume = 0
 
-        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
-
         buy_quantity = position_limit - position
         sell_quantity = position_limit + position
 
-        ask = round(observation.askPrice) - 1
+        ask = round(observation.askPrice) - 2
 
         if ask > implied_ask:
             edge = (ask - implied_ask) * self.params[Product.ORCHIDS][
@@ -1451,30 +1395,38 @@ class Trader:
         position: int,
         buy_order_volume: int,
         sell_order_volume: int,
+        implied_bid: float,
+        implied_ask: float,
+        orchids_implied_used: bool,
     ) -> (List[Order], int, int):
         orders: List[Order] = []
         position_limit = self.LIMIT[Product.ORCHIDS]
 
         # Implied Bid = observation.bidPrice - observation.exportTariff - observation.transportFees - 0.1
         # Implied Ask = observation.askPrice + observation.importTariff + observation.transportFees
-        implied_bid, implied_ask = self.orchids_implied_bid_ask(observation)
 
         aggressive_ask = round(observation.askPrice) - self.params[Product.ORCHIDS]["make_edge"]
         aggressive_bid = round(observation.bidPrice) + self.params[Product.ORCHIDS]["make_edge"]
 
-        if aggressive_bid < implied_bid:
-            bid = aggressive_bid
+        if not orchids_implied_used:
+            if aggressive_bid < implied_bid:
+                bid = aggressive_bid
+            else:
+                bid = implied_bid - 1
         else:
-            bid = implied_bid - 1
+            bid = implied_bid
 
-        if aggressive_ask >= implied_ask + 0.5:
-            ask = aggressive_ask
-        elif aggressive_ask + 1 >= implied_ask + 0.5:
-            ask = aggressive_ask
-            #ask = aggressive_ask + 1
+        if not orchids_implied_used:
+            if aggressive_ask >= implied_ask + 0.5:
+                ask = aggressive_ask
+            elif aggressive_ask + 1 >= implied_ask + 0.5:
+                ask = aggressive_ask
+                #ask = aggressive_ask + 1
+            else:
+                ask = implied_ask + 1
+                #ask = implied_ask + 2
         else:
-            ask = implied_ask + 1
-            #ask = implied_ask + 2
+            ask = implied_ask
 
         buy_quantity = position_limit - (position + buy_order_volume)
         if buy_quantity > 0:
@@ -1743,7 +1695,8 @@ class Trader:
                 if Product.ORCHIDS in state.position
                 else 0
             )
-            if state.timestamp > 98000:
+            orchids_observation = state.observations.conversionObservations[Product.ORCHIDS]
+            if state.timestamp > 99000:
                 # conversions = self.orchids_arb_clear(orchids_position)
                 # orchids_position += conversions
                 order_depth = state.order_depths[Product.ORCHIDS]
@@ -1761,20 +1714,28 @@ class Trader:
                     volume=position*int(np.sign(orchids_position))*(-1),
                 )
                 result[Product.ORCHIDS] = orders
-            else:     
+            else:    
+                conversions = self.orchids_arb_clear(orchids_position)
+                orchids_position += conversions 
+                orchids_implied_bid, orchids_implied_ask, orchids_implied_used = self.orchids_implied_bid_ask(orchids_observation, traderObject)
                 orchids_take_orders, buy_order_volume, sell_order_volume = (
                     self.orchids_arb_take(
                         state.order_depths[Product.ORCHIDS],
-                        state.observations.conversionObservations[Product.ORCHIDS],
+                        orchids_observation,
                         orchids_position,
+                        orchids_implied_bid,
+                        orchids_implied_ask,
                     )
                 )
 
                 orchids_make_orders, _, _ = self.orchids_arb_make(
-                    state.observations.conversionObservations[Product.ORCHIDS],
+                    orchids_observation,
                     orchids_position,
                     buy_order_volume,
                     sell_order_volume,
+                    orchids_implied_bid,
+                    orchids_implied_ask,
+                    orchids_implied_used,
                 )
 
                 result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
@@ -2007,7 +1968,6 @@ class Trader:
                     result[p3].extend(order_10500)
         
         traderData = jsonpickle.encode(traderObject)
-        logger.flush(state, result, conversions, traderData)
 
         return result, conversions, traderData
     

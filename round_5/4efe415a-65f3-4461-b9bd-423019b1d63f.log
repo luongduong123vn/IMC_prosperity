@@ -1,0 +1,522 @@
+Sandbox logs:
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"31c042a4-a506-458b-8863-f474de187401\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"31c042a4-a506-458b-8863-f474de187401\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6a238008-3af5-4082-83ea-74c49c9b59ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6a238008-3af5-4082-83ea-74c49c9b59ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3cc985f6-bde1-4993-b26e-adddbacf9e61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3cc985f6-bde1-4993-b26e-adddbacf9e61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a05e88ca-ef34-4553-b2da-dcd652110558\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a05e88ca-ef34-4553-b2da-dcd652110558\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ab654a0d-e142-46f2-95e0-680133ed6155\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ab654a0d-e142-46f2-95e0-680133ed6155\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"83daccea-b2f8-4078-a8dc-68315cd949ff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"83daccea-b2f8-4078-a8dc-68315cd949ff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dc6b42ea-59f6-4aba-bb46-e7267dfe67ad\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dc6b42ea-59f6-4aba-bb46-e7267dfe67ad\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bd945a7e-db3b-4f61-8b84-019c418d06d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bd945a7e-db3b-4f61-8b84-019c418d06d3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"834ffeb5-8497-49cd-8602-238932a108a4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"834ffeb5-8497-49cd-8602-238932a108a4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e6cdb2f9-4db1-47fc-abd8-da02b4b1254f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e6cdb2f9-4db1-47fc-abd8-da02b4b1254f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2299701c-bf54-40c9-bfa1-1a6f2491b7d6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2299701c-bf54-40c9-bfa1-1a6f2491b7d6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"50579749-f61c-40a7-a3b1-b4605e715b4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"50579749-f61c-40a7-a3b1-b4605e715b4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4bdd6706-ebf6-4033-a642-d59054a5a216\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4bdd6706-ebf6-4033-a642-d59054a5a216\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"071264ab-9438-4bd2-ae8a-5cfb513ce9dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"071264ab-9438-4bd2-ae8a-5cfb513ce9dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e355ed5d-8cc1-4a9c-8122-1d3d0520e340\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e355ed5d-8cc1-4a9c-8122-1d3d0520e340\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"18dc8f68-b33b-4173-ac58-5720c3a17d62\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"18dc8f68-b33b-4173-ac58-5720c3a17d62\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a646c001-4c8b-4316-abca-beb281926ec5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a646c001-4c8b-4316-abca-beb281926ec5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"06a8da75-95ad-4b9a-94ec-5d86232a4242\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"06a8da75-95ad-4b9a-94ec-5d86232a4242\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"0038a0dc-db58-48b6-a445-396cd1454d2d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"0038a0dc-db58-48b6-a445-396cd1454d2d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"7e646111-efa5-4e49-8e2b-2b0e784a29de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"7e646111-efa5-4e49-8e2b-2b0e784a29de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"552d2cb1-43ea-4f68-8092-8e4e33490363\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"552d2cb1-43ea-4f68-8092-8e4e33490363\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fdb518ca-311f-4049-8c51-8f3caae80d08\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fdb518ca-311f-4049-8c51-8f3caae80d08\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3b9b98c0-0e07-4b98-8bce-1526ea525a44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3b9b98c0-0e07-4b98-8bce-1526ea525a44\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a5c4799c-8b65-4835-8721-72da6820c5d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a5c4799c-8b65-4835-8721-72da6820c5d1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"48fab588-d83e-44bf-be27-949ed9135e6c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"48fab588-d83e-44bf-be27-949ed9135e6c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"92d8f001-6399-406d-a85c-3ff5556c2bc3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"92d8f001-6399-406d-a85c-3ff5556c2bc3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"07e59a84-5460-495a-9d2d-e81c0c4e0a14\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"07e59a84-5460-495a-9d2d-e81c0c4e0a14\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bb13e6e8-2796-4ca6-8824-fabd4ff96e75\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bb13e6e8-2796-4ca6-8824-fabd4ff96e75\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4088c9fc-187a-4d0b-9dd5-13490d78b1de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4088c9fc-187a-4d0b-9dd5-13490d78b1de\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ab154e98-f4d0-41d1-9bfc-324101302f21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ab154e98-f4d0-41d1-9bfc-324101302f21\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d3c4e141-33dc-48a2-9464-094bb83eeade\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d3c4e141-33dc-48a2-9464-094bb83eeade\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dfb49104-7764-4f15-ba51-aa87c26fb87d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dfb49104-7764-4f15-ba51-aa87c26fb87d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2acbd5c7-818e-4601-9033-a60bc6c606e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2acbd5c7-818e-4601-9033-a60bc6c606e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"52808dab-f9a3-49c4-8c9f-c67e3ba951e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"52808dab-f9a3-49c4-8c9f-c67e3ba951e2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"26130580-ae53-428b-8fb0-2f00cc0576b1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"26130580-ae53-428b-8fb0-2f00cc0576b1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"286a8783-b3a8-4f76-86b0-5b3b5c0d5bfc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"286a8783-b3a8-4f76-86b0-5b3b5c0d5bfc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6c75c7eb-f35c-4c91-9222-1f77988f9896\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6c75c7eb-f35c-4c91-9222-1f77988f9896\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e0728172-4812-483a-a8d2-f9bb4ee1d764\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e0728172-4812-483a-a8d2-f9bb4ee1d764\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"03c64000-1863-4e3b-8523-7db72b785d4d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"03c64000-1863-4e3b-8523-7db72b785d4d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"1eec3764-acac-46db-8e0b-ec7b1cc488eb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"1eec3764-acac-46db-8e0b-ec7b1cc488eb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2ace9ae9-f899-43d2-aa86-b6eac0d870a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2ace9ae9-f899-43d2-aa86-b6eac0d870a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"b2758323-09ba-473c-aee5-4cea5536940e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"b2758323-09ba-473c-aee5-4cea5536940e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fff7a7b3-37f3-4f75-b21c-c4413aaf165f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fff7a7b3-37f3-4f75-b21c-c4413aaf165f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d1e6d332-f7f9-494e-bced-6ec792f9a69a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d1e6d332-f7f9-494e-bced-6ec792f9a69a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3098591b-e92a-421e-b704-c229796c58b1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3098591b-e92a-421e-b704-c229796c58b1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e5ec0928-72f6-452d-bcdc-f297c209bf8a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e5ec0928-72f6-452d-bcdc-f297c209bf8a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"f4a2810a-fc64-41c5-b792-4ec64046a7c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"f4a2810a-fc64-41c5-b792-4ec64046a7c6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d4ad2623-14ec-4335-8f55-e5086e00bce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d4ad2623-14ec-4335-8f55-e5086e00bce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8eb15442-cbf9-45f9-ad05-933edd49cc3e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8eb15442-cbf9-45f9-ad05-933edd49cc3e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c1614bdd-0bf5-49d3-b7ce-ae85516f5c4e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c1614bdd-0bf5-49d3-b7ce-ae85516f5c4e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dc452e60-7a32-4963-bd60-7220f81aa282\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"dc452e60-7a32-4963-bd60-7220f81aa282\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"33a1bf6c-cad9-4bdb-aa12-c63c7cf886a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"33a1bf6c-cad9-4bdb-aa12-c63c7cf886a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2db39bbd-627c-4daa-a285-a3cef46de6dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2db39bbd-627c-4daa-a285-a3cef46de6dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d20950ab-645d-4f24-b691-756e319d8d66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d20950ab-645d-4f24-b691-756e319d8d66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c0702190-c292-4da8-bfa7-d368e7fa6a51\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c0702190-c292-4da8-bfa7-d368e7fa6a51\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"80577b6c-c501-4cb3-8c11-c5711cf568c2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"80577b6c-c501-4cb3-8c11-c5711cf568c2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e3a738c5-0460-4b09-8d4f-f1661c40da61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e3a738c5-0460-4b09-8d4f-f1661c40da61\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"05313c90-572e-411c-bcdc-8c80a2c26429\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"05313c90-572e-411c-bcdc-8c80a2c26429\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"cd1c18ac-30ab-4206-9f8b-22f351a10ce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"cd1c18ac-30ab-4206-9f8b-22f351a10ce0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"45b31d4b-5535-4108-9e92-803dd18e7a03\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"45b31d4b-5535-4108-9e92-803dd18e7a03\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3cd0ec53-dfad-4a16-9778-b64ee6b5c03b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"3cd0ec53-dfad-4a16-9778-b64ee6b5c03b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"1366b189-0c6e-4280-bd9f-5f301b6f083c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"1366b189-0c6e-4280-bd9f-5f301b6f083c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d93f6bac-e243-428a-b1f9-dbd91a83b803\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d93f6bac-e243-428a-b1f9-dbd91a83b803\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"41da5d41-c2c1-4b47-b375-5cac97ace6cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"41da5d41-c2c1-4b47-b375-5cac97ace6cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"147b3f89-30f6-4ff3-8f36-bcf5cfee7a3c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"147b3f89-30f6-4ff3-8f36-bcf5cfee7a3c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"35e4d0ea-9ca8-4f9f-ad30-af0ee3e6b0a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"35e4d0ea-9ca8-4f9f-ad30-af0ee3e6b0a6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"852b8a12-ddbe-4120-b88e-c9280331165a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"852b8a12-ddbe-4120-b88e-c9280331165a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c7a03bbc-e585-47f3-be5e-0a321bf22a19\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c7a03bbc-e585-47f3-be5e-0a321bf22a19\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"31dc3b00-56c5-44fa-9c4d-782a63e6f3ff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"31dc3b00-56c5-44fa-9c4d-782a63e6f3ff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e7ea86c0-d6e1-4e63-a1f9-7848e376a7e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e7ea86c0-d6e1-4e63-a1f9-7848e376a7e9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4e9a73e0-a761-4703-8138-c193e77a5599\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"4e9a73e0-a761-4703-8138-c193e77a5599\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"13bfb128-f6ac-4d22-9aa6-d13e7108e813\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"13bfb128-f6ac-4d22-9aa6-d13e7108e813\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c4e75c30-5c5e-4d97-92b3-82eb4089aeca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c4e75c30-5c5e-4d97-92b3-82eb4089aeca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6b625539-64ad-4198-aa4e-efba78671758\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"6b625539-64ad-4198-aa4e-efba78671758\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"9ab3228f-1c77-4017-abff-a3e791a87eb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"9ab3228f-1c77-4017-abff-a3e791a87eb1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c797afeb-cdd8-415f-ae08-d0ea69a794a9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c797afeb-cdd8-415f-ae08-d0ea69a794a9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"f8dc6b4c-9a3c-477a-a42e-064bfd35eaae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"f8dc6b4c-9a3c-477a-a42e-064bfd35eaae\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"43821dbb-141e-4a11-9866-877763947b33\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"43821dbb-141e-4a11-9866-877763947b33\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8fad2756-a419-4baf-b888-0af8ade8e5e7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8fad2756-a419-4baf-b888-0af8ade8e5e7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"798a7e70-20d4-4675-9700-73ef29644a6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"798a7e70-20d4-4675-9700-73ef29644a6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"49497850-a529-467d-88a0-fb2472580a97\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"49497850-a529-467d-88a0-fb2472580a97\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ded84a4e-a78c-4154-8634-6bf36576fd6a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"ded84a4e-a78c-4154-8634-6bf36576fd6a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a855a3fa-0318-46a6-b034-2c8ea5aee8cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a855a3fa-0318-46a6-b034-2c8ea5aee8cc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2a9ad29f-e1dc-453f-a598-5c1a94fdfa5c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"2a9ad29f-e1dc-453f-a598-5c1a94fdfa5c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"893a46ed-f3bb-42da-8e88-16043f6372f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"893a46ed-f3bb-42da-8e88-16043f6372f4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"760b05ef-5203-48bb-87e0-aa2c0a0260fb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"760b05ef-5203-48bb-87e0-aa2c0a0260fb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"5c7fde83-8c59-4cc6-8898-f20303b464aa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"5c7fde83-8c59-4cc6-8898-f20303b464aa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e3ed94e0-a4fd-42b4-b7f1-b87a78bad669\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"e3ed94e0-a4fd-42b4-b7f1-b87a78bad669\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"16928019-6175-40c7-8333-6df09d34c5fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"16928019-6175-40c7-8333-6df09d34c5fc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8ec153a3-ebfc-4d55-b569-bedb0eccadbf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"8ec153a3-ebfc-4d55-b569-bedb0eccadbf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"9d60b3da-abee-4653-889f-b874d1571ff0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"9d60b3da-abee-4653-889f-b874d1571ff0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fac5f2f6-a1fc-427c-b619-7f6322f9c9a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"fac5f2f6-a1fc-427c-b619-7f6322f9c9a0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c2d8091b-6ac8-48b1-a435-f2161d459ed5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c2d8091b-6ac8-48b1-a435-f2161d459ed5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"0280e44d-9650-4600-857c-b8ff0b6fe67f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"0280e44d-9650-4600-857c-b8ff0b6fe67f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"345a2062-27a3-4828-b12a-f82eb1fe46c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"345a2062-27a3-4828-b12a-f82eb1fe46c7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"7f219054-b62a-4249-99d7-7b90e2f6b51f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"7f219054-b62a-4249-99d7-7b90e2f6b51f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a345259b-8345-4512-a9de-0a8068ab2c51\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"a345259b-8345-4512-a9de-0a8068ab2c51\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"b2a9e623-5923-4f3b-a3fd-e23dfc3a8f24\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"b2a9e623-5923-4f3b-a3fd-e23dfc3a8f24\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bea55325-fb43-4cd6-a10e-28c9876d753b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"bea55325-fb43-4cd6-a10e-28c9876d753b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d6c87877-e8a9-461f-bf29-def0ca5964bc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"d6c87877-e8a9-461f-bf29-def0ca5964bc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c000e264-f1ac-4270-b435-d813689e59a1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "lambdaLog": "[ERROR] NameError: name 'logger' is not defined\\n{\"errorMessage\": \"name 'logger' is not defined\", \"errorType\": \"NameError\", \"requestId\": \"c000e264-f1ac-4270-b435-d813689e59a1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1964, in run\\n    logger.flush(state, result, conversions, traderData)\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission 4efe415a-65f3-4461-b9bd-423019b1d63f",
+  "lambdaLog": null,
+  "timestamp": 351514
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null

@@ -1,0 +1,522 @@
+Sandbox logs:
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9644ffc7-63b3-4464-9d2f-cc9b3ddeeb22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9644ffc7-63b3-4464-9d2f-cc9b3ddeeb22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 0
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c98db02e-75bd-409b-83a7-57487350b2f1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c98db02e-75bd-409b-83a7-57487350b2f1\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9e896e89-402e-446f-a688-18757af5141f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9e896e89-402e-446f-a688-18757af5141f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"041cea45-88e2-40da-808b-79c54b228ede\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"041cea45-88e2-40da-808b-79c54b228ede\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3a491a1b-1822-4b4c-8cec-aadabfb982b5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3a491a1b-1822-4b4c-8cec-aadabfb982b5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d133c312-bfda-4c2c-9595-38a13ed27e80\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d133c312-bfda-4c2c-9595-38a13ed27e80\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b52a1191-f9b5-45aa-a0d6-2d09ac04535d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b52a1191-f9b5-45aa-a0d6-2d09ac04535d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b4717743-887b-4b88-9207-af41e548426b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b4717743-887b-4b88-9207-af41e548426b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3cd7d8be-70ca-4c7e-ab78-f0cc52964123\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3cd7d8be-70ca-4c7e-ab78-f0cc52964123\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8015f16b-fe75-4b9b-b757-d620fbcbea66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8015f16b-fe75-4b9b-b757-d620fbcbea66\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0142606a-916f-4d35-8f82-70344887c7a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0142606a-916f-4d35-8f82-70344887c7a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"03d40127-c136-4c3a-a2c9-c0d302cef7b6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"03d40127-c136-4c3a-a2c9-c0d302cef7b6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"49270f94-eaf0-439e-b592-9341cbdb91e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"49270f94-eaf0-439e-b592-9341cbdb91e0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"155b6fc8-56c5-4f76-b38b-53dbef93cffc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"155b6fc8-56c5-4f76-b38b-53dbef93cffc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"635ab9e2-6230-4e7c-93de-1ea6fa0f53b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"635ab9e2-6230-4e7c-93de-1ea6fa0f53b8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e483d691-5da7-4da4-a82b-499e950f4a6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e483d691-5da7-4da4-a82b-499e950f4a6f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"043ad16f-3f2d-41c0-b17f-56eef5760ba4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"043ad16f-3f2d-41c0-b17f-56eef5760ba4\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"59ea076c-dea6-4889-b7ac-e0df3ea41989\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"59ea076c-dea6-4889-b7ac-e0df3ea41989\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a355984f-a7c3-4222-a011-5a5f2ea7e5cf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a355984f-a7c3-4222-a011-5a5f2ea7e5cf\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0283c17c-e3b9-45d8-bad7-6fa4b1a551d7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0283c17c-e3b9-45d8-bad7-6fa4b1a551d7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 1900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"060d8b84-81bd-4e3b-8c34-c58850b2859a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"060d8b84-81bd-4e3b-8c34-c58850b2859a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"35c12a81-aca5-47c6-b47f-a920aff77367\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"35c12a81-aca5-47c6-b47f-a920aff77367\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3ec3030c-7ea8-4a8f-a633-5b11431109ec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3ec3030c-7ea8-4a8f-a633-5b11431109ec\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dcc10766-0972-41f6-8f66-baf15209abdb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dcc10766-0972-41f6-8f66-baf15209abdb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"6fff2806-435c-4317-8278-94e064ed2f24\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"6fff2806-435c-4317-8278-94e064ed2f24\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"38a9fb60-006f-4460-8987-edaa095332dc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"38a9fb60-006f-4460-8987-edaa095332dc\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a5acbff3-bfa0-4724-8567-2eff80410049\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a5acbff3-bfa0-4724-8567-2eff80410049\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"47b15a7f-e273-4358-92cb-fcc6d203f990\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"47b15a7f-e273-4358-92cb-fcc6d203f990\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b7d529c1-30c1-4d6b-9400-3090b8a8fc93\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b7d529c1-30c1-4d6b-9400-3090b8a8fc93\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"42cdd1c5-6df7-4c70-824e-b87912188424\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"42cdd1c5-6df7-4c70-824e-b87912188424\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 2900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c95a2f4a-871b-4f77-89a6-873882fa851a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c95a2f4a-871b-4f77-89a6-873882fa851a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c37ebccb-1df4-462a-9745-b0d503472dcd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c37ebccb-1df4-462a-9745-b0d503472dcd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e0971171-e5de-473c-a5e0-e69e05c06d4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e0971171-e5de-473c-a5e0-e69e05c06d4a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5b13d6de-e507-4761-8c0a-aa918d042c22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5b13d6de-e507-4761-8c0a-aa918d042c22\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"603a45c7-abf0-4418-8d50-dd0f6611a490\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"603a45c7-abf0-4418-8d50-dd0f6611a490\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5180427d-25aa-41d4-88df-b3024f7d52be\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5180427d-25aa-41d4-88df-b3024f7d52be\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a419d1c9-ca57-458b-a927-766b9278a6e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a419d1c9-ca57-458b-a927-766b9278a6e3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f947ddd0-a6bc-4ca7-837f-0e1b55a4dadd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f947ddd0-a6bc-4ca7-837f-0e1b55a4dadd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3d88e45d-737d-43be-9a58-ebe80a570982\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3d88e45d-737d-43be-9a58-ebe80a570982\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"357a85df-1ef6-4b66-850b-529396d6ed1e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"357a85df-1ef6-4b66-850b-529396d6ed1e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 3900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"605bbd41-9b6f-4e13-8276-32f7deafd685\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"605bbd41-9b6f-4e13-8276-32f7deafd685\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d41734ff-2a9d-4aa5-ae26-7785a1028288\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d41734ff-2a9d-4aa5-ae26-7785a1028288\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2f63b2bb-f012-482c-912d-811cb3ceb635\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2f63b2bb-f012-482c-912d-811cb3ceb635\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"4c61778b-0cc9-458a-8566-9612c7b67826\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"4c61778b-0cc9-458a-8566-9612c7b67826\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"246efe28-fc1b-4ef3-aca8-8d3157e91ab3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"246efe28-fc1b-4ef3-aca8-8d3157e91ab3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"58848694-21e8-4d51-82b1-af573f10afa2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"58848694-21e8-4d51-82b1-af573f10afa2\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"542bc3a1-6900-4e6f-a362-5e127fe3d590\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"542bc3a1-6900-4e6f-a362-5e127fe3d590\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a5f6f2eb-7bd1-49ed-be69-94d558e18db5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a5f6f2eb-7bd1-49ed-be69-94d558e18db5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5281397f-7306-4a53-8333-a0883d98af91\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5281397f-7306-4a53-8333-a0883d98af91\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1da8609d-667b-498d-b859-effcb128c4cb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1da8609d-667b-498d-b859-effcb128c4cb\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 4900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"879121ed-ab57-48a7-8d72-1ddc08c822df\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"879121ed-ab57-48a7-8d72-1ddc08c822df\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"36ff4609-d222-417d-9f14-65238ecbdc73\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"36ff4609-d222-417d-9f14-65238ecbdc73\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"eb444a24-c3eb-46c7-bf22-66176ee9d1d9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"eb444a24-c3eb-46c7-bf22-66176ee9d1d9\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c24326d0-1c91-4ead-8fa6-c409528f893a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c24326d0-1c91-4ead-8fa6-c409528f893a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2af4cc53-6425-4334-acb9-678ded83dd0d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2af4cc53-6425-4334-acb9-678ded83dd0d\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dedb88fa-5ab8-423d-b92f-62798e8ec375\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dedb88fa-5ab8-423d-b92f-62798e8ec375\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5e34c9b9-b090-4257-9031-dae29c86e592\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5e34c9b9-b090-4257-9031-dae29c86e592\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2b876661-5bfc-4ada-952a-07f27571dad3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2b876661-5bfc-4ada-952a-07f27571dad3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b9e7ff88-a642-428d-9fc2-88d68a42fb99\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b9e7ff88-a642-428d-9fc2-88d68a42fb99\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c5596ca3-5c81-4328-a8a3-25f34f493d50\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"c5596ca3-5c81-4328-a8a3-25f34f493d50\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 5900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"76aa711c-4c52-418d-b775-dc474bd259ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"76aa711c-4c52-418d-b775-dc474bd259ea\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dfae4b36-d43e-445b-b07f-bddf112c303a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"dfae4b36-d43e-445b-b07f-bddf112c303a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0fa3ce30-8ed0-49dc-9ec1-580fd7d171e6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0fa3ce30-8ed0-49dc-9ec1-580fd7d171e6\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0df5c5aa-6103-40a5-a098-1f1c6bc85f8c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"0df5c5aa-6103-40a5-a098-1f1c6bc85f8c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e065650c-4d5c-44a0-980b-d01572ac4c95\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"e065650c-4d5c-44a0-980b-d01572ac4c95\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9eab176a-2302-4ad4-bacc-09b06461d283\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"9eab176a-2302-4ad4-bacc-09b06461d283\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"316b7467-19e4-4c77-ac94-d30fd66ec6ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"316b7467-19e4-4c77-ac94-d30fd66ec6ed\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b6069922-9206-493f-882f-00ee296f38b3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b6069922-9206-493f-882f-00ee296f38b3\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5113efce-0831-463f-ae51-eca475b202ca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"5113efce-0831-463f-ae51-eca475b202ca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1c0532a2-0311-4cbb-a4a6-d0bd65edb111\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1c0532a2-0311-4cbb-a4a6-d0bd65edb111\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 6900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ae9bae32-b1fd-4af4-a170-23d8c6b8c277\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ae9bae32-b1fd-4af4-a170-23d8c6b8c277\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"cd58ce82-941f-444b-b7ee-9388e18d5fff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"cd58ce82-941f-444b-b7ee-9388e18d5fff\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f1a35b16-fcd4-4d37-8d9c-5c7e01992d6b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f1a35b16-fcd4-4d37-8d9c-5c7e01992d6b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"893634b9-a3eb-4b25-8e1a-abaa802d3841\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"893634b9-a3eb-4b25-8e1a-abaa802d3841\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"44ffa9ef-8213-42b2-8b02-4f6ae6e3e455\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"44ffa9ef-8213-42b2-8b02-4f6ae6e3e455\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d7726b16-79c4-4a0b-9e9f-3a094d2292a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"d7726b16-79c4-4a0b-9e9f-3a094d2292a7\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"aa307eef-ed5f-4bd4-8cfa-861a0cd2af9f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"aa307eef-ed5f-4bd4-8cfa-861a0cd2af9f\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"78b17212-9d51-4823-84c1-0bf64c3543ca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"78b17212-9d51-4823-84c1-0bf64c3543ca\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f7a229e8-6bb3-485c-a117-12f93e7b7ca0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"f7a229e8-6bb3-485c-a117-12f93e7b7ca0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"51c61f5b-ee87-4f40-93db-c93cc783f366\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"51c61f5b-ee87-4f40-93db-c93cc783f366\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 7900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"85c1ab7d-5b08-4e8d-853c-14c1033ca43b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"85c1ab7d-5b08-4e8d-853c-14c1033ca43b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8a3d15db-c35f-42fd-bd54-29e7ae19f253\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8a3d15db-c35f-42fd-bd54-29e7ae19f253\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"86b42cc4-47e2-42a0-b0e9-235c4eb95d7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"86b42cc4-47e2-42a0-b0e9-235c4eb95d7b\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"6c11a29a-2018-4cb9-bd5f-54e60a5a76ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"6c11a29a-2018-4cb9-bd5f-54e60a5a76ac\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"fc5c268f-dcde-489e-9f93-14daaab79090\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"fc5c268f-dcde-489e-9f93-14daaab79090\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ed8bdff7-9c52-4936-a484-cedd67a84740\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ed8bdff7-9c52-4936-a484-cedd67a84740\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"76f74c47-fd00-4424-9eff-697e4427a0dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"76f74c47-fd00-4424-9eff-697e4427a0dd\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a7e9259d-2a36-44a4-b429-322a87a34587\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"a7e9259d-2a36-44a4-b429-322a87a34587\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"82ee15f5-658b-47af-a953-d93906e8dda0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"82ee15f5-658b-47af-a953-d93906e8dda0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1ec6730e-e344-4fb0-b1c1-a6a5194bc12c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"1ec6730e-e344-4fb0-b1c1-a6a5194bc12c\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 8900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8f3d6013-af5d-4a88-b47b-9878ef28d73a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"8f3d6013-af5d-4a88-b47b-9878ef28d73a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9000
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"24176a0e-9982-4f68-a0f2-ddaa9ac4694a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"24176a0e-9982-4f68-a0f2-ddaa9ac4694a\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9100
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b24f3cf2-a126-494a-a229-4e747a3b65f8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b24f3cf2-a126-494a-a229-4e747a3b65f8\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9200
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"fbf86189-dc26-403b-94dc-cf61d8ff105e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"fbf86189-dc26-403b-94dc-cf61d8ff105e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9300
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"94a3d38d-f7d5-4103-b38f-412dcf53e8a5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"94a3d38d-f7d5-4103-b38f-412dcf53e8a5\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9400
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"820dd4e5-8372-44eb-aac5-ec1b7317a005\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"820dd4e5-8372-44eb-aac5-ec1b7317a005\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9500
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2b424822-555a-49c3-84ba-2370f184b8ba\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"2b424822-555a-49c3-84ba-2370f184b8ba\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9600
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"429c50f6-f5e8-4542-af88-4d73eaaf9afa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"429c50f6-f5e8-4542-af88-4d73eaaf9afa\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9700
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b0e1adc3-e50c-470a-81b1-4ae272042ba0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"b0e1adc3-e50c-470a-81b1-4ae272042ba0\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9800
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3878c7b0-8c9e-4434-9d84-7721d38baa5e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"3878c7b0-8c9e-4434-9d84-7721d38baa5e\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 9900
+}
+{
+  "sandboxLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ff62fae1-39b9-4855-9b58-ecfc7db7e914\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "lambdaLog": "[ERROR] KeyError: 'VOLCANIC_ROCK_VOUCHER_9500'\\n{\"errorMessage\": \"'VOLCANIC_ROCK_VOUCHER_9500'\", \"errorType\": \"KeyError\", \"requestId\": \"ff62fae1-39b9-4855-9b58-ecfc7db7e914\", \"stackTrace\": [\"  File \\\"/var/task/app.py\\\", line 31, in lambda_handler\\n    orders, conversion, traderData = trader.run(trading_state)\\n\", \"  File \\\"/var/task/trader.py\\\", line 1749, in run\\n    self.params[product][\\\"strike\\\"],\\n\"]}",
+  "timestamp": 10000
+}
+{
+  "sandboxLog": "Lambda errors have reached maximum value for submission daa36e19-f107-48cc-9352-77f5b2295420",
+  "lambdaLog": null,
+  "timestamp": 351505
+}
+
+
+
+Activities log:
+day;timestamp;product;bid_price_1;bid_volume_1;bid_price_2;bid_volume_2;bid_price_3;bid_volume_3;ask_price_1;ask_volume_1;ask_price_2;ask_volume_2;ask_price_3;ask_volume_3;mid_price;profit_and_loss
+
+
+
+
+Trade History:
+null
