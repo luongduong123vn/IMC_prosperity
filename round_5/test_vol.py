@@ -28,15 +28,6 @@ class BlackScholes:
         return call_price
 
     @staticmethod
-    def black_scholes_put(spot, strike, time_to_expiry, volatility):
-        d1 = (log(spot / strike) + (0.5 * volatility * volatility) * time_to_expiry) / (
-            volatility * sqrt(time_to_expiry)
-        )
-        d2 = d1 - volatility * sqrt(time_to_expiry)
-        put_price = strike * NormalDist().cdf(-d2) - spot * NormalDist().cdf(-d1)
-        return put_price
-
-    @staticmethod
     def delta(spot, strike, time_to_expiry, volatility):
         d1 = (
             log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
@@ -49,18 +40,6 @@ class BlackScholes:
             log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
         ) / (volatility * sqrt(time_to_expiry))
         return NormalDist().pdf(d1) / (spot * volatility * sqrt(time_to_expiry))
-
-    @staticmethod
-    def vega(spot, strike, time_to_expiry, volatility):
-        d1 = (
-            log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
-        ) / (volatility * sqrt(time_to_expiry))
-        # print(f"d1: {d1}")
-        # print(f"vol: {volatility}")
-        # print(f"spot: {spot}")
-        # print(f"strike: {strike}")
-        # print(f"time: {time_to_expiry}")
-        return NormalDist().pdf(d1) * (spot * sqrt(time_to_expiry)) / 100
 
     @staticmethod
     def implied_volatility(
@@ -233,11 +212,11 @@ PARAMS = {
         "zscore_threshold": 21,
     },
     Product.ORCHIDS: {
-        "make_edge": 2,
+        "make_edge": 1,
         "make_probability": 0.8,
         "conversion_limit": 10,
         "periods_below_max": 10,
-        "periods_above_min": 30,
+        "periods_above_min": 20,
         "hard_level": 50,
     },
 }
@@ -1311,9 +1290,28 @@ class Trader:
                 current_sugar_price = observation.sugarPrice
                 
                 # Check if all last 10 indices are below period 11 and current sunlight is below 50
-                if all(idx < period_11_index for idx in last_10_indices) and current_sunlight < hard_level:
-                    if not all(idx > period_21_index for idx in last_20_indices):
+                if all(idx < period_11_index for idx in last_10_indices):
+                    if current_sunlight < hard_level:
                         # Use sugar prices from -6 to -1 (5 periods) and implied mids from -5 to 0 (5 periods)
+                        # This creates a lagged relationship where we compare current implied mid with previous sugar price
+                        lookback_sugar_prices = traderObject['sugar_price_history'][-6:-1]  # Last 5 sugar prices
+                        lookback_implied_mids = traderObject['implied_mid_history'][-5:]  # Current and last 4 implied mids
+                        
+                        if len(lookback_sugar_prices) > 0 and len(lookback_implied_mids) > 0:
+                            # Calculate the ratio for each period, comparing current implied mid with previous sugar price
+                            ratios = [mid/price for mid, price in zip(lookback_implied_mids[1:], lookback_sugar_prices)]
+                            avg_ratio = sum(ratios) / len(ratios)
+                            
+                            # Predict next implied mid using current sugar price
+                            implied_mid = current_sugar_price * avg_ratio
+                            
+                            # Adjust bid and ask around the new implied mid while maintaining the same spread
+                            spread = 2
+                            return implied_mid - spread/2, implied_mid + spread/2, True
+
+                elif all(idx > period_21_index for idx in last_20_indices):
+                    if current_sunlight < hard_level:
+                        #Use sugar prices from -6 to -1 (5 periods) and implied mids from -5 to 0 (5 periods)
                         # This creates a lagged relationship where we compare current implied mid with previous sugar price
                         lookback_sugar_prices = traderObject['sugar_price_history'][-6:-1]  # Last 5 sugar prices
                         lookback_implied_mids = traderObject['implied_mid_history'][-5:]  # Current and last 4 implied mids
