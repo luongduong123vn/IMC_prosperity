@@ -1743,9 +1743,24 @@ class Trader:
                 if Product.ORCHIDS in state.position
                 else 0
             )
-            if state.timestamp > 99000:
-                conversions = self.orchids_arb_clear(orchids_position)
-                orchids_position += conversions
+            if state.timestamp > 98000:
+                # conversions = self.orchids_arb_clear(orchids_position)
+                # orchids_position += conversions
+                order_depth = state.order_depths[Product.ORCHIDS]
+                best_bid = max(order_depth.buy_orders.keys())
+                best_ask = min(order_depth.sell_orders.keys())
+                mid_price = (best_bid + best_ask) / 2
+                position = min(abs(orchids_position), 10)
+                if np.sign(orchids_position) == -1:
+                    price = best_ask
+                elif np.sign(orchids_position) == 1:
+                    price = best_bid
+                orders = Order(
+                    product=Product.ORCHIDS,
+                    price=price,
+                    volume=position*int(np.sign(orchids_position))*(-1),
+                )
+                result[Product.ORCHIDS] = orders
             else:     
                 orchids_take_orders, buy_order_volume, sell_order_volume = (
                     self.orchids_arb_take(
