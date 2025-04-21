@@ -1692,49 +1692,49 @@ class Trader:
                 else 0
             )
             orchids_observation = state.observations.conversionObservations[Product.ORCHIDS]
-            if state.timestamp > 100000:
-                # conversions = self.orchids_arb_clear(orchids_position)
-                # orchids_position += conversions
-                order_depth = state.order_depths[Product.ORCHIDS]
-                best_bid = max(order_depth.buy_orders.keys())
-                best_ask = min(order_depth.sell_orders.keys())
-                mid_price = (best_bid + best_ask) / 2
-                position = min(abs(orchids_position), 10)
-                if np.sign(orchids_position) == -1:
-                    price = best_ask
-                elif np.sign(orchids_position) == 1:
-                    price = best_bid
-                orders = Order(
-                    product=Product.ORCHIDS,
-                    price=price,
-                    volume=position*int(np.sign(orchids_position))*(-1),
-                )
-                result[Product.ORCHIDS] = orders
-            else:    
-                conversions = self.orchids_arb_clear(orchids_position)
-                orchids_position += conversions 
-                orchids_implied_bid, orchids_implied_ask, orchids_implied_used = self.orchids_implied_bid_ask(orchids_observation, traderObject)
-                orchids_take_orders, buy_order_volume, sell_order_volume = (
-                    self.orchids_arb_take(
-                        state.order_depths[Product.ORCHIDS],
-                        orchids_observation,
-                        orchids_position,
-                        orchids_implied_bid,
-                        orchids_implied_ask,
-                    )
-                )
-
-                orchids_make_orders, _, _ = self.orchids_arb_make(
+            # if state.timestamp > 100000:
+            #     # conversions = self.orchids_arb_clear(orchids_position)
+            #     # orchids_position += conversions
+            #     order_depth = state.order_depths[Product.ORCHIDS]
+            #     best_bid = max(order_depth.buy_orders.keys())
+            #     best_ask = min(order_depth.sell_orders.keys())
+            #     mid_price = (best_bid + best_ask) / 2
+            #     position = min(abs(orchids_position), 10)
+            #     if np.sign(orchids_position) == -1:
+            #         price = best_ask
+            #     elif np.sign(orchids_position) == 1:
+            #         price = best_bid
+            #     orders = Order(
+            #         product=Product.ORCHIDS,
+            #         price=price,
+            #         volume=position*int(np.sign(orchids_position))*(-1),
+            #     )
+            #     result[Product.ORCHIDS] = orders
+            # else:    
+            conversions = self.orchids_arb_clear(orchids_position)
+            orchids_position += conversions 
+            orchids_implied_bid, orchids_implied_ask, orchids_implied_used = self.orchids_implied_bid_ask(orchids_observation, traderObject)
+            orchids_take_orders, buy_order_volume, sell_order_volume = (
+                self.orchids_arb_take(
+                    state.order_depths[Product.ORCHIDS],
                     orchids_observation,
                     orchids_position,
-                    buy_order_volume,
-                    sell_order_volume,
                     orchids_implied_bid,
                     orchids_implied_ask,
-                    orchids_implied_used,
                 )
+            )
 
-                result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
+            orchids_make_orders, _, _ = self.orchids_arb_make(
+                orchids_observation,
+                orchids_position,
+                buy_order_volume,
+                sell_order_volume,
+                orchids_implied_bid,
+                orchids_implied_ask,
+                orchids_implied_used,
+            )
+
+            result[Product.ORCHIDS] = orchids_take_orders + orchids_make_orders
 
         coconut_order_depth = state.order_depths[Product.COCONUT]
         coconut_mid_price = (
