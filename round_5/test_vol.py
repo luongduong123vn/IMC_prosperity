@@ -28,6 +28,15 @@ class BlackScholes:
         return call_price
 
     @staticmethod
+    def black_scholes_put(spot, strike, time_to_expiry, volatility):
+        d1 = (log(spot / strike) + (0.5 * volatility * volatility) * time_to_expiry) / (
+            volatility * sqrt(time_to_expiry)
+        )
+        d2 = d1 - volatility * sqrt(time_to_expiry)
+        put_price = strike * NormalDist().cdf(-d2) - spot * NormalDist().cdf(-d1)
+        return put_price
+
+    @staticmethod
     def delta(spot, strike, time_to_expiry, volatility):
         d1 = (
             log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
@@ -40,6 +49,18 @@ class BlackScholes:
             log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
         ) / (volatility * sqrt(time_to_expiry))
         return NormalDist().pdf(d1) / (spot * volatility * sqrt(time_to_expiry))
+
+    @staticmethod
+    def vega(spot, strike, time_to_expiry, volatility):
+        d1 = (
+            log(spot) - log(strike) + (0.5 * volatility * volatility) * time_to_expiry
+        ) / (volatility * sqrt(time_to_expiry))
+        # print(f"d1: {d1}")
+        # print(f"vol: {volatility}")
+        # print(f"spot: {spot}")
+        # print(f"strike: {strike}")
+        # print(f"time: {time_to_expiry}")
+        return NormalDist().pdf(d1) * (spot * sqrt(time_to_expiry)) / 100
 
     @staticmethod
     def implied_volatility(
@@ -212,12 +233,11 @@ PARAMS = {
         "zscore_threshold": 21,
     },
     Product.ORCHIDS: {
-        "make_edge": 1,
+        "make_edge": 2,
         "make_probability": 0.8,
         "conversion_limit": 10,
         "periods_below_max": 10,
         "periods_above_min": 20,
-        "hard_level": 50,
     },
 }
 
@@ -1269,19 +1289,16 @@ class Trader:
             traderObject['implied_mid_history'].append(base_implied_mid)
             
             # Keep only last 26 periods for sunlight and 6 periods for prices
-            periods_below_max = self.params[Product.ORCHIDS]["periods_below_max"]
-            periods_above_min = self.params[Product.ORCHIDS]["periods_above_min"]
-            total_lookback = max(periods_below_max, periods_above_min) + 6
-            hard_level = self.params[Product.ORCHIDS]["hard_level"]
-            if len(traderObject['sunlight_history']) > total_lookback:
+            if len(traderObject['sunlight_history']) > 26:
                 traderObject['sunlight_history'].pop(0)
             if len(traderObject['sugar_price_history']) > 6:
                 traderObject['sugar_price_history'].pop(0)
             if len(traderObject['implied_mid_history']) > 6:
                 traderObject['implied_mid_history'].pop(0)
-            
+            periods_below_max = self.params[Product.ORCHIDS]["periods_below_max"]
+            periods_above_min = self.params[Product.ORCHIDS]["periods_above_min"]
             # Check conditions if we have enough history
-            if len(traderObject['sunlight_history']) >= total_lookback and len(traderObject['sugar_price_history']) >= 6 and len(traderObject['implied_mid_history']) >= 6:
+            if len(traderObject['sunlight_history']) >= 26 and len(traderObject['sugar_price_history']) >= 6 and len(traderObject['implied_mid_history']) >= 6:
                 last_10_indices = traderObject['sunlight_history'][-periods_below_max:]
                 period_11_index = traderObject['sunlight_history'][-(periods_below_max+1)]
                 last_20_indices = traderObject['sunlight_history'][-periods_above_min:]
@@ -1290,28 +1307,9 @@ class Trader:
                 current_sugar_price = observation.sugarPrice
                 
                 # Check if all last 10 indices are below period 11 and current sunlight is below 50
-                if all(idx < period_11_index for idx in last_10_indices):
-                    if current_sunlight < hard_level:
+                if all(idx < period_11_index for idx in last_10_indices) and current_sunlight < 50:
+                    if not all(idx > period_21_index for idx in last_20_indices):
                         # Use sugar prices from -6 to -1 (5 periods) and implied mids from -5 to 0 (5 periods)
-                        # This creates a lagged relationship where we compare current implied mid with previous sugar price
-                        lookback_sugar_prices = traderObject['sugar_price_history'][-6:-1]  # Last 5 sugar prices
-                        lookback_implied_mids = traderObject['implied_mid_history'][-5:]  # Current and last 4 implied mids
-                        
-                        if len(lookback_sugar_prices) > 0 and len(lookback_implied_mids) > 0:
-                            # Calculate the ratio for each period, comparing current implied mid with previous sugar price
-                            ratios = [mid/price for mid, price in zip(lookback_implied_mids[1:], lookback_sugar_prices)]
-                            avg_ratio = sum(ratios) / len(ratios)
-                            
-                            # Predict next implied mid using current sugar price
-                            implied_mid = current_sugar_price * avg_ratio
-                            
-                            # Adjust bid and ask around the new implied mid while maintaining the same spread
-                            spread = 2
-                            return implied_mid - spread/2, implied_mid + spread/2, True
-
-                elif all(idx > period_21_index for idx in last_20_indices):
-                    if current_sunlight < hard_level:
-                        #Use sugar prices from -6 to -1 (5 periods) and implied mids from -5 to 0 (5 periods)
                         # This creates a lagged relationship where we compare current implied mid with previous sugar price
                         lookback_sugar_prices = traderObject['sugar_price_history'][-6:-1]  # Last 5 sugar prices
                         lookback_implied_mids = traderObject['implied_mid_history'][-5:]  # Current and last 4 implied mids
@@ -1347,7 +1345,7 @@ class Trader:
         buy_quantity = position_limit - position
         sell_quantity = position_limit + position
 
-        ask = round(observation.askPrice) - 2
+        ask = round(observation.askPrice) - 1
 
         if ask > implied_ask:
             edge = (ask - implied_ask) * self.params[Product.ORCHIDS][
@@ -1694,7 +1692,7 @@ class Trader:
                 else 0
             )
             orchids_observation = state.observations.conversionObservations[Product.ORCHIDS]
-            if state.timestamp > 99000:
+            if state.timestamp > 100000:
                 # conversions = self.orchids_arb_clear(orchids_position)
                 # orchids_position += conversions
                 order_depth = state.order_depths[Product.ORCHIDS]
