@@ -1685,14 +1685,14 @@ class Trader:
             )
 
         
-        if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths:
+        if Product.ORCHIDS in self.params and Product.ORCHIDS in state.order_depths and Product.ORCHIDS in state.observations.conversionObservations:
             orchids_position = (
                 state.position[Product.ORCHIDS]
                 if Product.ORCHIDS in state.position
                 else 0
             )
             orchids_observation = state.observations.conversionObservations[Product.ORCHIDS]
-            # if state.timestamp > 100000:
+            # if state.timestamp > 99000:
             #     # conversions = self.orchids_arb_clear(orchids_position)
             #     # orchids_position += conversions
             #     order_depth = state.order_depths[Product.ORCHIDS]
